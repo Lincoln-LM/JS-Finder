@@ -31,8 +31,8 @@ function Generate() {
     let iv2 = go.nextUShort();
     let ivs = getIVs(iv1,iv2);
     let flag = true;
-    for (i = 0; i < 6; i++) {
-      if (ivs[i] < ivn[i] | ivs[i] > ivx[i]) {
+    for (let j = 0; j < 6; j++) {
+      if (ivs[j] < ivn[j] | ivs[j] > ivx[j]) {
         flag = false;
       }
     }
