@@ -12,9 +12,9 @@
 #states tr:hover {background-color: #ddd;}
 
 #states th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
   background-color: #252525;
   color: white;
 }
