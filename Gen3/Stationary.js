@@ -53,7 +53,6 @@ function Generate() {
       state.push(natures[pid%25]);
       state.push(pid&1);
       state = state.concat(ivs);
-      console.log(state);
     
       let row = b.insertRow();
     
