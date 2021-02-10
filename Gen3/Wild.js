@@ -20,12 +20,21 @@ function Generate() {
   for (let i=0;i<max_advances;i++) {
     let seed = rng.seed;
     let go = new PokeRNG(seed);
+    go.next();
+    let slot = go.nextUShort();
+    go.next();
+    let targetNature = go.nextUShort() % 25;
     let state = [];
     
-    let low = go.nextUShort();
-    let high = go.nextUShort();
-    let pid = ((high<<16) | low) >>> 0;
-    let psv = Math.floor((low ^ high) / 8);
+    let pid;
+    let psv;
+    do
+    {
+        let low = go.nextUShort();
+        let high = go.nextUShort();
+        pid = (high << 16) | low;
+        psv = Math.floor((low ^ high) / 8);
+    } while (pid % 25 != targetNature);
     
     let iv1 = go.nextUShort();
     let iv2 = go.nextUShort();
