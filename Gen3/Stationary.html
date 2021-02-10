@@ -44,6 +44,51 @@
     <a style="position: absolute;left: 366px;">SID: </a><input style="position: absolute;left: 400px;" type="text" id="sid" value="54321"><br>
     <a>Delay: </a><input type="text" id="delay" value="0"><br>
   </div>
+	<div class="filters">
+    
+    <input type="number" max="31" style="width:25px" value="0"> ~ <input type="number" max="31" style="width:25px" value="31"><a> HP Nature:</a>
+<select id="nature"><option value="Any">Any</option>
+  
+  <option value="Hardy">Hardy</option>
+  <option value="Lonely">Lonely</option>
+  <option value="Brave">Brave</option>
+  <option value="Adamant">Adamant</option>
+  <option value="Naughty">Naughty</option>
+  <option value="Bold">Bold</option>
+  <option value="Docile">Docile</option>
+  <option value="Relaxed">Relaxed</option>
+  <option value="Impish">Impish</option>
+  <option value="Lax">Lax</option>
+  <option value="Timid">Timid</option>
+  <option value="Hasty">Hasty</option>
+  <option value="Serious">Serious</option>
+  <option value="Jolly">Jolly</option>
+  <option value="Naive">Naive</option>
+  <option value="Modest">Modest</option>
+  <option value="Mild">Mild</option>
+  <option value="Quiet">Quiet</option>
+  <option value="Bashful">Bashful</option>
+  <option value="Rash">Rash</option>
+  <option value="Calm">Calm</option>
+  <option value="Gentle">Gentle</option>
+  <option value="Sassy">Sassy</option>
+  <option value="Careful">Careful</option>
+  <option value="Quirky">Quirky</option>
+</select><br>
+
+    <input type="number" max="31" style="width:25px" value="0"> ~ <input type="number" max="31" style="width:25px" value="31"><a> Atk Shiny: </a>
+<input type="checkbox" id="shiny" value="Shiny">
+<label for="shiny"> Shiny</label><br>
+
+    <input type="number" max="31" style="width:25px" value="0"> ~ <input type="number" max="31" style="width:25px" value="31"><a> Def</a><br>
+    
+    <input type="number" max="31" style="width:25px" value="0"> ~ <input type="number" max="31" style="width:25px" value="31"><a> SpA</a><br>
+    
+    <input type="number" max="31" style="width:25px" value="0"> ~ <input type="number" max="31" style="width:25px" value="31"><a> SpD</a><br>
+
+    <input type="number" max="31" style="width:25px" value="0"> ~ <input type="number" max="31" style="width:25px" value="31"><a> Spe</a><br>
+
+</div>
   <br>
   <button onclick=Generate() class="generate">Generate</button>
   <table id="states">
