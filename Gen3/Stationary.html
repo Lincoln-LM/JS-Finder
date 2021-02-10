@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>Gen 3 Stationary Generator</title>
   <script src="/JS-Finder/Core/LCRNG.js"></script>
   <script src="/JS-Finder/Core/tools.js"></script>
   <link rel="stylesheet" href="/JS-Finder/Core/states.css">
   <style>
     .info {
-      border: 1px solid black;
+      border: 3px solid black;
     }
     .generate {
 	    background-color:#252525;
@@ -39,10 +39,10 @@
 <body>
   <div class="info">
     <a>Initial Seed:</a> <input style="width: 65px;" type="text" id="initial" value="1234"><br>
-    <a>Initial Advances: </a><input style="width: 100px;" type="number" id="initial_advances" value="0">
-    <a style="position: absolute;left: 365px;">TID: </a><input style="position: absolute;left: 400px;width: 50px;" type="number" max="65535" id="tid" value="12345"><br>
-    <a >Max Advances: </a><input style="width: 100px;" type="number" id="max_advances" value="100">
-    <a style="position: absolute;left: 366px;">SID: </a><input style="position: absolute;left: 400px;width: 50px;" type="number" max="65535" id="sid" value="54321"><br>
+    <a>Initial Advances: </a><input type="number" id="initial_advances" value="0">
+    <a>TID: </a><input type="number" max="65535" id="tid" value="12345"><br>
+    <a>Max Advances: </a><input type="number" id="max_advances" value="100">
+    <a>SID: </a><input type="number" max="65535" id="sid" value="54321"><br>
     <a>Delay: </a><input style="width: 100px;" type="number" id="delay" value="0"><br>
   </div>
 	<div class="filters">
