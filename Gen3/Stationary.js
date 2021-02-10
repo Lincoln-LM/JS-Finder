@@ -12,7 +12,10 @@ function Generate() {
   b.innerHTML = "";
   
   let natures = [ "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" ]
-
+  let ivn = [ document.getElementById("hpmin"), document.getElementById("atkmin"), document.getElementById("defmin"), document.getElementById("spamin"), document.getElementById("spdmin"), document.getElementById("spemin") ]
+  let ivx = [ document.getElementById("hpmax"), document.getElementById("atkmax"), document.getElementById("defmax"), document.getElementById("spamax"), document.getElementById("spdmax"), document.getElementById("spemax") ]
+    
+  
   rng.next(initial_advances+delay);
   for (let i=0;i<max_advances;i++) {
     let seed = rng.seed;
@@ -27,24 +30,37 @@ function Generate() {
     let iv1 = go.nextUShort();
     let iv2 = go.nextUShort();
     let ivs = getIVs(iv1,iv2);
-    
-    state.push(i+initial_advances);
-    state.push(pid.toString(16));
-    if (tsv == psv) {
-      state.push("Yes");
-    } else {
-      state.push("No");
+    let flag = true;
+    for (i = 0; i < 6; i++) {
+      if (ivs[i] < ivn[i] | ivs[i] > ivx[i]) {
+        flag = false;
+      }
     }
-    state.push(natures[pid%25]);
-    state.push(pid&1);
-    state = state.concat(ivs)
+    if (document.getElementById("nature").value != "Any" & natures[pid%25] != document.getElementById("nature").value) {
+      flag = false;
+    }
+    if (document.getElementById("shiny").value == "Shiny" & !(tsv == psv)) {
+      flag = false;
+    }
+    if (flag) {
+      state.push(i+initial_advances);
+      state.push(pid.toString(16));
+      if (tsv == psv) {
+        state.push("Yes");
+      } else {
+        state.push("No");
+      }
+      state.push(natures[pid%25]);
+      state.push(pid&1);
+      state = state.concat(ivs)
     
-    let row = b.insertRow();
+      let row = b.insertRow();
     
-    for (let val of state) {
-      let cell = row.insertCell();
-      let text = document.createTextNode(val);
-      cell.appendChild(text);
+      for (let val of state) {
+        let cell = row.insertCell();
+        let text = document.createTextNode(val);
+        cell.appendChild(text);
+      }
     }
     rng.nextUInt();
   }
