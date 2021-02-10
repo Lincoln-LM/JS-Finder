@@ -4,26 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>Gen 3 Stationary Generator</title>
-  <script src="https://github.com/Lincoln-LM/JS-Finder/Core/LCRNG.js"></script>
-  <script src="https://github.com/Lincoln-LM/JS-Finder/Core/tools.js"></script>
-  <link rel="stylesheet" href="https://github.com/Lincoln-LM/JS-Finder/Core/states.css">
+  <script src="/Core/LCRNG.js"></script>
+  <script src="/Core/tools.js"></script>
+  <link rel="stylesheet" href="/Core/states.css">
   <style>
     .info {
       border: 1px solid black;
     }
     .right {
-      margin-left: 80px;
+      position: absolute;
+      left: 300px;
     }
   </style>
 </head>
 
 <body>
   <div class="info">
-    Initial Seed: <input type="text" id="initial" value="1234"><br>
-    Initial Advances: <input type="text" id="initial_advances" value="0">
-    Max Advances: <input class="right" type="text" id="max_advances" value="100"><br>
-    TID: <input type="text" id="tid" value="12345">
-    SID: <input class="right" type="text" id="sid" value="54321"><br>
+    <a>Initial Seed:</a> <input type="text" id="initial" value="1234"><br>
+    <a>Initial Advances: </a><input type="text" id="initial_advances" value="0">
+    <a class="right">Max Advances: </a><input class="right" type="text" id="max_advances" value="100"><br>
+    <a>TID: </a><input type="text" id="tid" value="12345">
+    <a class="right">SID: </a><input class="right" type="text" id="sid" value="54321"><br>
     Delay: <input type="text" id="delay" value="0"><br>
   </div>
   <button onclick=Generate()>--Generate--</button>
