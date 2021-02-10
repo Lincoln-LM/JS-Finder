@@ -12,7 +12,7 @@
       border: 1px solid black;
     }
     .generate {
-	    background-color:#738c85;
+	    background-color:#252525;
 	    border-radius:28px;
 	    border:1px solid #566963;
 	    display:inline-block;
@@ -38,11 +38,12 @@
   <div class="info">
     <a>Initial Seed:</a> <input type="text" id="initial" value="1234"><br>
     <a>Initial Advances: </a><input type="text" id="initial_advances" value="0">
-    <a style="position: absolute;left: 397px;">Max Advances: </a><input style="position: absolute;left: 500px;" type="text" id="max_advances" value="100"><br>
-    <a>TID: </a><input type="text" id="tid" value="12345">
+		<a style="position: absolute;left: 466px;">TID: </a><input style="position: absolute;left: 500px;" type="text" id="tid" value="12345">
+    <a >Max Advances: </a><input style=type="text" id="max_advances" value="100"><br>
     <a style="position: absolute;left: 466px;">SID: </a><input style="position: absolute;left: 500px;" type="text" id="sid" value="54321"><br>
     <a>Delay: </a><input type="text" id="delay" value="0"><br>
   </div>
+  <br>
   <button onclick=Generate() class="generate">Generate</button>
   <table id="states">
     <thead>
