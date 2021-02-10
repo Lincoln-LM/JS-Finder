@@ -12,8 +12,8 @@ function Generate() {
   b.innerHTML = "";
   
   let natures = [ "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" ]
-  let ivn = [ document.getElementById("hpmin"), document.getElementById("atkmin"), document.getElementById("defmin"), document.getElementById("spamin"), document.getElementById("spdmin"), document.getElementById("spemin") ]
-  let ivx = [ document.getElementById("hpmax"), document.getElementById("atkmax"), document.getElementById("defmax"), document.getElementById("spamax"), document.getElementById("spdmax"), document.getElementById("spemax") ]
+  let ivn = [ document.getElementById("hpmin").value, document.getElementById("atkmin").value, document.getElementById("defmin").value, document.getElementById("spamin").value, document.getElementById("spdmin").value, document.getElementById("spemin").value ]
+  let ivx = [ document.getElementById("hpmax").value, document.getElementById("atkmax").value, document.getElementById("defmax").value, document.getElementById("spamax").value, document.getElementById("spdmax").value, document.getElementById("spemax").value ]
     
   
   rng.next(initial_advances+delay);
