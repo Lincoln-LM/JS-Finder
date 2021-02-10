@@ -24,7 +24,7 @@ function Generate() {
     
     let low = go.nextUShort();
     let high = go.nextUShort();
-    let pid = ((high<<16) | low) >>> 0;
+    let pid = ((high << 16)>>>0 | low)>>>0;
     let psv = Math.floor((low ^ high) / 8);
     
     let iv1 = go.nextUShort();
