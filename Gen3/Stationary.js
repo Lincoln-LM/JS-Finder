@@ -39,7 +39,7 @@ function Generate() {
     if (document.getElementById("nature").value != "Any" & natures[pid%25] != document.getElementById("nature").value) {
       flag = false;
     }
-    if (document.getElementById("shiny").value == "Shiny" & !(tsv == psv)) {
+    if (document.getElementById("shiny").checked & !(tsv == psv)) {
       flag = false;
     }
     if (flag) {
