@@ -6,7 +6,7 @@
 
 #states td, #states th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 2px;
 }
 
 #states tr:hover {background-color: #ddd;}
