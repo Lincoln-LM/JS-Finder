@@ -11,6 +11,26 @@
     .info {
       border: 1px solid black;
     }
+    .generate {
+	    background-color:#738c85;
+	    border-radius:28px;
+	    border:1px solid #566963;
+	    display:inline-block;
+	    cursor:pointer;
+	    color:#ffffff;
+	    font-family:Arial;
+	    font-size:17px;
+	    padding:5px 24px;
+	    text-decoration:none;
+	    text-shadow:0px 1px 0px #2b665e;
+    }
+    .generate:hover {
+	    background-color:#6c7c7c;
+    }
+    .generate:active {
+	    position:relative;
+	    top:1px;
+    }
   </style>
 </head>
 
@@ -18,12 +38,12 @@
   <div class="info">
     <a>Initial Seed:</a> <input type="text" id="initial" value="1234"><br>
     <a>Initial Advances: </a><input type="text" id="initial_advances" value="0">
-    <a style="position: absolute;left: 397px;">Max Advances: </a><input class="right" type="text" id="max_advances" value="100"><br>
+    <a style="position: absolute;left: 397px;">Max Advances: </a><input style="position: absolute;left: 500px;" type="text" id="max_advances" value="100"><br>
     <a>TID: </a><input type="text" id="tid" value="12345">
-    <a style="position: absolute;left: 466px;">SID: </a><input class="right" type="text" id="sid" value="54321"><br>
+    <a style="position: absolute;left: 466px;">SID: </a><input style="position: absolute;left: 500px;" type="text" id="sid" value="54321"><br>
     <a>Delay: </a><input type="text" id="delay" value="0"><br>
   </div>
-  <button onclick=Generate()>--Generate--</button>
+  <button onclick=Generate() class="generate">Generate</button>
   <table id="states">
     <thead>
       <tr>
