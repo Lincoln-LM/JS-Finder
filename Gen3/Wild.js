@@ -32,7 +32,7 @@ function Generate() {
     {
         let low = go.nextUShort();
         let high = go.nextUShort();
-        pid = (high << 16) | low;
+        pid = ((high << 16)>>>0 | low)>>>0;
         psv = Math.floor((low ^ high) / 8);
     } while (pid % 25 != targetNature);
     
