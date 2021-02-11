@@ -1,11 +1,10 @@
 #states {
-  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
 #states td, #states th {
-  border: 1px solid #32414b;
+  border: 1px solid #2c3a44;
   padding: 12px;
 }
 
