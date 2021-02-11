@@ -44,7 +44,7 @@ function Generate() {
     }
     if (flag) {
       state.push(i+initial_advances);
-      state.push(pid.toString(16));
+      state.push(pid.toString(16).toUpperCase());
       if (tsv == psv) {
         state.push("Yes");
       } else {
