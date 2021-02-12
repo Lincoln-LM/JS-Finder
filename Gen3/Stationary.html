@@ -8,89 +8,8 @@
 	<script src="/JS-Finder/Core/LCRNG.js"></script>
 	<script src="/JS-Finder/Core/tools.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<style>
-		
-		* {
-			background-color:#19232d;
-			color:#eaeae7;
-		}
-		a {
-			font-size: 13px;
-		}
-		body {
-			font-family: "Montserrat", sans-serif;
-		}
-		button {
-			background-color:#505f69;
-			border-radius:3px;
-			border:1px solid #3f4e58;
-			display:inline-block;
-			cursor:pointer;
-			color:#ffffff;
-			font-size:17px;
-			padding:5px 24px;
-			text-decoration:none;
-			text-shadow:0px 1px 0px #2b665e;
-		}
-		button:hover {
-			background-color:#6c7c7c;
-		}
-		button:active {
-			position:relative;
-			top:1px;
-		}
-		input, select {
-			border-style: none;
-			border: 1px solid #2c3a44;
-			border-radius: 25px; 
-			text-align: center;
-			-moz-appearance: none; 
-			-webkit-appearance: none; 
-			appearance: none; 
-		}
-		input[type='number']::-webkit-inner-spin-button, 
-		input[type='number']::-webkit-outer-spin-button { 
-			-webkit-appearance: none;
-			margin: 0;
-		}
-		select{
-			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I2ZmZmZmZjt9DQo8L3N0eWxlPg0KPHRpdGxlPmFycm93czwvdGl0bGU+DQo8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjEuNCw0LjcgMi41LDMuMiAzLjUsNC43ICIvPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4NCjwvc3ZnPg==) no-repeat 95% 50%;
-			-moz-appearance: none; 
-			-webkit-appearance: none; 
-			appearance: none; 
-			width: 80px;
-		}
-		.checkbox-round {
-			width: 11px;
-			height: 11px;
-			background-color: #27343e;
-			border-radius: 50%;
-			vertical-align: middle;
-			border: 1px solid #4f545a;
-			-webkit-appearance: none;
-			outline: none;
-			cursor: pointer;
-		}
-		.checkbox-round:checked {
-			background-color: gray;
-		}
-		.filters {
-			border: 1px solid #27343e;
-			padding: 5px 10px;
-		}
-	  	.info {
-			border: 1px solid #27343e;
-			padding: 5px 10px;
-		}
-
-		
-		div.info input, div.filters input[type="checkbox"], div.filters select {
-			position: relative;
-			left: 5px;
-		}
-		
-	</style>
-	<link rel="stylesheet" href="/JS-Finder/Core/states.css">
+	<link rel="stylesheet" href="/JS-Finder/Style/main.css">
+	<link rel="stylesheet" href="/JS-Finder/Style/states.css">
 </head>
 	
 
@@ -106,31 +25,31 @@
 	<div class="filters">
 		<input id="hpmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="hpmax" type="number" max="31" style="width:25px;" value="31"><a> HP Nature:</a>
 		<select id="nature" style="text-align-last:center;"><option value="Any">Any</option>
-  		<option value="Hardy">Hardy</option>
-  		<option value="Lonely">Lonely</option>
-  		<option value="Brave">Brave</option>
-  		<option value="Adamant">Adamant</option>
-  		<option value="Naughty">Naughty</option>
-  		<option value="Bold">Bold</option>
-  		<option value="Docile">Docile</option>
-  		<option value="Relaxed">Relaxed</option>
-  		<option value="Impish">Impish</option>
-  		<option value="Lax">Lax</option>
-  		<option value="Timid">Timid</option>
-  		<option value="Hasty">Hasty</option>
-  		<option value="Serious">Serious</option>
-  		<option value="Jolly">Jolly</option>
-  		<option value="Naive">Naive</option>
-  		<option value="Modest">Modest</option>
-  		<option value="Mild">Mild</option>
-  		<option value="Quiet">Quiet</option>
-  		<option value="Bashful">Bashful</option>
-  		<option value="Rash">Rash</option>
-  		<option value="Calm">Calm</option>
-  		<option value="Gentle">Gentle</option>
-  		<option value="Sassy">Sassy</option>
-  		<option value="Careful">Careful</option>
-  		<option value="Quirky">Quirky</option>
+			<option value="Hardy">Hardy</option>
+			<option value="Lonely">Lonely</option>
+			<option value="Brave">Brave</option>
+			<option value="Adamant">Adamant</option>
+			<option value="Naughty">Naughty</option>
+			<option value="Bold">Bold</option>
+			<option value="Docile">Docile</option>
+			<option value="Relaxed">Relaxed</option>
+			<option value="Impish">Impish</option>
+			<option value="Lax">Lax</option>
+			<option value="Timid">Timid</option>
+			<option value="Hasty">Hasty</option>
+			<option value="Serious">Serious</option>
+			<option value="Jolly">Jolly</option>
+			<option value="Naive">Naive</option>
+			<option value="Modest">Modest</option>
+			<option value="Mild">Mild</option>
+			<option value="Quiet">Quiet</option>
+			<option value="Bashful">Bashful</option>
+			<option value="Rash">Rash</option>
+			<option value="Calm">Calm</option>
+			<option value="Gentle">Gentle</option>
+			<option value="Sassy">Sassy</option>
+			<option value="Careful">Careful</option>
+			<option value="Quirky">Quirky</option>
 		</select><br>
 		<input id="atkmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="atkmax" type="number" max="31" style="width:25px;" value="31"><a> Atk Shiny: </a>
 		<input class="checkbox-round" type="checkbox" value="shiny" id="shiny" style="position: relative; left:-3px;"><br>
