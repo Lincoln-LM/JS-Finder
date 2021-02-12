@@ -14,7 +14,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     let slot = go.nextUShort();
     go.next();
     
-    let targetNature = go.nextUShort() % 25;
+    let searchNature = go.nextUShort() % 25;
     
     let state = [];
     
@@ -26,7 +26,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
       low = go.nextUShort();
       high = go.nextUShort();
       pid = ((high << 16)>>>0 | low)>>>0;
-    } while (pid % 25 != targetNature);
+    } while (pid % 25 != searchNature);
     
     let psv = Math.floor((low ^ high) / 8);
     
@@ -40,7 +40,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
         flag = false;
       }
     }
-    if (targetNature != "Any" & natures[pid%25] != targetNature) {
+    if (searchNature != "Any" & natures[pid%25] != targetNature) {
       flag = false;
     }
     if (isShiny & !(tsv == psv)) {
