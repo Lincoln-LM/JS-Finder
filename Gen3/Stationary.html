@@ -2,112 +2,44 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>Gen 3 Stationary Generator</title>
-  <script src="/JS-Finder/Core/LCRNG.js"></script>
-  <script src="/JS-Finder/Core/tools.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-  <style>
-	  a {
-    font-size: 13px;
-}
-	.checkbox-round {
-    		width: 11px;
-    		height: 11px;
-    		background-color: #27343e;
-    		border-radius: 50%;
-    		vertical-align: middle;
-    		border: 1px solid #4f545a;
-    		-webkit-appearance: none;
-    		outline: none;
-    		cursor: pointer;
-	}
-	.checkbox-round:checked {
-   		background-color: gray;
-	}
-	select{
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I2ZmZmZmZjt9DQo8L3N0eWxlPg0KPHRpdGxlPmFycm93czwvdGl0bGU+DQo8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjEuNCw0LjcgMi41LDMuMiAzLjUsNC43ICIvPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4NCjwvc3ZnPg==) no-repeat 95% 50%;
-		-moz-appearance: none; 
-		-webkit-appearance: none; 
-		appearance: none; 
-		width: 80px;
-	}
-	  
-	input, select {
-		border-style: none;
-		border: 1px solid #2c3a44;
-		border-radius: 25px; 
-		text-align: center;
-		-moz-appearance: none; 
-		-webkit-appearance: none; 
-		appearance: none; 
-	  } 
-	div.info input, div.filters input[type="checkbox"], div.filters select {
-    position: relative;
-    left: 5px;
-}
-	input[type='number']::-webkit-inner-spin-button, 
-	input[type='number']::-webkit-outer-spin-button { 
-    		-webkit-appearance: none;
-    		margin: 0;
-	}
-    * {
-        background-color:#19232d;
-	color:#eaeae7;
-    }
-	  body {
-  font-family: "Montserrat", sans-serif;
-}
-    .info {
-      border: 1px solid #27343e;
-      padding: 5px 10px;
-    }
-    .filters {
-      border: 1px solid #27343e;
-      padding: 5px 10px;
-    }
-    .generate {
-	    background-color:#505f69;
-	    border-radius:3px;
-	    border:1px solid #3f4e58;
-	    display:inline-block;
-	    cursor:pointer;
-	    color:#ffffff;
-	    font-size:17px;
-	    padding:5px 24px;
-	    text-decoration:none;
-	    text-shadow:0px 1px 0px #2b665e;
-    }
-    .generate:hover {
-	    background-color:#6c7c7c;
-    }
-    .generate:active {
-	    position:relative;
-	    top:1px;
-    }
-  
-  
-  
-  </style>
-  <link rel="stylesheet" href="/JS-Finder/Core/states.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Gen 3 Stationary Generator</title>
+	<script src="/JS-Finder/Core/LCRNG.js"></script>
+	<script src="/JS-Finder/Core/tools.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<style>
+		*{background-color: #19232d;color: #eaeae7}
+		a{font-size: 13px}
+		body{font-family: "Montserrat",sans-serif}
+		select{background: url(data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I2ZmZmZmZjt9DQo8L3N0eWxlPg0KPHRpdGxlPmFycm93czwvdGl0bGU+DQo8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjEuNCw0LjcgMi41LDMuMiAzLjUsNC43ICIvPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4NCjwvc3ZnPg==) no-repeat 95% 50%;-moz-appearance: none;-webkit-appearance: none;appearance: none;width: 80px}
+		input,select{border-style: none;border: 1px solid #2c3a44;border-radius: 25px;text-align: center;-moz-appearance: none;-webkit-appearance: none;appearance: none}
+		div.info input,div.filters input[type="checkbox"],div.filters select{position: relative;left: 5px}
+		input[type='number']: : -webkit-inner-spin-button,input[type='number']: : -webkit-outer-spin-button{-webkit-appearance: none;margin: 0}
+		.checkbox-round{width: 11px;height: 11px;background-color: #27343e;border-radius: 50%;vertical-align: middle;border: 1px solid #4f545a;-webkit-appearance: none;outline: none;cursor: pointer}
+		.checkbox-round: checked{background-color: #808080}
+		.info{border: 1px solid #27343e;padding: 5px 10px}
+		.filters{border: 1px solid #27343e;padding: 5px 10px}
+		.generate{background-color: #505f69;border-radius: 3px;border: 1px solid #3f4e58;display: inline-block;cursor: pointer;color: #ffffff;font-size: 17px;padding: 5px 24px;text-decoration: none;text-shadow: 0px 1px 0px #2b665e}
+		.generate: hover{background-color: #6c7c7c}
+		.generate: active{position: relative;top: 1px}
+	</style>
+	<link rel="stylesheet" href="/JS-Finder/Core/states.css">
 </head>
 	
 
 <body>
-  <div class="info">
-    <a>Initial Seed:</a> <input style="width: 100px;" type="text" id="initial" value="1234"><br>
-    <a>Initial Advances: </a><input style="width:80px;" type="number" id="initial_advances" value="0"><br>
-    <a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="12345"><br>
-    <a>SID: </a><input style="width:80px;" type="number" max="65535" id="sid" value="54321"><br>
-    <a>Max Advances: </a><input style="width:80px;" type="number" id="max_advances" value="100"><br>
-    <a>Delay: </a><input style="width:80px;" type="number" id="delay" value="0"><br>
-  </div><br>
+	<div class="info">
+		<a>Initial Seed:</a> <input style="width: 100px;" type="text" id="initial" value="1234"><br>
+		<a>Initial Advances: </a><input style="width:80px;" type="number" id="initial_advances" value="0"><br>
+		<a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="12345"><br>
+		<a>SID: </a><input style="width:80px;" type="number" max="65535" id="sid" value="54321"><br>
+		<a>Max Advances: </a><input style="width:80px;" type="number" id="max_advances" value="100"><br>
+		<a>Delay: </a><input style="width:80px;" type="number" id="delay" value="0"><br>
+	</div><br>
 	<div class="filters">
-    
-    <input id="hpmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="hpmax" type="number" max="31" style="width:25px;" value="31"><a> HP Nature:</a>
+		<input id="hpmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="hpmax" type="number" max="31" style="width:25px;" value="31"><a> HP Nature:</a>
 		<select id="nature" style="text-align-last:center;"><option value="Any">Any</option>
-  
   		<option value="Hardy">Hardy</option>
   		<option value="Lonely">Lonely</option>
   		<option value="Brave">Brave</option>
@@ -134,54 +66,49 @@
   		<option value="Careful">Careful</option>
   		<option value="Quirky">Quirky</option>
 		</select><br>
-
-    <input id="atkmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="atkmax" type="number" max="31" style="width:25px;" value="31"><a> Atk Shiny: </a>
-<input class="checkbox-round" type="checkbox" value="shiny" id="shiny" style="position: relative; left:-3px;"><br>
-
-    <input id="defmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="defmax" type="number" max="31" style="width:25px;" value="31"><a> Def</a><br>
-    
-    <input id="spamin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spamax" type="number" max="31" style="width:25px;" value="31"><a> SpA</a><br>
-    
-    <input id="spdmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spdmax" type="number" max="31" style="width:25px;" value="31"><a> SpD</a><br>
-
-    <input id="spemin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spemax" type="number" max="31" style="width:25px;" value="31"><a> Spe</a><br>
-
-</div>
-  <br>
-  <button onclick=Generate() class="generate">Generate</button>
-  <br>
-  <br>
-  <table id="states" style="width: 100%">
-    <colgroup>
-       <col style="width: 15%;">
-       <col style="width: 15%;">
-       <col style="width: 7%;">
-       <col style="width: 7%;">
-       <col style="width: 7%;">
-       <col style="width: 3%;">
-       <col style="width: 3%;">
-       <col style="width: 3%;">
-       <col style="width: 3%;">
-       <col style="width: 3%;">
-       <col style="width: 3%;">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Advance</th>
-        <th>PID</th>
-        <th>Shiny</th>
-        <th>Nature</th>
-        <th>Ability</th>
-        <th>HP</th>
-        <th>Atk</th>
-        <th>Def</th>
-        <th>SpA</th>
-        <th>SpD</th>
-        <th>Spe</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <script src="/JS-Finder/Gen3/Stationary.js"></script>
+		<input id="atkmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="atkmax" type="number" max="31" style="width:25px;" value="31"><a> Atk Shiny: </a>
+		<input class="checkbox-round" type="checkbox" value="shiny" id="shiny" style="position: relative; left:-3px;"><br>
+		<input id="defmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="defmax" type="number" max="31" style="width:25px;" value="31"><a> Def</a><br>
+		<input id="spamin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spamax" type="number" max="31" style="width:25px;" value="31"><a> SpA</a><br>
+		<input id="spdmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spdmax" type="number" max="31" style="width:25px;" value="31"><a> SpD</a><br>
+		<input id="spemin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spemax" type="number" max="31" style="width:25px;" value="31"><a> Spe</a><br>
+	</div>
+	<br>
+	<button onclick=Generate() class="generate">Generate</button>
+	<br>
+	<br>
+	<table id="states" style="width: 100%">
+		<colgroup>
+			<col style="width: 15%;">
+			<col style="width: 15%;">
+			<col style="width: 7%;">
+			<col style="width: 7%;">
+			<col style="width: 7%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Advance</th>
+				<th>PID</th>
+				<th>Shiny</th>
+				<th>Nature</th>
+				<th>Ability</th>
+				<th>HP</th>
+				<th>Atk</th>
+				<th>Def</th>
+				<th>SpA</th>
+				<th>SpD</th>
+				<th>Spe</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script src="/JS-Finder/Gen3/Stationary.js"></script>
 </body>
 </html>
