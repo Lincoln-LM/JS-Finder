@@ -14,7 +14,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     let slot = go.nextUShort();
     go.next();
     
-    let targetNature = go.nextUShort() % 25;
+    let searchNature = go.nextUShort() % 25;
     
     let state = [];
     
@@ -40,7 +40,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
         flag = false;
       }
     }
-    if (searchNature != "Any" & natures[pid%25] != targetNature) {
+    if (targetNature != "Any" & natures[pid%25] != targetNature) {
       flag = false;
     }
     if (isShiny & !(tsv == psv)) {
