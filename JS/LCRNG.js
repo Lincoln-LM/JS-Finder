@@ -14,7 +14,7 @@ class PokeRNG {
     return this.nextUInt() >>> 16;
   }
   
-  next(advances) {
+  next(advances=1) {
     for (let i=0; i<advances; i++) {
       this.nextUInt();
     }
