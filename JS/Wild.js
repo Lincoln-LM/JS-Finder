@@ -14,7 +14,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     let slot = go.nextUShort();
     go.next();
     
-    let searchNature = go.nextUShort() % 25;
+    let targetNature = go.nextUShort() % 25;
     
     let state = [];
     
