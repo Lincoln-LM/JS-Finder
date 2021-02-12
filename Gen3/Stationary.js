@@ -1,23 +1,13 @@
-function Generate() {
-  let initial = parseInt(document.getElementById("initial").value,16);
-  let initial_advances = parseInt(document.getElementById("initial_advances").value);
-  let max_advances = parseInt(document.getElementById("max_advances").value);
-  let delay = parseInt(document.getElementById("delay").value)
-  let tid = parseInt(document.getElementById("tid").value);
-  let sid = parseInt(document.getElementById("sid").value);
+
+function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targetNature,isShiny) {
+  let natures = [ "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" ]
+  
   let tsv = Math.floor((tid^sid)/8);
   let rng = new PokeRNG(initial);
-  let t = document.getElementById("states");
-  let b = t.tBodies[0];
-  b.innerHTML = "";
+  let states = [];
   
-  let natures = [ "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" ]
-  let ivn = [ document.getElementById("hpmin").value, document.getElementById("atkmin").value, document.getElementById("defmin").value, document.getElementById("spamin").value, document.getElementById("spdmin").value, document.getElementById("spemin").value ]
-  let ivx = [ document.getElementById("hpmax").value, document.getElementById("atkmax").value, document.getElementById("defmax").value, document.getElementById("spamax").value, document.getElementById("spdmax").value, document.getElementById("spemax").value ]
-    
-  
-  rng.next(initial_advances+delay);
-  for (let i=0;i<max_advances;i++) {
+  rng.next(initialAdvances+delay);
+  for (let i=0;i<maxAdvances;i++) {
     let seed = rng.seed;
     let go = new PokeRNG(seed);
     let state = [];
@@ -31,19 +21,21 @@ function Generate() {
     let iv2 = go.nextUShort();
     let ivs = getIVs(iv1,iv2);
     let flag = true;
+    
     for (let j = 0; j < 6; j++) {
       if (ivs[j] < ivn[j] | ivs[j] > ivx[j]) {
         flag = false;
       }
     }
-    if (document.getElementById("nature").value != "Any" & natures[pid%25] != document.getElementById("nature").value) {
+    if (targetNature != "Any" & natures[pid%25] != targetNature) {
       flag = false;
     }
-    if (document.getElementById("shiny").checked & !(tsv == psv)) {
+    if (isShiny & !(tsv == psv)) {
       flag = false;
     }
+    
     if (flag) {
-      state.push(i+initial_advances);
+      state.push(i+initialAdvances);
       state.push(pid.toString(16).toUpperCase());
       if (tsv == psv) {
         state.push("Yes");
@@ -53,15 +45,8 @@ function Generate() {
       state.push(natures[pid%25]);
       state.push(pid&1);
       state = state.concat(ivs);
-    
-      let row = b.insertRow();
-    
-      for (let val of state) {
-        let cell = row.insertCell();
-        let text = document.createTextNode(val);
-        cell.appendChild(text);
-      }
     }
+    
     rng.nextUInt();
   }
 }
