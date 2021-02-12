@@ -59,7 +59,7 @@
 		<input id="spemin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spemax" type="number" max="31" style="width:25px;" value="31"><a> Spe</a><br>
 	</div>
 	<br>
-	<button onclick=Generate()>Generate</button>
+	<button onclick=gen3StationaryGenerator()>Generate</button>
 	<br>
 	<br>
 	<table id="states" style="width: 100%">
@@ -95,5 +95,36 @@
 		</tbody>
 	</table>
 	<script src="/JS-Finder/Gen3/Stationary.js"></script>
+	<script>
+		function gen3StationaryGenerator() {
+			let initial = parseInt(document.getElementById("initial").value,16);
+			let initialAdvances = parseInt(document.getElementById("initialadvances").value);
+			let maxAdvances = parseInt(document.getElementById("maxadvances").value);
+			let delay = parseInt(document.getElementById("delay").value)
+			let tid = parseInt(document.getElementById("tid").value);
+			let sid = parseInt(document.getElementById("sid").value);
+			
+			let t = document.getElementById("states");
+			let b = t.tBodies[0];
+			b.innerHTML = "";
+			
+			let ivn = [ document.getElementById("hpmin").value, document.getElementById("atkmin").value, document.getElementById("defmin").value, document.getElementById("spamin").value, document.getElementById("spdmin").value, document.getElementById("spemin").value ];
+			let ivx = [ document.getElementById("hpmax").value, document.getElementById("atkmax").value, document.getElementById("defmax").value, document.getElementById("spamax").value, document.getElementById("spdmax").value, document.getElementById("spemax").value ];
+			let targetNature = document.getElementById("nature").value;
+			let isShiny = document.getElementById("shiny").checked;
+  
+			let states = generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targetNature,isShiny);
+  
+			for (let state of states) {
+				let row = b.insertRow();
+				
+				for (let val of state) {
+					let cell = row.insertCell();
+					let text = document.createTextNode(val);
+					cell.appendChild(text);
+				}
+			}
+		}
+	</script>
 </body>
 </html>
