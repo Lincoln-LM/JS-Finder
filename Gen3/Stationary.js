@@ -44,6 +44,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
       state.push(natures[pid%25]);
       state.push(pid&1);
       state = state.concat(ivs);
+      states.push(state)
     }
     
     rng.nextUInt();
