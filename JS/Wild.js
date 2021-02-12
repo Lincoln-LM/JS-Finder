@@ -19,10 +19,12 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     let state = [];
     
     let pid;
+    let low;
+    let high;
     do
     {
-      let low = go.nextUShort();
-      let high = go.nextUShort();
+      low = go.nextUShort();
+      high = go.nextUShort();
       pid = ((high << 16)>>>0 | low)>>>0;
     } while (pid % 25 != targetNature);
     
