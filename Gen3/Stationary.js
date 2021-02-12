@@ -48,4 +48,5 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     
     rng.nextUInt();
   }
+  return states;
 }
