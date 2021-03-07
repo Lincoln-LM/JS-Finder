@@ -8,7 +8,7 @@
 		body {
 			font-family: "Montserrat", sans-serif;
 		}
-		button {
+		.button-1 {
 			background-color:#505f69;
 			border-radius:3px;
 			border:1px solid #3f4e58;
@@ -20,12 +20,27 @@
 			text-decoration:none;
 			text-shadow:0px 1px 0px #2b665e;
 		}
-		button:hover {
+		.button-1:hover {
 			background-color:#6c7c7c;
 		}
-		button:active {
+		.button-1:active {
 			position:relative;
 			top:1px;
+		}
+		.button-2 {
+			background-color:#505f69;
+			border-radius:3px;
+			border:1px solid #3f4e58;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-size:12px;
+			padding:2px 16px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #2b665e;
+		}
+		.button-2:hover {
+			background-color:#6c7c7c;
 		}
 		input, select {
 			border-style: none;

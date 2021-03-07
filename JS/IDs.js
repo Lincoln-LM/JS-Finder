@@ -2,7 +2,6 @@ function generate(initial,initialAdvances,maxAdvances,delay,targetTid,targetSid,
     let rng = new PokeRNG(initial);
     let states = [];
     let psv = Math.floor(((targetPid>>>16)^(targetPid&0xFFFF))/8)
-    console.log(psv)
     
     rng.next(initialAdvances+delay);
     for (let i=0;i<maxAdvances;i++) {
