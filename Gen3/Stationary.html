@@ -5,18 +5,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>Gen 3 Stationary Generator</title>
-	<script src="/JS-Finder/JS/LCRNG.js"></script>
-	<script src="/JS-Finder/JS/tools.js"></script>
-	<script src="/JS-Finder/JS/Stationary.js"></script>
+	<script src="../JS/LCRNG.js"></script>
+	<script src="../JS/tools.js"></script>
+	<script src="../JS/Stationary.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="/JS-Finder/CSS/main.css">
-	<link rel="stylesheet" href="/JS-Finder/CSS/states.css">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<link rel="stylesheet" href="../CSS/states.css">
 </head>
 	
 
 <body>
 	<div class="info">
-		<a>Initial Seed:</a> <input style="width: 100px;" type="text" id="initial" value="1234"><br>
+		<a>Initial Seed:</a><input style="width: 100px;" type="text" id="initial" value="1234"><br>
 		<a>Initial Advances: </a><input style="width:80px;" type="number" id="initialadvances" value="0"><br>
 		<a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="12345"><br>
 		<a>SID: </a><input style="width:80px;" type="number" max="65535" id="sid" value="54321"><br>
@@ -24,7 +24,7 @@
 		<a>Delay: </a><input style="width:80px;" type="number" id="delay" value="0"><br>
 	</div><br>
 	<div class="filters">
-		<input id="hpmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="hpmax" type="number" max="31" style="width:25px;" value="31"><a> HP Nature:</a>
+		<input id="hpmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="hpmax" type="number" max="31" style="width:55px;" value="31"><a> HP Nature:</a>
 		<select id="nature" style="text-align-last:center;"><option value="Any">Any</option>
 			<option value="Hardy">Hardy</option>
 			<option value="Lonely">Lonely</option>
@@ -52,12 +52,12 @@
 			<option value="Careful">Careful</option>
 			<option value="Quirky">Quirky</option>
 		</select><br>
-		<input id="atkmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="atkmax" type="number" max="31" style="width:25px;" value="31"><a> Atk Shiny: </a>
+		<input id="atkmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="atkmax" type="number" max="31" style="width:55px;" value="31"><a> Atk Shiny: </a>
 		<input class="checkbox-round" type="checkbox" value="shiny" id="shiny" style="position: relative; left:-3px;"><br>
-		<input id="defmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="defmax" type="number" max="31" style="width:25px;" value="31"><a> Def</a><br>
-		<input id="spamin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spamax" type="number" max="31" style="width:25px;" value="31"><a> SpA</a><br>
-		<input id="spdmin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spdmax" type="number" max="31" style="width:25px;" value="31"><a> SpD</a><br>
-		<input id="spemin" type="number" max="31" style="width:25px;" value="0"> ~ <input id="spemax" type="number" max="31" style="width:25px;" value="31"><a> Spe</a><br>
+		<input id="defmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="defmax" type="number" max="31" style="width:55px;" value="31"><a> Def</a><br>
+		<input id="spamin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="spamax" type="number" max="31" style="width:55px;" value="31"><a> SpA</a><br>
+		<input id="spdmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="spdmax" type="number" max="31" style="width:55px;" value="31"><a> SpD</a><br>
+		<input id="spemin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="spemax" type="number" max="31" style="width:55px;" value="31"><a> Spe</a><br>
 	</div>
 	<br>
 	<button onclick=gen3StationaryGenerator()>Generate</button>
@@ -101,7 +101,7 @@
 			let initial = parseInt(document.getElementById("initial").value,16);
 			let initialAdvances = parseInt(document.getElementById("initialadvances").value);
 			let maxAdvances = parseInt(document.getElementById("maxadvances").value);
-			let delay = parseInt(document.getElementById("delay").value)
+			let delay = parseInt(document.getElementById("delay").value);
 			let tid = parseInt(document.getElementById("tid").value);
 			let sid = parseInt(document.getElementById("sid").value);
 			

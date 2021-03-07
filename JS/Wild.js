@@ -1,4 +1,4 @@
-function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targetNature,isShiny) {
+function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targetNature,isShiny,targetES) {
   let natures = [ "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" ]
   
   let tsv = Math.floor((tid^sid)/8);
@@ -11,7 +11,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     let go = new PokeRNG(seed);
     
     go.next();
-    let slot = go.nextUShort();
+    let slot = getSlot(go.nextUShort() % 100);
     go.next();
     
     let searchNature = go.nextUShort() % 25;
@@ -40,6 +40,9 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
         flag = false;
       }
     }
+    if (targetES != "Any" & slot.toString() != targetES) {
+      flag = false;
+    }
     if (targetNature != "Any" & natures[pid%25] != targetNature) {
       flag = false;
     }
@@ -49,6 +52,7 @@ function generate(initial,initialAdvances,maxAdvances,delay,tid,sid,ivn,ivx,targ
     
     if (flag) {
       state.push(i+initialAdvances);
+      state.push(slot);
       state.push(pid.toString(16).toUpperCase());
       if (tsv == psv) {
         state.push("Yes");
