@@ -1,3 +1,36 @@
+const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+const zeroPad = (num, places) => String(num).padStart(places, '0')
+
+Date.prototype.addDays = function(days) {
+  var date = new Date(this.valueOf());
+  date.setDate(date.getDate() + days);
+  return date;
+}
+
+Date.prototype.addSeconds = function(seconds) {
+  var date = new Date(this.valueOf());
+  date.setSeconds(date.getSeconds() + seconds);
+  return date;
+}
+
+function dateToSeed(dayIndex,hour,minute) {
+  v = (1440 * dayIndex + 960 * Math.floor(hour / 10) + 60 * (hour % 10) + 16 * Math.floor(minute / 10) + (minute % 10) + 0x5A0)&0xFFFFFFFF;
+  v = (v >> 16) ^ (v & 0xFFFF);
+  return v;
+}
+
+function dateFormat(d) {
+  s = (days[d.getDay()].substring(0,3)+" "+months[d.getMonth()].substring(0,3))
+  s = s+" "+d.getDate()+" "+zeroPad(d.getHours(),2)+":"+zeroPad(d.getMinutes(),2)+":00 2000";
+  return s;
+}
+
+function daysInMonth (month, year) {
+  return new Date(year, month+1, 0).getDate();
+}
+
 function getIVs(iv1, iv2) {
   hp = iv1 & 0x1f;
   atk = (iv1 >>> 5) & 0x1f;
