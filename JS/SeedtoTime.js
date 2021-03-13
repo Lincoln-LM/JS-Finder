@@ -10,7 +10,6 @@ function generate(seed) {
     let dayIndex = 0;
     for (month=0;month<12;month++) {
         for (day=0;day<daysInMonth(month, 2000);day++,dayIndex++) {
-            //console.log(dayIndex+1,month+1,day+1)
             for (hour=0;hour<24;hour++) {
                 for (minute=0;minute<60;minute++) {
                     v = dateToSeed(dayIndex,hour,minute);
