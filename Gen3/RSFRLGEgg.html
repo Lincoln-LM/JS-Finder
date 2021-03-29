@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>RSFRLG Egg Generator</title>
+	<script src="../JS/LCRNG.js"></script>
+	<script src="../JS/tools.js"></script>
+	<script src="../JS/RSFRLGEgg.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<link rel="stylesheet" href="../CSS/states.css">
+</head>
+	
+
+<body>
+	<div class="info">
+		<a>Held Seed:</a><input style="width: 100px;" type="text" id="heldinitial" value="1234"><a style="position:relative; left:10px">Pickup Seed:</a><input style="width: 100px; position:relative; left:15px" type="text" id="pickupinitial" value="4321"><br>
+		<a>Held: Initial Advances: </a><input style="width:80px;" type="number" id="heldinitialadvances" value="0"><a style="position:relative; left:10px">Max Advances: </a><input style="width:80px; position:relative; left:10px" type="number" id="heldmaxadvances" value="0"><br>
+		<a>Pickup: Initial Advances: </a><input style="width:80px;" type="number" id="pickupinitialadvances" value="0"><a style="position:relative; left:10px">Max Advances: </a><input style="width:80px; position:relative; left:10px" type="number" id="pickupmaxadvances" value="0"><br>
+		<a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="12345"><br>
+		<a>SID: </a><input style="width:80px;" type="number" max="65535" id="sid" value="54321"><br>
+		<a>Delay: </a><input style="width:80px;" type="number" id="delay" value="0"><br>
+		<a>Parent IVs</a><br>
+		<strong style="position:relative; left: 25px;">A</strong><strong style="position:relative; left: 73px;">B</strong><br>
+		<input id="hpA" type="number" max="31" style="width:55px;" value="0"><input id="hpB" type="number" max="31" style="width:55px;" value="31"><a style="position:relative; left:10px">HP</a><br>
+		<input id="atkA" type="number" max="31" style="width:55px;" value="0"><input id="atkB" type="number" max="31" style="width:55px;" value="31"><a style="position:relative; left:10px">Atk</a><br>
+		<input id="defA" type="number" max="31" style="width:55px;" value="0"><input id="defB" type="number" max="31" style="width:55px;" value="31"><a style="position:relative; left:10px">Def</a><br>
+		<input id="spaA" type="number" max="31" style="width:55px;" value="0"><input id="spaB" type="number" max="31" style="width:55px;" value="31"><a style="position:relative; left:10px">SpA</a><br>
+		<input id="spdA" type="number" max="31" style="width:55px;" value="0"><input id="spdB" type="number" max="31" style="width:55px;" value="31"><a style="position:relative; left:10px">SpD</a><br>
+		<input id="speA" type="number" max="31" style="width:55px;" value="0"><input id="speB" type="number" max="31" style="width:55px;" value="31"><a style="position:relative; left:10px">Spe</a><br>
+		<select id="compatability" style="text-align-last:center; width:300px;">
+			<option value="20">Don't seem to like eachother</option>
+			<option value="50">Seem to like eachother</option>
+			<option value="70">Seem to like eachother very much</option>
+		</select><br>
+	</div><br>
+	<div class="filters">
+		<input id="hpmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="hpmax" type="number" max="31" style="width:55px;" value="31"><a> HP Nature:</a>
+		<select id="nature" style="text-align-last:center;"><option value="Any">Any</option>
+			<option value="Hardy">Hardy</option>
+			<option value="Lonely">Lonely</option>
+			<option value="Brave">Brave</option>
+			<option value="Adamant">Adamant</option>
+			<option value="Naughty">Naughty</option>
+			<option value="Bold">Bold</option>
+			<option value="Docile">Docile</option>
+			<option value="Relaxed">Relaxed</option>
+			<option value="Impish">Impish</option>
+			<option value="Lax">Lax</option>
+			<option value="Timid">Timid</option>
+			<option value="Hasty">Hasty</option>
+			<option value="Serious">Serious</option>
+			<option value="Jolly">Jolly</option>
+			<option value="Naive">Naive</option>
+			<option value="Modest">Modest</option>
+			<option value="Mild">Mild</option>
+			<option value="Quiet">Quiet</option>
+			<option value="Bashful">Bashful</option>
+			<option value="Rash">Rash</option>
+			<option value="Calm">Calm</option>
+			<option value="Gentle">Gentle</option>
+			<option value="Sassy">Sassy</option>
+			<option value="Careful">Careful</option>
+			<option value="Quirky">Quirky</option>
+		</select><br>
+		<input id="atkmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="atkmax" type="number" max="31" style="width:55px;" value="31"><a> Atk Shiny: </a>
+		<input class="checkbox-round" type="checkbox" value="shiny" id="shiny" style="position: relative; left:-3px;"><br>
+		<input id="defmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="defmax" type="number" max="31" style="width:55px;" value="31"><a> Def</a><br>
+		<input id="spamin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="spamax" type="number" max="31" style="width:55px;" value="31"><a> SpA</a><br>
+		<input id="spdmin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="spdmax" type="number" max="31" style="width:55px;" value="31"><a> SpD</a><br>
+		<input id="spemin" type="number" max="31" style="width:55px;" value="0"> ~ <input id="spemax" type="number" max="31" style="width:55px;" value="31"><a> Spe</a><br>
+	</div>
+	<br>
+	<button class="button-1" onclick=gen3RSFRLGEggGenerator()>Generate</button>
+	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+	<br>
+	<br>
+	<table id="states" style="width: 100%">
+		<colgroup>
+			<col style="width: 10%;">
+			<col style="width: 10%;">
+			<col style="width: 10%;">
+			<col style="width: 7%;">
+			<col style="width: 7%;">
+			<col style="width: 7%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+			<col style="width: 3%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Held Advance</th>
+				<th>Pickup Advance</th>
+				<th>PID</th>
+				<th>Shiny</th>
+				<th>Nature</th>
+				<th>Ability</th>
+				<th>HP</th>
+				<th>Atk</th>
+				<th>Def</th>
+				<th>SpA</th>
+				<th>SpD</th>
+				<th>Spe</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script>
+		function gen3RSFRLGEggGenerator() {
+			let heldinitial = parseInt(document.getElementById("heldinitial").value,16);
+			let pickupinitial = parseInt(document.getElementById("pickupinitial").value,16);
+			let heldInitialAdvances = parseInt(document.getElementById("heldinitialadvances").value);
+			let heldMaxAdvances = parseInt(document.getElementById("heldmaxadvances").value);
+			let pickupInitialAdvances = parseInt(document.getElementById("pickupinitialadvances").value);
+			let pickupMaxAdvances = parseInt(document.getElementById("pickupmaxadvances").value);
+			let compatability = parseInt(document.getElementById("compatability").value);
+			let delay = parseInt(document.getElementById("delay").value);
+			let tid = parseInt(document.getElementById("tid").value);
+			let sid = parseInt(document.getElementById("sid").value);
+			
+			let t = document.getElementById("states");
+			let b = t.tBodies[0];
+			b.innerHTML = "";
+			
+			let ivn = [ document.getElementById("hpmin").value, document.getElementById("atkmin").value, document.getElementById("defmin").value, document.getElementById("spamin").value, document.getElementById("spdmin").value, document.getElementById("spemin").value ];
+			let ivx = [ document.getElementById("hpmax").value, document.getElementById("atkmax").value, document.getElementById("defmax").value, document.getElementById("spamax").value, document.getElementById("spdmax").value, document.getElementById("spemax").value ];
+			
+			let iva = [ parseInt(document.getElementById("hpA").value), parseInt(document.getElementById("atkA").value), parseInt(document.getElementById("defA").value), parseInt(document.getElementById("spaA").value), parseInt(document.getElementById("spdA").value), parseInt(document.getElementById("speA").value) ];
+			let ivb = [ parseInt(document.getElementById("hpB").value), parseInt(document.getElementById("atkB").value), parseInt(document.getElementById("defB").value), parseInt(document.getElementById("spaB").value), parseInt(document.getElementById("spdB").value), parseInt(document.getElementById("speB").value) ];
+			let targetNature = document.getElementById("nature").value;
+			let isShiny = document.getElementById("shiny").checked;
+  
+			let states = generate(heldinitial,pickupinitial,heldInitialAdvances,pickupInitialAdvances,heldMaxAdvances,pickupMaxAdvances,delay,tid,sid,ivn,ivx,iva,ivb,compatability,targetNature,isShiny);
+  
+			for (let state of states) {
+				let row = b.insertRow();
+				
+				for (let val of state) {
+					let cell = row.insertCell();
+					let text = document.createTextNode(val);
+					cell.appendChild(text);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
