@@ -1,2 +1,2 @@
 # JS-Finder
-Javascript PokeFinder-like Tool
+Hub for online tools made by me (mostly rng)
