@@ -70,7 +70,7 @@
 		}
 		function reverse() {  
             var mult = Math.pow(10,precision.value)
-            var encounters = Math.round((Math.log(1-(percent_reverse.value/100)) / Math.log(1-(1/odds.value))) * mult)/mult;
+            var encounters = Math.round((Math.log(1-(percent_reverse.value/100)) / Math.log(1-(1/odds_reverse.value))) * mult)/mult;
             encounters_reverse.textContent = encounters.toString();
 		}
 	</script>
