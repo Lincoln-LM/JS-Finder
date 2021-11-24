@@ -14,7 +14,7 @@
 
 <body>
 	<div class="info">
-        <a>One of the red and one of the green tiles can spawn feebas.</a><br>
+        <a>Either both red or both green tiles can generate feebas.</a><br>
 		<a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="65535" id="lottery" value="0" onchange="generate()"><br>
 	</div><br>
 	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
@@ -95,9 +95,9 @@
             let high_location_neg = TILE_DATA[2 + 0x84 * 2 + high_neg % 0x84];
             ctx.fillStyle = 'green';
             ctx.fillRect(1+(low_location_pos[0]-0x9)*16,1+(low_location_pos[1]-0x12)*16,15,15);
-            ctx.fillRect(1+(low_location_neg[0]-0x9)*16,1+(low_location_neg[1]-0x12)*16,15,15);
-            ctx.fillStyle = 'red';
             ctx.fillRect(1+(high_location_pos[0]-0x9)*16,1+(high_location_pos[1]-0x12)*16,15,15);
+            ctx.fillStyle = 'red';
+            ctx.fillRect(1+(low_location_neg[0]-0x9)*16,1+(low_location_neg[1]-0x12)*16,15,15);
             ctx.fillRect(1+(high_location_neg[0]-0x9)*16,1+(high_location_neg[1]-0x12)*16,15,15);
         }
     </script>
