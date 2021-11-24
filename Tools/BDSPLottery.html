@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>BDSP Lottery Predictor</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<link rel="stylesheet" href="../CSS/states.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+	
+
+<body>
+	<div class="info">
+		<a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="65535" id="lottery" value="0"><br>
+		<a>Max Days To Display: </a><input style="width:80px;" type="number" id="maxadvances" value="10"><br>
+	</div><br>
+	<button class="button-1" onclick=lotteryGenerator()>Generate</button>
+	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+	<br>
+	<br>
+	<table id="states" style="width: 100%">
+		<colgroup>
+			<col style="width: 50%;">
+			<col style="width: 50%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>In X Days</th>
+				<th>Lottery Number</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script>
+		function lotteryGenerator() {
+			let lottery = parseInt(document.getElementById("lottery").value);
+			let maxAdvances = parseInt(document.getElementById("maxadvances").value);
+			
+			let t = document.getElementById("states");
+			let b = t.tBodies[0];
+			b.innerHTML = "";
+  
+			for (let i=0;i<maxAdvances;i++) {
+				let row = b.insertRow();
+				row.insertCell().appendChild(document.createTextNode(i));
+				row.insertCell().appendChild(document.createTextNode(lottery));
+				lottery = (lottery * 0x8965 + 0xF729) & 0xFFFF
+			}
+		}
+	</script>
+</body>
+</html>
