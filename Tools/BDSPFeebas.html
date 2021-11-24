@@ -19,14 +19,16 @@
 	</div><br>
 	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
 	<br>
-    <div style="display:none;">
-        <img id="source" src="map.png">
+    <div style="display:none;" id="hidden">
     </div>
     <canvas id="canvas"></canvas>
     <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-        const image = document.getElementById('source');
+        const hidden = document.getElementById('hidden')
+        const image = document.createElement('img');
+        image.src = "map.png";
+        hidden.appendChild(image);
         canvas.width = image.width;
         canvas.height = image.height;
         const TILE_DATA = [
