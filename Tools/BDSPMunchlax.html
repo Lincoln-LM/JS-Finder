@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>BDSP Munchlax</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<link rel="stylesheet" href="../CSS/states.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+	
+
+<body>
+	<div class="info">
+		<a>6 Digit Display TID: </a><input style="width:80px;" type="number" max="999999" id="tid" value="0" onchange="generate()"><br>
+	</div><br>
+    <h>One of the following trees should be a Rare Tree: <ul id="rare"></ul></h>
+	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+    <script>
+        var trees = ["Route 205, Floaroma Town side", "Route 205, Eterna City side", "Route 206", "Route 207", "Route 208", "Route 209", "Route 210, Solaceon Town side", "Route 210, Celestic Town side", "Route 211", "Route 212, Hearthome City side", "Route 212, Pastoria City side", "Route 213", "Route 214", "Route 215", "Route 218", "Route 221", "Route 222", "Valley Windworks", "Eterna Forest", "Fuego Ironworks", "Floaroma Meadow"];
+        generate();
+        function generate() {
+            let g7tid = document.getElementById("tid").value;
+            let rare = document.getElementById("rare");
+            let masked = g7tid & 0b111111;
+            rare.innerHTML = "<li>" + trees[masked%21] + "</li>";
+            masked += 0b1000000
+            rare.innerHTML += "<li>" + trees[masked%21] + "</li>";
+            masked += 0b1000000
+            rare.innerHTML += "<li>" + trees[masked%21] + "</li>";
+            masked += 0b1000000
+            rare.innerHTML += "<li>" + trees[masked%21] + "</li>";
+        }
+    </script>
+</body>
+</html>
