@@ -1,6 +1,8 @@
+@import url(./vars.css);
+
 * {
-			background-color:#19232d;
-			color:#eaeae7;
+			background-color:var(--main-bg);
+			color: var(--main-fg);
 		}
 		a {
 			font-size: 13px;
@@ -9,42 +11,42 @@
 			font-family: "Montserrat", sans-serif;
 		}
 		.button-1 {
-			background-color:#505f69;
+			background-color: var(--btn-bg);
 			border-radius:3px;
-			border:1px solid #3f4e58;
+			border:1px solid var(--btn-brdr);
 			display:inline-block;
 			cursor:pointer;
-			color:#ffffff;
+			color:var(--btn-fg);
 			font-size:17px;
 			padding:5px 24px;
 			text-decoration:none;
-			text-shadow:0px 1px 0px #2b665e;
+			text-shadow:0px 1px 0px var(--btn-shdw);
 		}
 		.button-1:hover {
-			background-color:#6c7c7c;
+			background-color: var(--btn-bg-hvr);
 		}
 		.button-1:active {
 			position:relative;
 			top:1px;
 		}
 		.button-2 {
-			background-color:#505f69;
+			background-color:var(--btn-bg);
 			border-radius:3px;
-			border:1px solid #3f4e58;
+			border:1px solid var(--btn-brdr);
 			display:inline-block;
 			cursor:pointer;
-			color:#ffffff;
+			color:var(--btn-fg);
 			font-size:12px;
 			padding:2px 16px;
 			text-decoration:none;
-			text-shadow:0px 1px 0px #2b665e;
+			text-shadow:0px 1px 0px var(--btn-shdw);
 		}
 		.button-2:hover {
-			background-color:#6c7c7c;
+			background-color:var(--btn-bg-hvr);
 		}
 		input, select {
 			border-style: none;
-			border: 1px solid #2c3a44;
+			border: 1px solid var(--inpt-brdr);
 			border-radius: 25px; 
 			text-align: center;
 			-moz-appearance: none; 
@@ -66,23 +68,23 @@
 		.checkbox-round {
 			width: 11px;
 			height: 11px;
-			background-color: #27343e;
+			background-color: var(--chkbx-bg);
 			border-radius: 50%;
 			vertical-align: middle;
-			border: 1px solid #4f545a;
+			border: 1px solid var(--chkbx-brdr);
 			-webkit-appearance: none;
 			outline: none;
 			cursor: pointer;
 		}
 		.checkbox-round:checked {
-			background-color: gray;
+			background-color: var(--chkbx-bg-hvr);
 		}
 		.filters {
-			border: 1px solid #27343e;
+			border: 1px solid var(--chkbx-bg);
 			padding: 5px 10px;
 		}
 	  	.info {
-			border: 1px solid #27343e;
+			border: 1px solid var(--chkbx-bg);
 			padding: 5px 10px;
 		}
 
