@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>SWSH Seed Finder</title>
+	<script src="../../JS/XoroshiroInverse.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../../CSS/main.css">
+	<link rel="stylesheet" href="../../CSS/states.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+	
+
+<body>
+	<div class="info">
+        <a>Record 128 Motions (Press Right Stick on Summary)</a><br>
+        <a>You will be 128 advances from this state after recording motions</a><br>
+		<a>Motions:</a><input style="width: 95%;" onkeyup="update()" onchange="update()" type="text" id="motions" maxlength=128 value=""><br>
+        <button class="button-2" onclick='addMotion("0")'>(0) Physical</button><button class="button-2" onclick='addMotion("1")'>(1) Special</button><br>
+        <a id="count">000</a><a>/128</a><br>
+        <button class="button-2" onclick=findSeed()>Find Seed!</button><br>
+        <a>[S0]: </a><a id="s0"></a><br>
+        <a>[S1]: </a><a id="s1"></a>
+    </div><br>
+	<button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
+	<br>
+	<script>
+        function stringToBits(string) {
+            let bits = [];
+            for (i=0; i < string.length; i++) {
+                bits.push(parseInt(string[i]));
+            }
+            return bits;
+        }
+		function findSeed() {
+            let s = calculateState(stringToBits(document.getElementById("motions").value));
+            document.getElementById("s0").innerText = s[0].toUpperCase();
+            document.getElementById("s1").innerText = s[1].toUpperCase();
+		}
+
+        function addMotion(val) {
+            if (document.getElementById("motions").value.length < 128) {
+                document.getElementById("motions").value += val;
+                update();
+            }
+        }
+
+        function update() {
+            document.getElementById("count").innerText = ("000"+document.getElementById("motions").value.length.toString(10)).slice(-3);
+        }
+	</script>
+</body>
+<br>
+<footer>Credit for algorithm! <br>
+    <a href="https://github.com/niart120/Project_Xe">Project Xe</a></footer>
+</html>
