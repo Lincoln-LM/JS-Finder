@@ -30,11 +30,10 @@ function calculateState(res) {
             pivot += 1;
         }
     }
-    console.log(res);
-    for (i=127;i>0;i--) {
+    for (i=127;i>=0;i--) {
         let check = BigInt(1);
         check <<= BigInt(128-i-1);
-        for (j=i-1;j>0;j--) {
+        for (j=i-1;j>=0;j--) {
             if ((BigInt(bitmat[j])&BigInt(check))==BigInt(check)) {
                 bitmat[j] ^= bitmat[i];
                 res[j] ^= res[i];
