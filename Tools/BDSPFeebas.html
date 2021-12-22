@@ -14,26 +14,41 @@
 
 <body>
 	<div class="info">
-        <strong>OUTDATED AS OF 1.3</strong><br>
-        <a>Either both red <strong>or</strong> both green tiles can generate feebas.</a><br>
-        <a>This means that if one of the red tiles does not give you feebas, both of the green will.</a><br>
+        <strong>Since update 1.1.3 the tool now requires two days of lottery numbers, but it can predict all 4 feebas tiles</strong><br>
+        <a>All of the green tiles can spawn feebas!</a><br>
         <a>If you fish with a Good/Super Rod and your lead pokemon has Illuminate/Arena Trap/No Guard, every time you fish will have a guaranteed hook!</a><br>
         <a>You can catch a Machoke with No Guard in the same room you fish for feebas.</a><br>
         <a>(if the map does not show up then reload the page)</a><br>
-		<a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="65535" id="lottery" value="0" onchange="generate()"><br>
+		<a>Yesterdays Lottery Number: </a><input style="width:80px;" type="number" max="99999" id="lottery_yesterday" value="0" onchange="generate()"><br>
+		<a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="99999" id="lottery_today" value="0" onchange="generate()"><br>
+        <a>Todays Swarm: </a><select style="width:200px;" id="swarm_today" onchange="generate()"></select><br>
 	</div><br>
 	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
 	<br>
     <div style="display:none;" id="hidden">
     </div>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas"></canvas><br>
+    <a id="todays_seed"></a>
     <script>
+        const swarms = ['Route 201 - Doduo', 'Route 202 - Zigzagoon', 'Route 203 - Cubone', 'Route 206 - Nosepass', 'Route 207 - Phanpy',
+                        'Route 208 - Dunsparce', 'Route 209 - Snubbull', 'Route 213 - Absol', 'Route 214 - Spoink', 'Route 215 - Drowzee',
+                        'Route 216 - Delibird', 'Route 217 - Swinub', 'Route 218 - Voltorb', 'Route 221 - Farfetch\'d', 'Route 222 - Skitty',
+                        'Route 224 - Natu', 'Route 225 - Makuhita', 'Route 226 - Krabby', 'Route 227 - Spinda', 'Route 228 - Beldum',
+                        'Route 229 - Pidget', 'Route 230 - Corsola', 'Lake Verity - Surskit', 'Lake Valor - Lickitung', 'Lake Acuity - Smoochum',
+                        'Valley Windworks - Electrike', 'Eterna Forest - Slakoth', 'Fuego Ironworks - Magnemite'];
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-        const hidden = document.getElementById('hidden')
+        const hidden = document.getElementById('hidden');
         const image = document.createElement('img');
         image.src = "map.png";
         hidden.appendChild(image);
+        for (let i = 0; i < 0x1c; i++) {
+            let option = new Option(swarms[i],i);
+            document.getElementById("swarm_today").appendChild(option);
+        }
+        document.getElementById("swarm_today").value = 10;
+        document.getElementById("lottery_today").value = 64757;
+        document.getElementById("lottery_yesterday").value = 40416;
         const TILE_DATA = [
             [0x09,0x12],[0x0a,0x12],[0x0b,0x12],[0x0c,0x12],[0x0d,0x12],[0x0e,0x12],[0x0f,0x12],[0x10,0x12],[0x11,0x12],[0x12,0x12],[0x13,0x12],[0x14,0x12],[0x15,0x12],[0x16,0x12],[0x17,0x12],[0x18,0x12],[0x19,0x12],[0x1a,0x12],
             [0x09,0x13],[0x0a,0x13],[0x0b,0x13],[0x0c,0x13],[0x0d,0x13],[0x0e,0x13],[0x0f,0x13],[0x10,0x13],[0x11,0x13],[0x12,0x13],[0x13,0x13],[0x14,0x13],[0x15,0x13],[0x16,0x13],[0x17,0x13],[0x18,0x13],[0x19,0x13],[0x1a,0x13],
@@ -77,6 +92,7 @@
             generate();
         });
         function clear() {
+            document.getElementById("todays_seed").innerText = "";
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(image,0,0);
             ctx.fillStyle = 'black';
@@ -87,8 +103,80 @@
                 ctx.fillRect(0,16*i,image.width,1);
             }
         }
+
+        function ARNG(seed) {
+            seed = seed * BigInt(0x6c078965) + BigInt(0x1);
+            return seed & BigInt(0xFFFFFFFF);
+        }
+
+        function MRNGR(seed) {
+            seed = seed * BigInt(0xEEB9EB65) + BigInt(0xFC77A683);
+            return seed & BigInt(0xFFFFFFFF);
+        }
+
+        function MRNG(seed) {
+            seed = seed * BigInt(0x41C64E6D) + BigInt(0x3039);
+            return seed & BigInt(0xFFFFFFFF);
+        }
+
         function generate() {
             clear();
+            let lotto0 = parseInt(document.getElementById("lottery_yesterday").value);
+            let lotto1 = parseInt(document.getElementById("lottery_today").value);
+            let swarm = parseInt(document.getElementById("swarm_today").value);
+            let possible = [];
+
+            // please dont copy paste my code :) 
+            // lotto0 = lotto0_val % 100000
+            // loop to test all possibilities
+            for (let lotto0_val = lotto0; lotto0_val < 0x100000; lotto0_val += 100000) {
+                for (let low = 0; low < 0x1000; low++) {
+                    // reverse to get yesterdays group seed, then advance to get todays
+                    let today_seed = ARNG(MRNGR((BigInt(lotto0_val)<<BigInt(0xc)) | BigInt(low)));
+                    // daily = abs(int_32(group_seed))
+                    let today_daily = today_seed;
+                    if (today_daily > 0x80000000) {
+                        today_daily = BigInt(0x100000000) - today_daily;
+                    }
+                    // swarm is based on daily and helps to narrow down the group seed
+                    if (today_daily % BigInt(0x1c) != swarm) {
+                        continue
+                    }
+                    let flag = false;
+                    // lotto1 = lotto1_val % 100000
+                    // loop to test all possibilities
+                    for (let lotto1_val = lotto1; lotto1_val < 0x100000; lotto1_val += 100000) {
+                        if (BigInt(lotto1_val) == ((MRNG(today_seed)) >> BigInt(0xc))) {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag) {
+                        possible.push(today_seed);
+                    }
+                }
+            }
+
+            if (possible.length > 1) {
+                alert(`Error when calculating group seed, please submit an issue at https://github.com/Lincoln-LM/JS-Finder\n ${possible}`);
+            }
+
+            if (possible.length != 0) {
+                let today_daily = possible[0];
+                if (today_daily > 0x80000000) {
+                    today_daily = BigInt(0x100000000) - today_daily;
+                }
+                ctx.fillStyle = 'green';
+                for (let tile = 0; tile < 4; tile++) {
+                    let pos = ((Number(today_daily)>>(tile*8))&0xFF)%0x84;
+                    let tile_pos = TILE_DATA[0x85 * (3-tile) + pos];
+                    ctx.fillRect(1+(tile_pos[0]-0x9)*16,1+(tile_pos[1]-0x12)*16,15,15);
+                }
+            }
+
+            // Pre 1.1.3 algo
+            
+            /*
             let lotto = document.getElementById("lottery").value;
             let seed = (lotto * 0xEB65 + 0xA683) & 0xFFFF;
             let seed_neg = 0x10000-seed;
@@ -106,6 +194,7 @@
             ctx.fillStyle = 'red';
             ctx.fillRect(1+(low_location_neg[0]-0x9)*16,1+(low_location_neg[1]-0x12)*16,15,15);
             ctx.fillRect(1+(high_location_neg[0]-0x9)*16,1+(high_location_neg[1]-0x12)*16,15,15);
+            */
         }
     </script>
     <footer>Credits for helping with the research behind this!:<br>
