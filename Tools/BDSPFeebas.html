@@ -166,6 +166,7 @@
                 if (today_daily > 0x80000000) {
                     today_daily = BigInt(0x100000000) - today_daily;
                 }
+                document.getElementById("todays_seed").innerText = possible[0].toString(16);
                 ctx.fillStyle = 'green';
                 for (let tile = 0; tile < 4; tile++) {
                     let pos = ((Number(today_daily)>>(tile*8))&0xFF)%0x84;
