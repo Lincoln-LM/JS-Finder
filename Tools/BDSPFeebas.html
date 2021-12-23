@@ -14,20 +14,22 @@
 
 <body>
 	<div class="info">
-        <strong>Since update 1.1.3 the tool now requires two days of lottery numbers, but it can predict all 4 feebas tiles</strong><br>
-        <a>All of the green tiles can spawn feebas!</a><br>
-        <a>If you fish with a Good/Super Rod and your lead pokemon has Illuminate/Arena Trap/No Guard, every time you fish will have a guaranteed hook!</a><br>
-        <a>You can catch a Machoke with No Guard in the same room you fish for feebas.</a><br>
-        <a>(if the map does not show up then reload the page)</a><br>
-		<a>Yesterdays Lottery Number: </a><input style="width:80px;" type="number" max="99999" id="lottery_yesterday" value="0" onchange="generate()"><br>
-		<a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="99999" id="lottery_today" value="0" onchange="generate()"><br>
-        <a>Todays Swarm: </a><select style="width:200px;" id="swarm_today" onchange="generate()"></select><br>
+        <strong>Press the "+" to add information for Day 1/2</strong><br>
+        <div id="yesterday">
+            <strong>Day 1 Information</strong><br>
+            <button class="button-2" onclick="addYesterday()">+</button>
+        </div><br>
+        <div id="today">
+            <strong>Day 2 Information</strong><br>
+            <button class="button-2" onclick="addToday()">+</button>
+        </div>
 	</div><br>
+    <button class="button-1" onclick="generate()">Generate</button>
 	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
 	<br>
     <div style="display:none;" id="hidden">
     </div>
-    <canvas id="canvas"></canvas><br>
+    <canvas id="canvas" style="display:none;"></canvas><br>
     <a id="todays_seed"></a>
     <script>
         const swarms = ['Route 201 - Doduo', 'Route 202 - Zigzagoon', 'Route 203 - Cubone', 'Route 206 - Nosepass', 'Route 207 - Phanpy',
@@ -36,19 +38,100 @@
                         'Route 224 - Natu', 'Route 225 - Makuhita', 'Route 226 - Krabby', 'Route 227 - Spinda', 'Route 228 - Beldum',
                         'Route 229 - Pidget', 'Route 230 - Corsola', 'Lake Verity - Surskit', 'Lake Valor - Lickitung', 'Lake Acuity - Smoochum',
                         'Valley Windworks - Electrike', 'Eterna Forest - Slakoth', 'Fuego Ironworks - Magnemite'];
+        const spheres = ['Red','Blue','Green','Prism','Scale']
+        const options = ['Lotto Number',"Swarm","Drill Sphere","Sold Sphere"];
+        const colors = ['green','red','blue'];
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         const hidden = document.getElementById('hidden');
         const image = document.createElement('img');
+        let yesterday = [];
+        let today = [];
+        let yest_count = 0;
+        let toda_count = 0;
         image.src = "map.png";
         hidden.appendChild(image);
-        for (let i = 0; i < 0x1c; i++) {
-            let option = new Option(swarms[i],i);
-            document.getElementById("swarm_today").appendChild(option);
+        function addYesterday() {
+            let selectDiv = document.createElement("div");
+            let select = document.createElement("select");
+            for (let i = 0; i < options.length; i++) {
+                let option = new Option(options[i],i);
+                select.appendChild(option);
+            }
+            select.style = "width:200px;";
+            select.id = `yesterday-${yest_count++}`;
+            function x() {
+                createValueSelect(select.id);
+            }
+            select.onchange = x;
+            selectDiv.appendChild(select);
+            document.getElementById("yesterday").appendChild(selectDiv);
+            createValueSelect(`yesterday-${yest_count-1}`);
         }
-        document.getElementById("swarm_today").value = 10;
-        document.getElementById("lottery_today").value = 64757;
-        document.getElementById("lottery_yesterday").value = 40416;
+        function addToday() {
+            let selectDiv = document.createElement("div");
+            let select = document.createElement("select");
+            for (let i = 0; i < options.length; i++) {
+                let option = new Option(options[i],i);
+                select.appendChild(option);
+            }
+            select.style = "width:200px;";
+            select.id = `today-${toda_count++}`;
+            function x() {
+                createValueSelect(select.id);
+            }
+            select.onchange = x;
+            selectDiv.appendChild(select);
+            document.getElementById("today").appendChild(selectDiv);
+            createValueSelect(`today-${toda_count-1}`);
+        }
+        function createValueSelect(select) {
+            let value;
+            select = document.getElementById(select);
+            let selectDiv = select.parentElement;
+            while (selectDiv.childNodes.length > 1) {
+                selectDiv.removeChild(selectDiv.lastChild);
+            }
+            switch (parseInt(select.value)) {
+                case 0:
+                    value = document.createElement("input");
+                    value.style = "width:80px;";
+                    value.type = "number";
+                    value.max = "99999";
+                    value.value = "0";
+                    selectDiv.appendChild(value);
+                    break
+                case 1:
+                    value = document.createElement("select");
+                    value.style = "width:200px;";
+                    for (let i = 0; i < 0x1c; i++) {
+                        let option = new Option(swarms[i],i);
+                        value.appendChild(option);
+                    }
+                    selectDiv.appendChild(value);
+                    break
+                case 2:
+                    value = document.createElement("select");
+                    value.style = "width:100px;";
+                    for (let i = 0; i < 3; i++) {
+                        let option = new Option(spheres[i],i);
+                        value.appendChild(option);
+                    }
+                    selectDiv.appendChild(value);
+                    break
+                case 3:
+                    value = document.createElement("select");
+                    value.style = "width:100px;";
+                    for (let i = 0; i < 5; i++) {
+                        let option = new Option(spheres[i],i);
+                        value.appendChild(option);
+                    }
+                    selectDiv.appendChild(value);
+                    break
+                default:
+                    console.log(select.value);
+            }
+        }
         const TILE_DATA = [
             [0x09,0x12],[0x0a,0x12],[0x0b,0x12],[0x0c,0x12],[0x0d,0x12],[0x0e,0x12],[0x0f,0x12],[0x10,0x12],[0x11,0x12],[0x12,0x12],[0x13,0x12],[0x14,0x12],[0x15,0x12],[0x16,0x12],[0x17,0x12],[0x18,0x12],[0x19,0x12],[0x1a,0x12],
             [0x09,0x13],[0x0a,0x13],[0x0b,0x13],[0x0c,0x13],[0x0d,0x13],[0x0e,0x13],[0x0f,0x13],[0x10,0x13],[0x11,0x13],[0x12,0x13],[0x13,0x13],[0x14,0x13],[0x15,0x13],[0x16,0x13],[0x17,0x13],[0x18,0x13],[0x19,0x13],[0x1a,0x13],
@@ -89,7 +172,7 @@
             canvas.width = image.width;
             canvas.height = image.height;
             clear();
-            generate();
+            addYesterday();
         });
         function clear() {
             document.getElementById("todays_seed").innerText = "";
@@ -119,61 +202,143 @@
             return seed & BigInt(0xFFFFFFFF);
         }
 
+        function intabs(seed) {
+            if (seed > 0x80000000) {
+                seed = BigInt(0x100000000) - seed;
+            }
+            return seed
+        }
+
+
         function generate() {
             clear();
-            let lotto0 = parseInt(document.getElementById("lottery_yesterday").value);
-            let lotto1 = parseInt(document.getElementById("lottery_today").value);
-            let swarm = parseInt(document.getElementById("swarm_today").value);
             let possible = [];
-
-            // please dont copy paste my code :) 
-            // lotto0 = lotto0_val % 100000
-            // loop to test all possibilities
-            for (let lotto0_val = lotto0; lotto0_val < 0x100000; lotto0_val += 100000) {
-                for (let low = 0; low < 0x1000; low++) {
-                    // reverse to get yesterdays group seed, then advance to get todays
-                    let today_seed = ARNG(MRNGR((BigInt(lotto0_val)<<BigInt(0xc)) | BigInt(low)));
-                    // daily = abs(int_32(group_seed))
-                    let today_daily = today_seed;
-                    if (today_daily > 0x80000000) {
-                        today_daily = BigInt(0x100000000) - today_daily;
-                    }
-                    // swarm is based on daily and helps to narrow down the group seed
-                    if (today_daily % BigInt(0x1c) != swarm) {
-                        continue
-                    }
-                    let flag = false;
-                    // lotto1 = lotto1_val % 100000
-                    // loop to test all possibilities
-                    for (let lotto1_val = lotto1; lotto1_val < 0x100000; lotto1_val += 100000) {
-                        if (BigInt(lotto1_val) == ((MRNG(today_seed)) >> BigInt(0xc))) {
-                            flag = true;
-                            break;
-                        }
-                    }
-                    if (flag) {
-                        possible.push(today_seed);
-                    }
+            let lotto0 = lotto1 = swarm0 = swarm1 = drill0 = drill1 = sold0 = sold1 = null;
+            for (let i = 0; i < yest_count; i++) {
+                let type = parseInt(document.getElementById(`yesterday-${i}`).value);
+                let value = parseInt(document.getElementById(`yesterday-${i}`).parentElement.lastChild.value);
+                switch (type) {
+                    case 0:
+                        lotto0 = value;
+                        break;
+                    case 1:
+                        swarm0 = value;
+                        break;
+                    case 2:
+                        drill0 = value;
+                        break;
+                    case 3:
+                        sold0 = value;
+                        break;
                 }
             }
-
-            if (possible.length > 1) {
-                alert(`Error when calculating group seed, please submit an issue at https://github.com/Lincoln-LM/JS-Finder\n ${possible}`);
+            for (let i = 0; i < toda_count; i++) {
+                let type = parseInt(document.getElementById(`today-${i}`).value);
+                let value = parseInt(document.getElementById(`today-${i}`).parentElement.lastChild.value);
+                switch (type) {
+                    case 0:
+                        lotto1 = value;
+                        break;
+                    case 1:
+                        swarm1 = value;
+                        break;
+                    case 2:
+                        drill1 = value;
+                        break;
+                    case 3:
+                        sold1 = value;
+                        break;
+                }
+            }
+            if (lotto0 == null) {
+                alert("No Day 1 Lottery Number to base seed on.\nThis is required to get results");
+                return;
             }
 
-            if (possible.length != 0) {
+            // please dont copy paste my code :) 
+            for (let lotto0_val = lotto0; lotto0_val < 0x100000; lotto0_val += 100000) {
+                for (let low = 0; low < 0x1000; low++) {
+                    let yeste_seed = MRNGR((BigInt(lotto0_val) << BigInt(0xc)) | BigInt(low))
+                    let today_seed = ARNG(yeste_seed);
+                    let today_daily = Number(intabs(today_seed));
+                    let yeste_daily = Number(intabs(yeste_seed));
+
+                    if (lotto1 != null) {
+                        if (BigInt(lotto1) != (((MRNG(today_seed)) >> BigInt(0xc)) % BigInt(100000))) {
+                            continue
+                        }
+                    }
+                    if (swarm0 != null) {
+                        if (yeste_daily % 0x1c != swarm0) {
+                            continue
+                        }
+                    }
+                    if (swarm1 != null) {
+                        if (today_daily % 0x1c != swarm1) {
+                            continue
+                        }
+                    }
+                    if (drill0 != null) {
+                        if (Math.floor((today_daily % 999) / 333) != drill0) {
+                            continue
+                        }
+                    }
+                    if (drill1 != null) {
+                        if (Math.floor((today_daily % 999) / 333) != drill1) {
+                            continue
+                        }
+                    }
+                    if (sold0 != null) {
+                        if (Math.floor((today_daily % 1000) / 200) != sold0) {
+                            continue
+                        }
+                    }
+                    if (sold1 != null) {
+                        if (Math.floor((today_daily % 1000) / 200) != sold1) {
+                            continue
+                        }
+                    }
+
+                    possible.push(today_seed);
+                }
+            }
+            let message = possible.length > 1 ? possible.length < 4 ? `\nYour tiles will be displayed with ${100/possible.length}% certainty` : '\nPlease add more information' : "";
+            alert(`${possible.length} Possible Seeds ${message}`);
+            console.log(possible);
+            if (possible.length == 1) {
+                canvas.style = "";
                 let today_daily = possible[0];
                 if (today_daily > 0x80000000) {
                     today_daily = BigInt(0x100000000) - today_daily;
                 }
-                document.getElementById("todays_seed").innerText = possible[0].toString(16);
-                ctx.fillStyle = 'green';
+                document.getElementById("todays_seed").innerText = possible[0];
+                ctx.fillStyle = colors[0];
                 for (let tile = 0; tile < 4; tile++) {
                     let pos = ((Number(today_daily)>>(tile*8))&0xFF)%0x84;
                     let tile_pos = TILE_DATA[0x85 * (3-tile) + pos];
                     ctx.fillRect(1+(tile_pos[0]-0x9)*16,1+(tile_pos[1]-0x12)*16,15,15);
                 }
             }
+            else if (possible.length < 4) {
+                canvas.style = "";
+                document.getElementById("todays_seed").innerText = possible;
+                for (let i = 0; i < 2; i++) {
+                    ctx.fillStyle = colors[i];
+                    let today_daily = possible[i];
+                    if (today_daily > 0x80000000) {
+                        today_daily = BigInt(0x100000000) - today_daily;
+                    }
+                    for (let tile = 0; tile < 4; tile++) {
+                        let pos = ((Number(today_daily)>>(tile*8))&0xFF)%0x84;
+                        let tile_pos = TILE_DATA[0x85 * (3-tile) + pos];
+                        ctx.fillRect(1+(tile_pos[0]-0x9)*16,1+(tile_pos[1]-0x12)*16,15,15);
+                    }
+                }
+            }
+            else {
+                canvas.style = "display:none;";
+            }
+
 
             // Pre 1.1.3 algo
             
@@ -198,6 +363,19 @@
             */
         }
     </script>
+    <div class="info">
+        <strong>Extra Info</strong>
+        <ul>
+            <li>The colored tiles can spawn feebas</li>
+            <li>If there are multiple colors then you need to try one of each color to be sure of hooking feebas</li>
+            <li>The more information you have entered the more you can narrow down your group seed and feebas tiles</li>
+            <li>Two days worth of lottery numbers is the easiest way to narrow it down</li>
+            <li>You can check your lottery number in Jubilife City</li>
+            <li>You need to have beaten the elite four to check swarms</li>
+            <li>If you fish with a Good/Super Rod and your lead pokemon has Illuminate/Arena Trap/No Guard, every time you fish will have a guaranteed hook!</li>
+            <li>You can catch a Machoke with No Guard in the same room you fish for feebas</li>
+        </ul>
+    </div>
     <footer>Credits for helping with the research behind this!:<br>
         <a href=https://github.com/DRayX>DRayX</a> <a href=https://gist.github.com/DRayX/d618ca7adc69065950a30425fae6eece>(link to gist on this topic)</a><br>
         <a>EzPzStreamz in the PokemonRNG Discord</a><br>
