@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>BDSP TID/SID Tracker</title>
+	<script src="../../JS/Xorshift.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../../CSS/main.css">
+	<link rel="stylesheet" href="../../CSS/states.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+	
+
+<body>
+	<div class="info">
+		<a>Timestamp:</a><input style="width: 200px;" type="text" id="ts" value=""><br>
+		<a>S[0]:</a><input style="width: 200px;" type="text" id="s0" maxlength=16 value=""><br>
+		<a>S[1]:</a><input style="width: 200px;" type="text" id="s1" maxlength=16 value=""><br>
+		<a>Target Advance:</a><input style="width: 100px;" onchange="updateTarget()" type="number" id="tadv" maxlength=16 value=""><br>
+		<a>Advances: </a><a id="adv">0</a><br>
+        <a>Current Timestamp: </a><a id="curr">0</a><br>
+        <a>Time Until Next Advance: </a><a id="tuna">0</a><br>
+        <a>Time Until Target Advance: </a><a id="tuta">0</a><br>
+    </div><br>
+    <button class="button-1" onclick="generate()" style="position:relative;left:2px">Generate</button>
+	<button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
+	<br>
+	<script>
+        let t0,t1,interval,rng,ts,tts,curr,advances;
+        function updateCurrent() {
+            curr = Date.now()/1000;
+            while (curr >= ts) {
+                ts += rng.rangeF(100,370)/30 - 0.048;
+                advances += 1;
+            }
+            document.getElementById("adv").innerText = advances;
+            document.getElementById("curr").innerText = Math.round(curr*100)/100;
+            document.getElementById("tuna").innerText = Math.round((ts-curr)*100)/100;
+            document.getElementById("tuta").innerText = Math.round((tts-curr)*100)/100;
+        }
+        function updateTarget() {
+            tts = parseFloat(document.getElementById("ts").value);
+            let target = parseInt(document.getElementById("tadv").value);
+            let trng = new Xorshift(t0 >> 32n, t0 & 0xFFFFFFFFn, t1 >> 32n, t1 & 0xFFFFFFFFn);
+            for (let i = 1; i < target; i++) {
+                tts += trng.rangeF(100,370)/30 - 0.048;
+            }
+        }
+        function generate() {
+            if (interval) {
+                clearInterval(interval);
+            }
+            t0 = BigInt('0x'+document.getElementById("s0").value);
+            t1 = BigInt('0x'+document.getElementById("s1").value);
+            rng = new Xorshift(t0 >> 32n, t0 & 0xFFFFFFFFn, t1 >> 32n, t1 & 0xFFFFFFFFn);
+            ts = parseFloat(document.getElementById("ts").value);
+            advances = 0;
+            updateTarget();
+            interval = setInterval(updateCurrent,100);
+        }
+	</script>
+</body>
+</html>
