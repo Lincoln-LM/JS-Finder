@@ -5,7 +5,7 @@ class Xorshift {
     this.s2 = BigInt(s2);
     this.s3 = BigInt(s3);
   }
-  
+
   next() {
     let t = this.s0 ^ this.s0 << 11n & 0xFFFFFFFFn;
     this.s0 = this.s1;

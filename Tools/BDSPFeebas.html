@@ -333,7 +333,7 @@
                 if (today_daily > 0x80000000) {
                     today_daily = BigInt(0x100000000) - today_daily;
                 }
-                document.getElementById("todays_seed").innerText = possible[0];
+                document.getElementById("todays_seed").innerText = "Group Seed: " + possible[0].toString(16);
                 ctx.fillStyle = colors[0];
                 for (let tile = 0; tile < 4; tile++) {
                     let pos = ((Number(today_daily)>>(tile*8))&0xFF)%0x84;
@@ -343,10 +343,11 @@
             }
             else if (possible.length != 0 && possible.length < 4) {
                 canvas.style = "";
-                document.getElementById("todays_seed").innerText = possible;
+                var seed_hex = [];
                 for (let i = 0; i < 2; i++) {
                     ctx.fillStyle = colors[i];
                     let today_daily = possible[i];
+                    seed_hex.push(today_daily.toString(16));
                     if (today_daily > 0x80000000) {
                         today_daily = BigInt(0x100000000) - today_daily;
                     }
@@ -356,6 +357,7 @@
                         ctx.fillRect(1+(tile_pos[0]-0x9)*16,1+(tile_pos[1]-0x12)*16,15,15);
                     }
                 }
+                document.getElementById("todays_seed").innerText = "Possible Group Seeds: " + seed_hex.join("/");
             }
             else {
                 canvas.style = "display:none;";

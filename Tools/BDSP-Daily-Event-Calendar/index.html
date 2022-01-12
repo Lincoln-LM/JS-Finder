@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="title" content="BDSP Daily Event Calendar">
+	<meta name="description" content="BDSP Daily Event Predictor!">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="BDSP Daily Event Calendar">
+	<meta property="og:description" content="BDSP Daily Event Predictor!">
+	<!-- <meta property="og:image" content=""> -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="BDSP Feebas Calculator">
+	<meta property="twitter:description" content="BDSP Daily Event Predictor!">
+	<!-- <meta property="twitter:image" content=""> -->
+	<meta name="theme-color" content="#dea5a4">
+	<title>BDSP Daily Event Calendar</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY1HPCV2W0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HY1HPCV2W0');
+    </script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../../CSS/main.css">
+	<link rel="stylesheet" href="../../CSS/states.css">
+	<link rel="stylesheet" href="../../JS/fullcalendar/main.css">
+    <script src='../../JS/fullcalendar/main.js'></script>
+    <script>
+        const offset = new Date().getTimezoneOffset();
+        const swarm_text = ['Route 201<br>Doduo', 'Route 202<br>Zigzagoon', 'Route 203<br>Cubone', 'Route 206<br>Nosepass', 'Route 207<br>Phanpy',
+                        'Route 208<br>Dunsparce', 'Route 209<br>Snubbull', 'Route 213<br>Absol', 'Route 214<br>Spoink', 'Route 215<br>Drowzee',
+                        'Route 216<br>Delibird', 'Route 217<br>Swinub', 'Route 218<br>Voltorb', 'Route 221<br>Farfetch\'d', 'Route 222<br>Skitty',
+                        'Route 224<br>Natu', 'Route 225<br>Makuhita', 'Route 226<br>Krabby', 'Route 227<br>Spinda', 'Route 228<br>Beldum',
+                        'Route 229<br>Pidgey', 'Route 230<br>Corsola', 'Lake Verity<br>Surskit', 'Lake Valor<br>Lickitung', 'Lake Acuity<br>Smoochum',
+                        'Valley Windworks<br>Electrike', 'Eterna Forest<br>Slakoth', 'Fuego Ironworks<br>Magnemite'];
+        const swarm_pokemon = ['doduo','zigzagoon','cubone','nosepass','phanpy',
+                               'dunsparce', 'snubbull', 'absol', 'spoink', 'drowzee',
+                               'delibird','swinub','voltorb','farfetchd','skitty',
+                               'natu', 'makuhita', 'krabby', 'spinda', 'beldum',
+                               'pidgey','corsola','surskit','lickitung','smoochum',
+                               'electrike','slakoth','magnemite']
+        function ARNG(seed) {
+            seed = seed * 0x6C078965n + 0x1n;
+            return seed & 0xFFFFFFFFn;
+        }
+
+        function MRNGR(seed) {
+            seed = seed * 0xEEB9EB65n + 0xFC77A683n;
+            return seed & 0xFFFFFFFFn;
+        }
+
+        function MRNG(seed) {
+            seed = seed * 0x41C64E6Dn + 0x3039n;
+            return seed & 0xFFFFFFFFn;
+        }
+
+        function intabs(seed) {
+            if (seed & 0x80000000n) {
+                seed = 0x100000000n - seed;
+            }
+            return seed
+        }
+
+        var calendar;
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                eventContent: function(arg) {
+                    let arrayOfDomNodes = []
+                    // title event
+                    let titleEvent = document.createElement('div')
+                    if (arg.event._def.title) {
+                        titleEvent.style = arg.event.extendedProps.style;
+                        titleEvent.innerHTML = arg.event._def.title;
+                        titleEvent.classList = "fc-event-title fc-sticky";
+                    }
+        
+                    // image event
+                    let imgEventWrap = document.createElement('div')
+                    if (arg.event.extendedProps.image_url) {
+                        let imgEvent = '<img src="'+arg.event.extendedProps.image_url+'" >';
+                        imgEventWrap.classList = "fc-event-img";
+                        imgEventWrap.innerHTML = imgEvent;
+                    }
+        
+                    arrayOfDomNodes = [titleEvent,imgEventWrap];
+                    return {domNodes: arrayOfDomNodes}
+             },
+            });
+            calendar.render();
+            var date = new Date();
+            date = new Date(date.getTime() - (offset*60*1000))
+            document.getElementById("start-date").value = date.toISOString().split('T')[0];
+            generate();
+        });
+        function generate() {
+            var events = calendar.getEvents();
+            var len = events.length;
+            for (var i = 0; i < len; i++) {
+                events[i].remove();
+            }
+            var starting_seed = BigInt("0x" + document.getElementById("group-seed").value);
+            var starting_date = new Date(document.getElementById("start-date").value);
+            starting_date.setTime(starting_date.getTime() + (offset*60*1000));
+            var current_seed = starting_seed;
+            var current_date = starting_date;
+            var days = parseInt(document.getElementById("day-count").value);
+            for (var i = 0; i < days; i++) {
+                var daily = intabs(current_seed);
+                var swarm = daily % 0x1Cn;
+                var lotto = (MRNG(current_seed) >> 0xCn) % 100000n;
+
+                calendar.addEvent({
+                    title: `${swarm_text[swarm]}`,
+                    image_url:`https://github.com/msikma/pokesprite/raw/master/pokemon-gen8/regular/${swarm_pokemon[swarm]}.png`,
+                    start: current_date,
+                    allDay: true,
+                });
+
+                calendar.addEvent({
+                    title: `\nLotto<br>${lotto}`,
+                    start: current_date,
+                    allDay: true,
+                });
+
+                current_seed = ARNG(current_seed);
+                current_date.setDate(current_date.getDate() + 1);
+            }
+        }
+      </script>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+</head>
+	
+<body>
+    <div class="info">
+        <label for="start-date">Group Seed Date:</label>
+        <input type="date" id="start-date" onchange="generate()">
+        <br>
+        <label for="group-seed">Group Seed: 0x</label>
+        <input style="width:80px;" type="text" id="group-seed" value="00000000" onchange="generate()">
+        <br>
+        <label for="day-count">Day Count:</label>
+        <input style="width:80px;" type="number" id="day-count" value="10" onchange="generate()">
+	</div><br>
+    <div class="info">
+        <strong>How to use</strong>
+        <ol>
+            <li>Obtain two consecutive lotto numbers (day 2 should be from today)</li>
+            <li>Obtain the swarm for today</li>
+            <li>Plug that information into the <a href="../BDSPFeebas.html">Feebas Calculator</a></li>
+            <li>Click "Generate"</li>
+            <li>Copy the hex string present after "Group Seed:" under the feebas tile map</li>
+            <li>Enter this in the "Group Seed" box, along with the date it was obtained (typically today)</li>
+            <li>Change "Day Count" to how many days in the future you want it to predict</li>
+        </ol>
+    </div>
+    <div id='calendar'></div>
+  </body>
+  <footer>
+      <b>Planned Features:</b>
+      <ul>
+        <li>Integrated Feebas Prediction</li>
+        <li>Great Marsh Binocular Prediction</li>
+        <li>Underground Hiker Pedestal/TM Prediction</li>
+      </ul>
+      <b>Likely Possible But Not Planned:</b>
+      <ul>
+        <li>Battle Tower Prediction</li>
+      </ul>
+      <b>Credits:</b>
+      <ul>Sprites provided by: msikma - <a href="https://github.com/msikma/pokesprite">pokesprite</a></ul>
+      <ul>Calendar provided by: <a href="https://fullcalendar.io/">fullcalendar</a></ul>
+  </footer>
+</html>
