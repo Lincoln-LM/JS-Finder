@@ -76,7 +76,6 @@
                     // title event
                     let titleEvent = document.createElement('div')
                     if (arg.event._def.title) {
-                        titleEvent.style = 'font-size: 2.25vw;';
                         titleEvent.innerHTML = arg.event._def.title;
                         titleEvent.classList = "fc-event-title fc-sticky";
                     }
@@ -84,7 +83,7 @@
                     // image event
                     let imgEventWrap = document.createElement('div')
                     if (arg.event.extendedProps.image_url) {
-                        let imgEvent = '<img src="'+arg.event.extendedProps.image_url+'" >';
+                        let imgEvent = `<img src="${arg.event.extendedProps.image_url}">`;
                         imgEventWrap.classList = "fc-event-img";
                         imgEventWrap.innerHTML = imgEvent;
                     }
@@ -117,7 +116,7 @@
                 var lotto = (MRNG(current_seed) >> 0xCn) % 100000n;
 
                 calendar.addEvent({
-                    title: `${swarm_text[swarm]}`,
+                    // title: `${swarm_text[swarm]}`,
                     image_url:`https://github.com/msikma/pokesprite/raw/master/pokemon-gen8/regular/${swarm_pokemon[swarm]}.png`,
                     start: current_date,
                     allDay: true,
