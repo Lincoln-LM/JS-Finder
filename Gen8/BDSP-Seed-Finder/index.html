@@ -1,13 +1,139 @@
-<video autoplay></video>
+<!DOCTYPE html>
 
-<script>
-const constraints = {
-  video: true,
-};
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>BDSP Seed Finder</title>
+	<script src="../../JS/Xorshift.js"></script>
+    <script async src="https://docs.opencv.org/4.5.5/opencv.js" onload="onCvLoaded();" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../../CSS/main.css">
+	<link rel="stylesheet" href="../../CSS/states.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+</head>
 
-const video = document.querySelector("video");
 
-navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-  video.srcObject = stream;
-});
-</script>
+<body>
+	<div class="info">
+        <a>X: </a><input style="width:80px;" type="number" id="x" value="105"><br>
+        <a>Y: </a><input style="width:80px;" type="number" id="y" value="30"><br>
+        <a>W: </a><input style="width:80px;" type="number" id="w" value="40"><br>
+        <a>H: </a><input style="width:80px;" type="number" id="h" value="40"><br>
+    </div><br>
+    <button class="button-1" id="previewButton" style="position:relative;left:2px">Preview</button>
+	<button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
+	<br>
+    <img src="eye.png" id="eye">
+	<br>
+    <video id="video" width="300" height="225"></video>
+    <canvas id="canvasOutput"></canvas>
+	<script>
+        const video = document.getElementById('video');
+        const previewButton = document.getElementById('previewButton');
+        const xInput = document.getElementById('x');
+        const yInput = document.getElementById('y');
+        const wInput = document.getElementById('w');
+        const hInput = document.getElementById('h');
+        const width = video.width;
+        const height = video.height;
+        const FPS = 30;
+        let stream;
+        let streaming = false;
+        function onCvLoaded () {
+            console.log('cv', cv);
+            cv.onRuntimeInitialized = onReady;
+        }
+        function onReady () {
+            let src;
+            let dst;
+            let last = Date.now();
+            const cap = new cv.VideoCapture(video);
+
+            previewButton.addEventListener('click', () => {
+                if (streaming) {
+                    stop();
+                } else {
+                    start();
+                }
+            });
+
+            function start () {
+                previewButton.textContent = "Stop Previewing";
+                navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                .then(_stream => {
+                    stream = _stream;
+                    console.log('stream', stream);
+                    video.srcObject = stream;
+                    video.play();
+                    streaming = true;
+                    src = new cv.Mat(height, width, cv.CV_8UC4);
+                    dst = new cv.Mat(height, width, cv.CV_8UC1);
+                    setTimeout(processVideo, 0)
+                })
+                .catch(err => console.log(`An error occurred: ${err}`));
+            }
+
+            function stop () {
+                previewButton.textContent = "Preview"
+                if (video) {
+                    video.pause();
+                    video.srcObject = null;
+                }
+                if (stream) {
+                    stream.getVideoTracks()[0].stop();
+                }
+                streaming = false;
+            }
+
+            function processVideo () {
+                if (!streaming) {
+                    src.delete();
+                    dst.delete();
+                    return;
+                }
+                const begin = Date.now();
+                cap.read(src)
+                dst = src
+                let x = parseInt(xInput.value);
+                let y = parseInt(yInput.value);
+                let w = parseInt(wInput.value);
+                let h = parseInt(hInput.value);
+                let rect = new cv.Rect(x,y,w,h)
+                let sr = new cv.Mat();
+                let templ = cv.imread('eye');
+                cv.cvtColor(dst, sr, cv.COLOR_RGBA2GRAY);
+                cv.cvtColor(templ, templ, cv.COLOR_RGBA2GRAY);
+                sr = sr.roi(rect);
+                let ds = new cv.Mat();
+                let mask = new cv.Mat();
+                cv.matchTemplate(sr, templ, ds, cv.TM_CCOEFF_NORMED, mask);
+                let result = cv.minMaxLoc(ds, mask);
+                let confidence = result.maxVal;
+                let maxPoint = result.maxLoc;
+                let color = new cv.Scalar(0, 0, 255, 255);
+                let color2 = new cv.Scalar(255, 0, 0, 255);
+                let point = new cv.Point(maxPoint.x+templ.cols, maxPoint.y+templ.rows);
+                cv.rectangle(dst, new cv.Point(x,y), new cv.Point(x+w,y+h), color2, 2, cv.LINE_8, 0);
+                if (confidence >= 0.9) {
+                    cv.rectangle(dst, new cv.Point(maxPoint.x+x,maxPoint.y+y), new cv.Point(point.x+x,point.y+y), color, 2, cv.LINE_8, 0);
+                }
+                else {
+                    let curr = Date.now();
+                    if (curr-last >= 700) {
+                        console.log("blink",Math.round((curr-last)/1000),(curr-last)/1000);
+                        last = curr;
+                    }
+                    else if (300 <= curr-last) {
+                        console.log("double blink");
+                    }
+                    cv.rectangle(dst, new cv.Point(x,y), new cv.Point(x+w,y+h), color, 2, cv.LINE_8, 0);
+                }
+                cv.imshow('canvasOutput', dst);
+                const delay = 1000/FPS - (Date.now() - begin);
+                setTimeout(processVideo, delay);
+            }
+        }
+	</script>
+</body>
+</html>
