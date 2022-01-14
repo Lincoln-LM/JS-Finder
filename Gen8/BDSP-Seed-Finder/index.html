@@ -69,7 +69,7 @@
 
             function start () {
                 previewButton.textContent = "Stop Previewing";
-                navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false })
                 .then(_stream => {
                     stream = _stream;
                     console.log('stream', stream);
