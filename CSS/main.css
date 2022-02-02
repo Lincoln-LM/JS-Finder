@@ -1,6 +1,6 @@
 @import url(./vars.css);
 
-* {
+* :not(.leaflet-marker-icon) {
 			background-color:var(--main-bg);
 			color: var(--main-fg);
 		}
