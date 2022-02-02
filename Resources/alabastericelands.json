@@ -2833,7 +2833,7 @@
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
     "tableID": 995,
-    "spawnerID": -1,
+    "spawnerID": 1428,
     "markerID": "257",
     "ivs": 0
   },

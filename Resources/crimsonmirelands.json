@@ -3680,7 +3680,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 335,
-    "spawnerID": -1,
+    "spawnerID": 0,
     "markerID": "334",
     "ivs": 3
   },
@@ -3702,7 +3702,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 337,
-    "spawnerID": -1,
+    "spawnerID": 17,
     "markerID": "336",
     "ivs": 3
   },
@@ -3746,7 +3746,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 341,
-    "spawnerID": -1,
+    "spawnerID": 51,
     "markerID": "340",
     "ivs": 3
   },
@@ -3768,7 +3768,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 343,
-    "spawnerID": -1,
+    "spawnerID": 153,
     "markerID": "342",
     "ivs": 3
   },
@@ -3801,7 +3801,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 346,
-    "spawnerID": -1,
+    "spawnerID": 34,
     "markerID": "345",
     "ivs": 3
   },
@@ -3812,7 +3812,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 347,
-    "spawnerID": -1,
+    "spawnerID": 102,
     "markerID": "346",
     "ivs": 3
   },
@@ -3856,7 +3856,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 351,
-    "spawnerID": -1,
+    "spawnerID": 85,
     "markerID": "350",
     "ivs": 3
   },
