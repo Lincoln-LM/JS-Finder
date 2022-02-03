@@ -666,7 +666,7 @@
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
     "tableID": 727,
-    "spawnerID": -1,
+    "spawnerID": 136,
     "markerID": "60",
     "ivs": 0
   },
@@ -897,7 +897,7 @@
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
     "tableID": 732,
-    "spawnerID": -1,
+    "spawnerID": 187,
     "markerID": "81",
     "ivs": 0
   },
