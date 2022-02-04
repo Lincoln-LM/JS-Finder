@@ -2008,7 +2008,7 @@
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
     "tableID": 68,
-    "spawnerID": -1,
+    "spawnerID": 2465,
     "markerID": "182",
     "ivs": 0
   },
@@ -3130,7 +3130,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 113,
-    "spawnerID": -1,
+    "spawnerID": 68,
     "markerID": "284",
     "ivs": 3
   },
@@ -3240,7 +3240,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 123,
-    "spawnerID": -1,
+    "spawnerID": 136,
     "markerID": "294",
     "ivs": 3
   },
@@ -3251,7 +3251,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 124,
-    "spawnerID": -1,
+    "spawnerID": 119,
     "markerID": "295",
     "ivs": 3
   },
@@ -3284,7 +3284,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 127,
-    "spawnerID": -1,
+    "spawnerID": 51,
     "markerID": "298",
     "ivs": 3
   },
@@ -3295,7 +3295,7 @@
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
     "tableID": 128,
-    "spawnerID": -1,
+    "spawnerID": 102,
     "markerID": "299",
     "ivs": 3
   },
