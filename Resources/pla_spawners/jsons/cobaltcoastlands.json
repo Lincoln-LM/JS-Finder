@@ -1578,9 +1578,9 @@
       27.82,
       842.15
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/alpha.png",
     "spawnerID": 2431,
-    "ivs": 0,
+    "ivs": 3,
     "name": "lnd_ex_01"
   },
   "2448": {
@@ -4196,9 +4196,9 @@
       41.23,
       176.87
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/alpha.png",
     "spawnerID": 6477,
-    "ivs": 0,
+    "ivs": 3,
     "name": "lnd_ex_00"
   },
   "6494": {
@@ -4207,9 +4207,9 @@
       42.41,
       157.72
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/alpha.png",
     "spawnerID": 6494,
-    "ivs": 0,
+    "ivs": 3,
     "name": "lnd_ex_02"
   },
   "6511": {
@@ -4328,9 +4328,9 @@
       41.81,
       162.51
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/alpha.png",
     "spawnerID": 6681,
-    "ivs": 0,
+    "ivs": 3,
     "name": "lnd_ex_00"
   },
   "6698": {
@@ -4504,7 +4504,7 @@
       64.32,
       385.88
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 6953,
     "ivs": 0,
     "name": "mas_no_00"
@@ -4515,7 +4515,7 @@
       74.36,
       417.62
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 6970,
     "ivs": 0,
     "name": "mas_no_01"
@@ -4526,7 +4526,7 @@
       27.83,
       428.87
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 6987,
     "ivs": 0,
     "name": "mas_no_02"
@@ -4537,7 +4537,7 @@
       27.83,
       428.9
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7004,
     "ivs": 0,
     "name": "mas_no_03"
@@ -4548,7 +4548,7 @@
       25.21,
       275.0
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7021,
     "ivs": 0,
     "name": "mas_no_04"
@@ -4559,7 +4559,7 @@
       24.9,
       247.42
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7038,
     "ivs": 0,
     "name": "mas_no_05"
@@ -4570,7 +4570,7 @@
       25.8,
       889.31
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7055,
     "ivs": 0,
     "name": "mas_no_06"
@@ -4581,7 +4581,7 @@
       25.8,
       889.31
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7072,
     "ivs": 0,
     "name": "mas_no_07"
@@ -4592,7 +4592,7 @@
       34.8,
       545.42
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7089,
     "ivs": 0,
     "name": "mas_no_08"
@@ -4603,7 +4603,7 @@
       34.84,
       545.06
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7106,
     "ivs": 0,
     "name": "mas_no_09"
@@ -4614,7 +4614,7 @@
       45.38,
       210.39
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7123,
     "ivs": 0,
     "name": "mas_no_10"
@@ -4625,7 +4625,7 @@
       47.68,
       169.24
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7140,
     "ivs": 0,
     "name": "mas_no_11"
@@ -4636,7 +4636,7 @@
       27.27,
       861.26
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7157,
     "ivs": 0,
     "name": "mas_no_12"
@@ -4647,7 +4647,7 @@
       47.06,
       924.94
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7174,
     "ivs": 0,
     "name": "mas_no_13"
@@ -4658,7 +4658,7 @@
       47.06,
       924.97
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7191,
     "ivs": 0,
     "name": "mas_no_14"
@@ -4669,7 +4669,7 @@
       22.28,
       978.8
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7208,
     "ivs": 0,
     "name": "mas_no_15"
@@ -4680,7 +4680,7 @@
       27.01,
       918.17
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7225,
     "ivs": 0,
     "name": "mas_no_16"
@@ -4691,7 +4691,7 @@
       25.14,
       436.02
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7242,
     "ivs": 0,
     "name": "mas_no_17"
@@ -4702,7 +4702,7 @@
       24.8,
       647.06
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7259,
     "ivs": 0,
     "name": "mas_no_18"
@@ -4713,7 +4713,7 @@
       24.9,
       613.33
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7276,
     "ivs": 0,
     "name": "mas_no_19"
@@ -4724,7 +4724,7 @@
       29.01,
       837.59
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7293,
     "ivs": 0,
     "name": "mas_no_20"
@@ -4735,7 +4735,7 @@
       29.03,
       837.67
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7310,
     "ivs": 0,
     "name": "mas_no_21"
@@ -4746,7 +4746,7 @@
       27.78,
       931.91
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7327,
     "ivs": 0,
     "name": "mas_no_22"
@@ -4757,7 +4757,7 @@
       27.78,
       931.91
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7344,
     "ivs": 0,
     "name": "mas_no_23"
@@ -4768,7 +4768,7 @@
       27.78,
       931.91
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7361,
     "ivs": 0,
     "name": "mas_no_24"
@@ -4779,7 +4779,7 @@
       33.25,
       279.3
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7378,
     "ivs": 0,
     "name": "mas_no_25"
@@ -4790,7 +4790,7 @@
       33.25,
       279.3
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7395,
     "ivs": 0,
     "name": "mas_no_26"
@@ -4801,7 +4801,7 @@
       26.07,
       793.63
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7412,
     "ivs": 0,
     "name": "mas_no_27"
@@ -4812,7 +4812,7 @@
       26.08,
       793.72
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7429,
     "ivs": 0,
     "name": "mas_no_28"
@@ -4823,7 +4823,7 @@
       26.1,
       583.18
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7446,
     "ivs": 0,
     "name": "mas_no_29"
@@ -4834,7 +4834,7 @@
       27.01,
       810.52
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7463,
     "ivs": 0,
     "name": "mas_no_30"
@@ -4845,7 +4845,7 @@
       27.01,
       810.52
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7480,
     "ivs": 0,
     "name": "mas_no_31"
@@ -4856,7 +4856,7 @@
       26.06,
       335.38
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7497,
     "ivs": 0,
     "name": "mas_no_32"
@@ -4867,7 +4867,7 @@
       26.06,
       335.38
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7514,
     "ivs": 0,
     "name": "mas_no_33"
@@ -4878,7 +4878,7 @@
       24.05,
       42.29
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7531,
     "ivs": 0,
     "name": "mas_no_34"
@@ -4889,7 +4889,7 @@
       24.05,
       42.29
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7548,
     "ivs": 0,
     "name": "mas_no_35"
@@ -4900,7 +4900,7 @@
       66.15,
       401.63
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7565,
     "ivs": 0,
     "name": "mas_no_36"
@@ -4911,7 +4911,7 @@
       66.15,
       401.63
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7582,
     "ivs": 0,
     "name": "mas_no_37"
@@ -4922,7 +4922,7 @@
       25.65,
       821.05
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7599,
     "ivs": 0,
     "name": "mas_no_38"
@@ -4933,7 +4933,7 @@
       26.4,
       461.8
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7616,
     "ivs": 0,
     "name": "mas_no_39"
@@ -4944,7 +4944,7 @@
       26.4,
       461.8
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7633,
     "ivs": 0,
     "name": "mas_no_40"
@@ -4955,7 +4955,7 @@
       22.76,
       341.7
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7650,
     "ivs": 0,
     "name": "mas_no_41"
@@ -4966,7 +4966,7 @@
       23.1,
       233.14
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7667,
     "ivs": 0,
     "name": "mas_no_42"
@@ -4977,7 +4977,7 @@
       27.04,
       76.3
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/event.png",
     "spawnerID": 7684,
     "ivs": 0,
     "name": "mas_no_43"

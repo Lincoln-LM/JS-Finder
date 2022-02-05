@@ -20,10 +20,11 @@ for map_id in range(1,6):
                     flag = split2[-2][:3] in prefixes
                 i += 1
             if split[i-1].split('"')[-2][:3] != "eve":
-                alpha = split[i-1].split('"')[-2][:3] == "oyb" or index == 0
+                alpha = split[i-1].split('"')[-2][4:6] == "ex" or index == 0
+                swarm = split[i-1].split('"')[-2][:3] == "mas"
                 markers[index*17] = {
                     "coords": pos,
-                    "icon": "/pokearth/hisui/icons/alpha.png" if alpha else "/pokearth/hisui/icons/pokeball.png",
+                    "icon": "/pokearth/hisui/icons/alpha.png" if alpha else "/pokearth/hisui/icons/event.png" if swarm else "/pokearth/hisui/icons/pokeball.png",
                     "spawnerID": index*17,
                     "ivs": 3 if alpha else 0,
                     "name": split[i-1].split('"')[-2]
