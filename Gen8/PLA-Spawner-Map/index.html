@@ -34,6 +34,9 @@
     <script src=map.js></script>
     <script>
         let layer;
+        function convertCoordinates(coords) {
+            return [coords[2] * -0.5, coords[0] * 0.5]
+        }
         function update() {
             let location = document.getElementById("locationSelect").value
             map.eachLayer(function(layer){
@@ -46,7 +49,7 @@
                 attribution: "PLA Spawner Map",//map label in bottom right
             }).addTo(map);
             let request = new XMLHttpRequest();
-            request.open("GET", `../../Resources/${location}.json`, false);
+            request.open("GET", `../../Resources/pla_spawners/jsons/${location}.json`, false);
             request.send(null)
             let json = JSON.parse(request.responseText);
             let keys = Object.keys(json);
@@ -59,8 +62,8 @@
                 else {
                     iconURL = `https://www.serebii.net${marker['icon']}`
                 }
-                L.marker(marker['coords'], { icon: L.icon({ iconUrl: iconURL, iconSize: [ 32, 32 ], iconAnchor: [ 16, 16 ]}), spawnerID: marker['spawnerID'], markerID: marker["markerID"], ivs: marker['ivs']}).addTo(map)
-                .bindPopup(`Spawner ID: ${marker['spawnerID']} Marker ID: ${marker['markerID']}`);
+                L.marker(convertCoordinates(marker['coords']), { icon: L.icon({ iconUrl: iconURL, iconSize: [ 32, 32 ], iconAnchor: [ 16, 16 ]}), spawnerID: marker['spawnerID'], markerID: marker["markerID"], ivs: marker['ivs']}).addTo(map)
+                .bindPopup(`Spawner ID: ${marker['spawnerID']}<br>Name: ${marker['name']}`);
             }
         }
         update()
