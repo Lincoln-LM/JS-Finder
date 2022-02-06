@@ -1787,9 +1787,9 @@
       62.84,
       401.03
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 2754,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_ex_00"
   },
   "2771": {
@@ -1853,9 +1853,9 @@
       48.24,
       359.73
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 2856,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_ex_00"
   },
   "2873": {
@@ -2183,9 +2183,9 @@
       60.6,
       886.8
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 3366,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_ex_01"
   },
   "3383": {
@@ -2227,9 +2227,9 @@
       61.53,
       863.7
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 3434,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_ex_01"
   },
   "3451": {
@@ -2282,9 +2282,9 @@
       61.3,
       917.2
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 3519,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_ex_01"
   },
   "3536": {
@@ -2348,9 +2348,9 @@
       69.27,
       663.83
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 3621,
-    "ivs": 3,
+    "ivs": 0,
     "name": "oyb_ex_17"
   },
   "3638": {
@@ -2733,9 +2733,9 @@
       29.82,
       849.17
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "spawnerID": 4216,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_ex_04"
   },
   "4233": {

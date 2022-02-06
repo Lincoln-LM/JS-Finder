@@ -8,7 +8,23 @@ blacklists = [
     [],
     [],
     [],
-    [1122,1428+17,1445+17+17,1530+17+17+17,1632+17+17+17+17,1683+17+17+17+17+17,1700+17+17+17+17+17+17,1734+17+17+17+17+17+17+17,1870+17+17+17+17+17+17+17+17,2856+17+17+17+17+17+17+17+17+17]
+    [1122,
+     1428+17,
+     1445+17+17,
+     1530+17+17+17,
+     1632+17+17+17+17,
+     1683+17+17+17+17+17,
+     1700+17+17+17+17+17+17,
+     1734+17+17+17+17+17+17+17,
+     1870+17+17+17+17+17+17+17+17,
+     2856+17+17+17+17+17+17+17+17+17]
+]
+alphas = [
+    [i*17 for i in range(18)],
+    [i*17 for i in range(18)],
+    [i*17 for i in range(19)],
+    [i*17 for i in range(15)],
+    [i*17 for i in range(13)]
 ]
 
 for map_id in range(1,6):
@@ -31,12 +47,9 @@ for map_id in range(1,6):
             if split[i-1].split('"')[-2][:3] != "eve":
                 if index*17+offset in blacklists[map_id-1]:
                     print(index*17, pos)
-                    # print(line)
                     offset += 17
-                    # if offset == 0:
-                    #     offset += 17
                     continue
-                alpha = split[i-1].split('"')[-2][4:6] == "ex" or index == 0
+                alpha = index*17 in alphas[map_id-1]
                 swarm = split[i-1].split('"')[-2][:3] == "mas"
                 markers[index*17] = {
                     "coords": pos,
@@ -46,6 +59,4 @@ for map_id in range(1,6):
                     "name": split[i-1].split('"')[-2]
                 }
                 index += 1
-                # print(alpha,split[i-1].split('"')[-2],pos)
-    # print(markers)
     json.dump(markers,open(f"./jsons/{locations[map_id-1]}.json","w+"),indent=2)
