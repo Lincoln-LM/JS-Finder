@@ -2,22 +2,12 @@ import json
 
 locations = ["obsidianfieldlands","crimsonmirelands","cobaltcoastlands","coronethighlands","alabastericelands"]
 prefixes = ["eve","fly","gmk","lnd","mas","oyb","swm","whl","sky"]
-# bad system fix logic later
 blacklists = [
     [],
     [],
     [],
     [],
-    [1122,
-     1428+17,
-     1445+17+17,
-     1530+17+17+17,
-     1632+17+17+17+17,
-     1683+17+17+17+17+17,
-     1700+17+17+17+17+17+17,
-     1734+17+17+17+17+17+17+17,
-     1870+17+17+17+17+17+17+17+17,
-     2856+17+17+17+17+17+17+17+17+17]
+    [1122,1428,1445,1530,1632,1683,1700,1734,1870,2856]
 ]
 alphas = [
     [i*17 for i in range(18)],
@@ -29,7 +19,6 @@ alphas = [
 
 for map_id in range(1,6):
     markers = {}
-    offset = 0
     with open(f"./dumps/Spawner_ha_area0{map_id}.txt",encoding="utf-8") as spawner_dump:
         index = 0
         for line in spawner_dump.readlines()[1:]:
@@ -45,9 +34,9 @@ for map_id in range(1,6):
                     flag = split2[-2][:3] in prefixes
                 i += 1
             if split[i-1].split('"')[-2][:3] != "eve":
-                if index*17+offset in blacklists[map_id-1]:
+                if index*17 in blacklists[map_id-1]:
+                    blacklists[map_id-1].remove(index*17)
                     print(index*17, pos)
-                    offset += 17
                     continue
                 alpha = index*17 in alphas[map_id-1]
                 swarm = split[i-1].split('"')[-2][:3] == "mas"
