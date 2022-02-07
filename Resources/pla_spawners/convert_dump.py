@@ -40,12 +40,13 @@ for map_id in range(1,6):
                     continue
                 alpha = index*17 in alphas[map_id-1]
                 swarm = split[i-1].split('"')[-2][:3] == "mas"
-                markers[index*17] = {
-                    "coords": pos,
-                    "icon": "/pokearth/hisui/icons/alpha.png" if alpha else "/pokearth/hisui/icons/event.png" if swarm else "/pokearth/hisui/icons/pokeball.png",
-                    "spawnerID": index*17,
-                    "ivs": 3 if alpha else 0,
-                    "name": split[i-1].split('"')[-2]
-                }
+                if not swarm:
+                    markers[index*17] = {
+                        "coords": pos,
+                        "icon": "/pokearth/hisui/icons/alpha.png" if alpha else "/pokearth/hisui/icons/event.png" if swarm else "/pokearth/hisui/icons/pokeball.png",
+                        "spawnerID": index*17,
+                        "ivs": 3 if alpha else 0,
+                        "name": split[i-1].split('"')[-2]
+                    }
                 index += 1
     json.dump(markers,open(f"./jsons/{locations[map_id-1]}.json","w+"),indent=2)
