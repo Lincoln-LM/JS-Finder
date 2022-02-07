@@ -6,2878 +6,2878 @@
       922.66
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 0,
+    "groupID": 0,
     "ivs": 3,
     "name": "oyb_ex_16"
   },
-  "17": {
+  "1": {
     "coords": [
       841.7,
       50.98,
       536.03
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 17,
+    "groupID": 1,
     "ivs": 3,
     "name": "oyb_ex_00"
   },
-  "34": {
+  "2": {
     "coords": [
       874.45,
       46.54,
       603.61
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 34,
+    "groupID": 2,
     "ivs": 3,
     "name": "oyb_ex_09"
   },
-  "51": {
+  "3": {
     "coords": [
       593.86,
       145.12,
       452.48
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 51,
+    "groupID": 3,
     "ivs": 3,
     "name": "oyb_ex_17"
   },
-  "68": {
+  "4": {
     "coords": [
       575.6,
       122.4,
       524.23
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 68,
+    "groupID": 4,
     "ivs": 3,
     "name": "oyb_ex_07"
   },
-  "85": {
+  "5": {
     "coords": [
       365.07,
       150.47,
       491.58
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 85,
+    "groupID": 5,
     "ivs": 3,
     "name": "oyb_ex_11"
   },
-  "102": {
+  "6": {
     "coords": [
       319.23,
       185.31,
       367.82
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 102,
+    "groupID": 6,
     "ivs": 3,
     "name": "oyb_ex_06"
   },
-  "119": {
+  "7": {
     "coords": [
       533.99,
       87.63,
       854.09
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 119,
+    "groupID": 7,
     "ivs": 3,
     "name": "oyb_ex_12"
   },
-  "136": {
+  "8": {
     "coords": [
       612.76,
       68.92,
       663.79
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 136,
+    "groupID": 8,
     "ivs": 3,
     "name": "oyb_ex_13"
   },
-  "153": {
+  "9": {
     "coords": [
       261.47,
       69.7,
       939.33
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 153,
+    "groupID": 9,
     "ivs": 3,
     "name": "oyb_ex_01"
   },
-  "170": {
+  "10": {
     "coords": [
       150.69,
       93.82,
       719.99
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 170,
+    "groupID": 10,
     "ivs": 3,
     "name": "oyb_ex_03"
   },
-  "187": {
+  "11": {
     "coords": [
       203.05,
       129.63,
       591.34
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 187,
+    "groupID": 11,
     "ivs": 3,
     "name": "oyb_ex_04"
   },
-  "204": {
+  "12": {
     "coords": [
       322.3,
       127.24,
       603.6
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 204,
+    "groupID": 12,
     "ivs": 3,
     "name": "oyb_ex_02"
   },
-  "221": {
+  "13": {
     "coords": [
       447.1,
       107.81,
       621.79
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 221,
+    "groupID": 13,
     "ivs": 3,
     "name": "oyb_ex_05"
   },
-  "238": {
+  "14": {
     "coords": [
       582.56,
       99.09,
       570.51
     ],
     "icon": "/pokearth/hisui/icons/alpha.png",
-    "spawnerID": 238,
+    "groupID": 14,
     "ivs": 3,
     "name": "oyb_ex_14"
   },
-  "255": {
+  "15": {
     "coords": [
       733.38,
       25.04,
       906.85
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 255,
+    "groupID": 15,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "272": {
+  "16": {
     "coords": [
       931.36,
       46.34,
       763.56
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 272,
+    "groupID": 16,
     "ivs": 0,
     "name": "lnd_no_19"
   },
-  "289": {
+  "17": {
     "coords": [
       843.38,
       26.15,
       844.32
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 289,
+    "groupID": 17,
     "ivs": 0,
     "name": "lnd_no_19"
   },
-  "306": {
+  "18": {
     "coords": [
       724.65,
       25.89,
       915.25
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 306,
+    "groupID": 18,
     "ivs": 0,
     "name": "fly_no_04"
   },
-  "323": {
+  "19": {
     "coords": [
       749.04,
       36.7,
       940.07
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 323,
+    "groupID": 19,
     "ivs": 0,
     "name": "fly_no_04"
   },
-  "340": {
+  "20": {
     "coords": [
       799.43,
       36.31,
       927.95
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 340,
+    "groupID": 20,
     "ivs": 0,
     "name": "lnd_no_24"
   },
-  "357": {
+  "21": {
     "coords": [
       765.54,
       36.17,
       927.55
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 357,
+    "groupID": 21,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "374": {
+  "22": {
     "coords": [
       816.91,
       36.14,
       899.14
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 374,
+    "groupID": 22,
     "ivs": 0,
     "name": "lnd_no_24"
   },
-  "391": {
+  "23": {
     "coords": [
       901.87,
       36.0,
       843.37
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 391,
+    "groupID": 23,
     "ivs": 0,
     "name": "lnd_no_19"
   },
-  "408": {
+  "24": {
     "coords": [
       798.12,
       26.05,
       879.86
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 408,
+    "groupID": 24,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "425": {
+  "25": {
     "coords": [
       934.35,
       40.25,
       797.09
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 425,
+    "groupID": 25,
     "ivs": 0,
     "name": "lnd_no_19"
   },
-  "442": {
+  "26": {
     "coords": [
       834.8,
       26.85,
       860.85
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 442,
+    "groupID": 26,
     "ivs": 0,
     "name": "lnd_no_19"
   },
-  "459": {
+  "27": {
     "coords": [
       911.86,
       36.19,
       791.64
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 459,
+    "groupID": 27,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "476": {
+  "28": {
     "coords": [
       901.68,
       36.22,
       786.81
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 476,
+    "groupID": 28,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "493": {
+  "29": {
     "coords": [
       867.26,
       24.76,
       810.28
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 493,
+    "groupID": 29,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "510": {
+  "30": {
     "coords": [
       911.08,
       36.48,
       777.06
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 510,
+    "groupID": 30,
     "ivs": 0,
     "name": "fly_no_04"
   },
-  "527": {
+  "31": {
     "coords": [
       684.34,
       26.63,
       958.51
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 527,
+    "groupID": 31,
     "ivs": 0,
     "name": "fly_no_04"
   },
-  "544": {
+  "32": {
     "coords": [
       698.71,
       26.63,
       890.91
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 544,
+    "groupID": 32,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "561": {
+  "33": {
     "coords": [
       862.5,
       25.9,
       761.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 561,
+    "groupID": 33,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "578": {
+  "34": {
     "coords": [
       780.87,
       36.21,
       942.21
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 578,
+    "groupID": 34,
     "ivs": 0,
     "name": "fly_no_01"
   },
-  "595": {
+  "35": {
     "coords": [
       840.83,
       36.65,
       908.51
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 595,
+    "groupID": 35,
     "ivs": 0,
     "name": "lnd_no_19"
   },
-  "612": {
+  "36": {
     "coords": [
       764.51,
       49.43,
       747.29
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 612,
+    "groupID": 36,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "629": {
+  "37": {
     "coords": [
       748.7,
       49.75,
       784.56
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 629,
+    "groupID": 37,
     "ivs": 0,
     "name": "lnd_no_23"
   },
-  "646": {
+  "38": {
     "coords": [
       710.65,
       49.48,
       758.42
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 646,
+    "groupID": 38,
     "ivs": 0,
     "name": "lnd_no_23"
   },
-  "663": {
+  "39": {
     "coords": [
       699.08,
       48.82,
       803.69
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 663,
+    "groupID": 39,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "680": {
+  "40": {
     "coords": [
       655.82,
       51.5,
       892.96
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 680,
+    "groupID": 40,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "697": {
+  "41": {
     "coords": [
       624.43,
       56.66,
       962.59
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 697,
+    "groupID": 41,
     "ivs": 0,
     "name": "fly_no_02"
   },
-  "714": {
+  "42": {
     "coords": [
       629.14,
       56.92,
       944.04
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 714,
+    "groupID": 42,
     "ivs": 0,
     "name": "fly_no_02"
   },
-  "731": {
+  "43": {
     "coords": [
       634.6,
       52.62,
       901.69
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 731,
+    "groupID": 43,
     "ivs": 0,
     "name": "lnd_no_31"
   },
-  "748": {
+  "44": {
     "coords": [
       766.89,
       49.83,
       773.49
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 748,
+    "groupID": 44,
     "ivs": 0,
     "name": "lnd_no_23"
   },
-  "765": {
+  "45": {
     "coords": [
       811.79,
       49.37,
       747.79
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 765,
+    "groupID": 45,
     "ivs": 0,
     "name": "lnd_no_31"
   },
-  "782": {
+  "46": {
     "coords": [
       817.91,
       49.72,
       761.81
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 782,
+    "groupID": 46,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "799": {
+  "47": {
     "coords": [
       699.03,
       49.24,
       854.4
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 799,
+    "groupID": 47,
     "ivs": 0,
     "name": "fly_no_02"
   },
-  "816": {
+  "48": {
     "coords": [
       687.45,
       49.48,
       810.54
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 816,
+    "groupID": 48,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "833": {
+  "49": {
     "coords": [
       669.34,
       49.43,
       845.87
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 833,
+    "groupID": 49,
     "ivs": 0,
     "name": "lnd_no_11"
   },
-  "850": {
+  "50": {
     "coords": [
       597.56,
       57.06,
       955.76
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 850,
+    "groupID": 50,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "867": {
+  "51": {
     "coords": [
       573.81,
       56.54,
       943.82
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 867,
+    "groupID": 51,
     "ivs": 0,
     "name": "lnd_no_35"
   },
-  "884": {
+  "52": {
     "coords": [
       765.14,
       49.21,
       802.05
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 884,
+    "groupID": 52,
     "ivs": 0,
     "name": "lnd_no_23"
   },
-  "901": {
+  "53": {
     "coords": [
       596.04,
       46.13,
       865.28
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 901,
+    "groupID": 53,
     "ivs": 0,
     "name": "lnd_no_38"
   },
-  "918": {
+  "54": {
     "coords": [
       606.68,
       47.73,
       823.44
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 918,
+    "groupID": 54,
     "ivs": 0,
     "name": "lnd_no_62"
   },
-  "935": {
+  "55": {
     "coords": [
       597.05,
       47.49,
       850.35
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 935,
+    "groupID": 55,
     "ivs": 0,
     "name": "lnd_no_38"
   },
-  "952": {
+  "56": {
     "coords": [
       702.21,
       41.88,
       694.36
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 952,
+    "groupID": 56,
     "ivs": 0,
     "name": "lnd_no_63"
   },
-  "969": {
+  "57": {
     "coords": [
       737.42,
       40.78,
       698.91
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 969,
+    "groupID": 57,
     "ivs": 0,
     "name": "lnd_no_36"
   },
-  "986": {
+  "58": {
     "coords": [
       666.4,
       46.89,
       742.19
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 986,
+    "groupID": 58,
     "ivs": 0,
     "name": "lnd_no_63"
   },
-  "1003": {
+  "59": {
     "coords": [
       690.57,
       42.75,
       721.27
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1003,
+    "groupID": 59,
     "ivs": 0,
     "name": "lnd_no_63"
   },
-  "1020": {
+  "60": {
     "coords": [
       749.26,
       41.84,
       695.99
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1020,
+    "groupID": 60,
     "ivs": 0,
     "name": "lnd_no_36"
   },
-  "1037": {
+  "61": {
     "coords": [
       763.65,
       43.65,
       702.85
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1037,
+    "groupID": 61,
     "ivs": 0,
     "name": "lnd_no_36"
   },
-  "1054": {
+  "62": {
     "coords": [
       726.88,
       54.32,
       607.18
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1054,
+    "groupID": 62,
     "ivs": 0,
     "name": "lnd_no_39"
   },
-  "1071": {
+  "63": {
     "coords": [
       820.5,
       50.48,
       558.41
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1071,
+    "groupID": 63,
     "ivs": 0,
     "name": "lnd_no_39"
   },
-  "1088": {
+  "64": {
     "coords": [
       818.07,
       50.68,
       534.06
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1088,
+    "groupID": 64,
     "ivs": 0,
     "name": "lnd_no_39"
   },
-  "1105": {
+  "65": {
     "coords": [
       727.56,
       55.59,
       624.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1105,
+    "groupID": 65,
     "ivs": 0,
     "name": "lnd_no_39"
   },
-  "1122": {
+  "66": {
     "coords": [
       841.99,
       50.42,
       560.12
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1122,
+    "groupID": 66,
     "ivs": 0,
     "name": "lnd_no_39"
   },
-  "1139": {
+  "67": {
     "coords": [
       718.03,
       58.09,
       639.08
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1139,
+    "groupID": 67,
     "ivs": 0,
     "name": "lnd_no_39"
   },
-  "1156": {
+  "68": {
     "coords": [
       883.12,
       49.99,
       686.66
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1156,
+    "groupID": 68,
     "ivs": 0,
     "name": "lnd_no_37"
   },
-  "1173": {
+  "69": {
     "coords": [
       901.17,
       50.4,
       673.56
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1173,
+    "groupID": 69,
     "ivs": 0,
     "name": "lnd_no_37"
   },
-  "1190": {
+  "70": {
     "coords": [
       843.24,
       46.82,
       629.7
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1190,
+    "groupID": 70,
     "ivs": 0,
     "name": "lnd_no_37"
   },
-  "1207": {
+  "71": {
     "coords": [
       897.05,
       59.3,
       587.0
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1207,
+    "groupID": 71,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1224": {
+  "72": {
     "coords": [
       899.08,
       46.59,
       629.95
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1224,
+    "groupID": 72,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1241": {
+  "73": {
     "coords": [
       851.93,
       46.66,
       615.4
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1241,
+    "groupID": 73,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1258": {
+  "74": {
     "coords": [
       811.46,
       60.51,
       641.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1258,
+    "groupID": 74,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1275": {
+  "75": {
     "coords": [
       806.32,
       60.61,
       606.37
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1275,
+    "groupID": 75,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1292": {
+  "76": {
     "coords": [
       878.28,
       59.98,
       569.83
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1292,
+    "groupID": 76,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1309": {
+  "77": {
     "coords": [
       934.3,
       58.31,
       641.63
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1309,
+    "groupID": 77,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1326": {
+  "78": {
     "coords": [
       918.4,
       60.17,
       612.39
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1326,
+    "groupID": 78,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1343": {
+  "79": {
     "coords": [
       875.69,
       25.72,
       470.21
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1343,
+    "groupID": 79,
     "ivs": 0,
     "name": "lnd_no_26"
   },
-  "1360": {
+  "80": {
     "coords": [
       906.18,
       25.58,
       508.42
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1360,
+    "groupID": 80,
     "ivs": 0,
     "name": "lnd_no_37"
   },
-  "1377": {
+  "81": {
     "coords": [
       743.35,
       91.89,
       541.5
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1377,
+    "groupID": 81,
     "ivs": 0,
     "name": "lnd_no_05"
   },
-  "1394": {
+  "82": {
     "coords": [
       631.47,
       134.96,
       409.76
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1394,
+    "groupID": 82,
     "ivs": 0,
     "name": "lnd_no_41"
   },
-  "1411": {
+  "83": {
     "coords": [
       770.34,
       96.26,
       502.01
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1411,
+    "groupID": 83,
     "ivs": 0,
     "name": "lnd_no_05"
   },
-  "1428": {
+  "84": {
     "coords": [
       626.72,
       109.42,
       543.65
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1428,
+    "groupID": 84,
     "ivs": 0,
     "name": "lnd_ra_12"
   },
-  "1445": {
+  "85": {
     "coords": [
       594.16,
       121.08,
       526.53
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1445,
+    "groupID": 85,
     "ivs": 0,
     "name": "lnd_no_61"
   },
-  "1462": {
+  "86": {
     "coords": [
       658.79,
       109.36,
       537.98
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1462,
+    "groupID": 86,
     "ivs": 0,
     "name": "lnd_no_12"
   },
-  "1479": {
+  "87": {
     "coords": [
       584.85,
       145.85,
       468.77
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1479,
+    "groupID": 87,
     "ivs": 0,
     "name": "lnd_no_43"
   },
-  "1496": {
+  "88": {
     "coords": [
       611.7,
       145.56,
       454.02
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1496,
+    "groupID": 88,
     "ivs": 0,
     "name": "lnd_no_43"
   },
-  "1513": {
+  "89": {
     "coords": [
       665.89,
       97.02,
       573.57
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1513,
+    "groupID": 89,
     "ivs": 0,
     "name": "lnd_no_05"
   },
-  "1530": {
+  "90": {
     "coords": [
       637.51,
       97.99,
       584.28
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1530,
+    "groupID": 90,
     "ivs": 0,
     "name": "lnd_no_05"
   },
-  "1547": {
+  "91": {
     "coords": [
       669.83,
       118.28,
       476.93
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1547,
+    "groupID": 91,
     "ivs": 0,
     "name": "lnd_no_61"
   },
-  "1564": {
+  "92": {
     "coords": [
       730.48,
       112.12,
       490.98
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1564,
+    "groupID": 92,
     "ivs": 0,
     "name": "lnd_no_12"
   },
-  "1581": {
+  "93": {
     "coords": [
       412.72,
       133.64,
       473.16
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1581,
+    "groupID": 93,
     "ivs": 0,
     "name": "lnd_no_43"
   },
-  "1598": {
+  "94": {
     "coords": [
       434.63,
       132.97,
       473.31
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1598,
+    "groupID": 94,
     "ivs": 0,
     "name": "lnd_no_22"
   },
-  "1615": {
+  "95": {
     "coords": [
       514.13,
       129.53,
       507.65
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1615,
+    "groupID": 95,
     "ivs": 0,
     "name": "lnd_no_22"
   },
-  "1632": {
+  "96": {
     "coords": [
       555.56,
       139.78,
       427.03
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1632,
+    "groupID": 96,
     "ivs": 0,
     "name": "lnd_no_41"
   },
-  "1649": {
+  "97": {
     "coords": [
       425.08,
       133.3,
       482.11
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1649,
+    "groupID": 97,
     "ivs": 0,
     "name": "lnd_no_06"
   },
-  "1666": {
+  "98": {
     "coords": [
       555.94,
       138.53,
       481.9
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1666,
+    "groupID": 98,
     "ivs": 0,
     "name": "lnd_no_41"
   },
-  "1683": {
+  "99": {
     "coords": [
       456.69,
       130.54,
       467.66
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1683,
+    "groupID": 99,
     "ivs": 0,
     "name": "lnd_no_43"
   },
-  "1700": {
+  "100": {
     "coords": [
       416.88,
       133.83,
       526.72
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1700,
+    "groupID": 100,
     "ivs": 0,
     "name": "lnd_no_43"
   },
-  "1717": {
+  "101": {
     "coords": [
       484.0,
       129.0,
       476.92
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1717,
+    "groupID": 101,
     "ivs": 0,
     "name": "lnd_no_06"
   },
-  "1734": {
+  "102": {
     "coords": [
       430.5,
       132.52,
       501.71
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1734,
+    "groupID": 102,
     "ivs": 0,
     "name": "lnd_no_45"
   },
-  "1751": {
+  "103": {
     "coords": [
       638.26,
       133.54,
       419.39
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1751,
+    "groupID": 103,
     "ivs": 0,
     "name": "lnd_no_45"
   },
-  "1768": {
+  "104": {
     "coords": [
       535.19,
       131.63,
       464.5
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1768,
+    "groupID": 104,
     "ivs": 0,
     "name": "lnd_no_22"
   },
-  "1785": {
+  "105": {
     "coords": [
       444.39,
       131.62,
       529.41
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1785,
+    "groupID": 105,
     "ivs": 0,
     "name": "lnd_no_06"
   },
-  "1802": {
+  "106": {
     "coords": [
       468.15,
       129.49,
       520.52
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1802,
+    "groupID": 106,
     "ivs": 0,
     "name": "lnd_no_45"
   },
-  "1819": {
+  "107": {
     "coords": [
       481.56,
       128.96,
       527.57
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1819,
+    "groupID": 107,
     "ivs": 0,
     "name": "lnd_no_45"
   },
-  "1836": {
+  "108": {
     "coords": [
       326.21,
       153.14,
       489.47
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1836,
+    "groupID": 108,
     "ivs": 0,
     "name": "lnd_no_10"
   },
-  "1853": {
+  "109": {
     "coords": [
       364.5,
       151.37,
       470.2
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1853,
+    "groupID": 109,
     "ivs": 0,
     "name": "lnd_ra_32"
   },
-  "1870": {
+  "110": {
     "coords": [
       383.54,
       150.11,
       513.45
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1870,
+    "groupID": 110,
     "ivs": 0,
     "name": "lnd_ra_32"
   },
-  "1887": {
+  "111": {
     "coords": [
       311.83,
       153.58,
       510.29
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1887,
+    "groupID": 111,
     "ivs": 0,
     "name": "lnd_no_10"
   },
-  "1904": {
+  "112": {
     "coords": [
       378.87,
       146.6,
       541.61
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1904,
+    "groupID": 112,
     "ivs": 0,
     "name": "lnd_no_32"
   },
-  "1921": {
+  "113": {
     "coords": [
       361.96,
       151.18,
       513.47
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1921,
+    "groupID": 113,
     "ivs": 0,
     "name": "lnd_ra_32"
   },
-  "1938": {
+  "114": {
     "coords": [
       289.71,
       154.24,
       468.48
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1938,
+    "groupID": 114,
     "ivs": 0,
     "name": "lnd_no_10"
   },
-  "1955": {
+  "115": {
     "coords": [
       262.28,
       154.91,
       486.75
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1955,
+    "groupID": 115,
     "ivs": 0,
     "name": "lnd_ra_32"
   },
-  "1972": {
+  "116": {
     "coords": [
       286.21,
       153.36,
       491.66
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1972,
+    "groupID": 116,
     "ivs": 0,
     "name": "lnd_ra_32"
   },
-  "1989": {
+  "117": {
     "coords": [
       284.14,
       144.5,
       547.04
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 1989,
+    "groupID": 117,
     "ivs": 0,
     "name": "lnd_no_56"
   },
-  "2006": {
+  "118": {
     "coords": [
       325.61,
       144.32,
       544.93
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2006,
+    "groupID": 118,
     "ivs": 0,
     "name": "lnd_no_56"
   },
-  "2023": {
+  "119": {
     "coords": [
       235.84,
       172.74,
       382.37
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2023,
+    "groupID": 119,
     "ivs": 0,
     "name": "lnd_ra_07"
   },
-  "2040": {
+  "120": {
     "coords": [
       212.05,
       166.84,
       405.84
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2040,
+    "groupID": 120,
     "ivs": 0,
     "name": "lnd_no_34"
   },
-  "2057": {
+  "121": {
     "coords": [
       289.33,
       179.65,
       365.89
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2057,
+    "groupID": 121,
     "ivs": 0,
     "name": "lnd_ra_07"
   },
-  "2074": {
+  "122": {
     "coords": [
       303.9,
       181.9,
       380.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2074,
+    "groupID": 122,
     "ivs": 0,
     "name": "lnd_ra_07"
   },
-  "2091": {
+  "123": {
     "coords": [
       453.8,
       172.7,
       375.5
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2091,
+    "groupID": 123,
     "ivs": 0,
     "name": "lnd_no_44"
   },
-  "2108": {
+  "124": {
     "coords": [
       409.7,
       177.9,
       389.9
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2108,
+    "groupID": 124,
     "ivs": 0,
     "name": "lnd_no_44"
   },
-  "2125": {
+  "125": {
     "coords": [
       400.0,
       171.2,
       430.0
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2125,
+    "groupID": 125,
     "ivs": 0,
     "name": "lnd_no_44"
   },
-  "2142": {
+  "126": {
     "coords": [
       314.21,
       188.44,
       425.17
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2142,
+    "groupID": 126,
     "ivs": 0,
     "name": "lnd_no_44"
   },
-  "2159": {
+  "127": {
     "coords": [
       482.2,
       154.83,
       405.28
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2159,
+    "groupID": 127,
     "ivs": 0,
     "name": "lnd_no_25"
   },
-  "2176": {
+  "128": {
     "coords": [
       497.48,
       155.27,
       395.03
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2176,
+    "groupID": 128,
     "ivs": 0,
     "name": "lnd_no_25"
   },
-  "2193": {
+  "129": {
     "coords": [
       359.95,
       179.99,
       438.12
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2193,
+    "groupID": 129,
     "ivs": 0,
     "name": "lnd_no_44"
   },
-  "2210": {
+  "130": {
     "coords": [
       274.94,
       186.18,
       426.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2210,
+    "groupID": 130,
     "ivs": 0,
     "name": "lnd_no_44"
   },
-  "2227": {
+  "131": {
     "coords": [
       506.48,
       86.9,
       825.64
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2227,
+    "groupID": 131,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2244": {
+  "132": {
     "coords": [
       552.1,
       87.31,
       824.9
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2244,
+    "groupID": 132,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2261": {
+  "133": {
     "coords": [
       555.3,
       87.5,
       849.8
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2261,
+    "groupID": 133,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2278": {
+  "134": {
     "coords": [
       497.07,
       86.33,
       847.2
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2278,
+    "groupID": 134,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2295": {
+  "135": {
     "coords": [
       503.65,
       87.31,
       860.75
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2295,
+    "groupID": 135,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2312": {
+  "136": {
     "coords": [
       571.84,
       86.33,
       834.92
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2312,
+    "groupID": 136,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2329": {
+  "137": {
     "coords": [
       493.01,
       89.39,
       876.8
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2329,
+    "groupID": 137,
     "ivs": 0,
     "name": "lnd_no_08"
   },
-  "2346": {
+  "138": {
     "coords": [
       330.36,
       82.84,
       889.57
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2346,
+    "groupID": 138,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2363": {
+  "139": {
     "coords": [
       455.77,
       67.3,
       902.91
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2363,
+    "groupID": 139,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2380": {
+  "140": {
     "coords": [
       527.09,
       66.23,
       941.31
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2380,
+    "groupID": 140,
     "ivs": 0,
     "name": "fly_no_03"
   },
-  "2397": {
+  "141": {
     "coords": [
       449.48,
       69.83,
       845.6
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2397,
+    "groupID": 141,
     "ivs": 0,
     "name": "lnd_no_20"
   },
-  "2414": {
+  "142": {
     "coords": [
       560.99,
       76.78,
       749.18
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2414,
+    "groupID": 142,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2431": {
+  "143": {
     "coords": [
       474.23,
       74.94,
       794.61
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2431,
+    "groupID": 143,
     "ivs": 0,
     "name": "lnd_no_20"
   },
-  "2448": {
+  "144": {
     "coords": [
       564.7,
       75.6,
       767.34
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2448,
+    "groupID": 144,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2465": {
+  "145": {
     "coords": [
       579.71,
       69.41,
       906.97
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2465,
+    "groupID": 145,
     "ivs": 0,
     "name": "fly_no_03"
   },
-  "2482": {
+  "146": {
     "coords": [
       487.79,
       66.3,
       938.7
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2482,
+    "groupID": 146,
     "ivs": 0,
     "name": "fly_no_03"
   },
-  "2499": {
+  "147": {
     "coords": [
       467.65,
       72.85,
       821.17
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2499,
+    "groupID": 147,
     "ivs": 0,
     "name": "lnd_no_20"
   },
-  "2516": {
+  "148": {
     "coords": [
       465.75,
       74.94,
       776.57
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2516,
+    "groupID": 148,
     "ivs": 0,
     "name": "lnd_no_20"
   },
-  "2533": {
+  "149": {
     "coords": [
       428.61,
       78.66,
       793.0
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2533,
+    "groupID": 149,
     "ivs": 0,
     "name": "lnd_no_20"
   },
-  "2550": {
+  "150": {
     "coords": [
       538.97,
       74.23,
       775.8
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2550,
+    "groupID": 150,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2567": {
+  "151": {
     "coords": [
       384.04,
       77.57,
       916.71
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2567,
+    "groupID": 151,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2584": {
+  "152": {
     "coords": [
       387.4,
       87.0,
       880.3
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2584,
+    "groupID": 152,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2601": {
+  "153": {
     "coords": [
       357.15,
       94.71,
       851.42
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2601,
+    "groupID": 153,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2618": {
+  "154": {
     "coords": [
       605.58,
       80.2,
       842.42
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2618,
+    "groupID": 154,
     "ivs": 0,
     "name": "fly_no_03"
   },
-  "2635": {
+  "155": {
     "coords": [
       574.33,
       81.65,
       801.64
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2635,
+    "groupID": 155,
     "ivs": 0,
     "name": "lnd_no_46"
   },
-  "2652": {
+  "156": {
     "coords": [
       673.67,
       63.37,
       652.07
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2652,
+    "groupID": 156,
     "ivs": 0,
     "name": "lnd_no_27"
   },
-  "2669": {
+  "157": {
     "coords": [
       662.5,
       65.1,
       663.05
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2669,
+    "groupID": 157,
     "ivs": 0,
     "name": "lnd_no_15"
   },
-  "2686": {
+  "158": {
     "coords": [
       615.86,
       69.29,
       677.51
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2686,
+    "groupID": 158,
     "ivs": 0,
     "name": "lnd_no_27"
   },
-  "2703": {
+  "159": {
     "coords": [
       582.71,
       71.36,
       697.34
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2703,
+    "groupID": 159,
     "ivs": 0,
     "name": "lnd_no_15"
   },
-  "2720": {
+  "160": {
     "coords": [
       513.99,
       69.69,
       735.85
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2720,
+    "groupID": 160,
     "ivs": 0,
     "name": "lnd_no_21"
   },
-  "2737": {
+  "161": {
     "coords": [
       385.28,
       70.27,
       780.86
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2737,
+    "groupID": 161,
     "ivs": 0,
     "name": "lnd_no_09"
   },
-  "2754": {
+  "162": {
     "coords": [
       362.63,
       70.32,
       795.66
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2754,
+    "groupID": 162,
     "ivs": 0,
     "name": "lnd_no_09"
   },
-  "2771": {
+  "163": {
     "coords": [
       327.6,
       69.64,
       800.03
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2771,
+    "groupID": 163,
     "ivs": 0,
     "name": "lnd_no_54"
   },
-  "2788": {
+  "164": {
     "coords": [
       298.13,
       70.53,
       837.18
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2788,
+    "groupID": 164,
     "ivs": 0,
     "name": "lnd_no_54"
   },
-  "2805": {
+  "165": {
     "coords": [
       631.76,
       69.24,
       705.03
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2805,
+    "groupID": 165,
     "ivs": 0,
     "name": "lnd_no_14"
   },
-  "2822": {
+  "166": {
     "coords": [
       480.83,
       69.71,
       743.69
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2822,
+    "groupID": 166,
     "ivs": 0,
     "name": "lnd_no_21"
   },
-  "2839": {
+  "167": {
     "coords": [
       660.48,
       63.83,
       634.42
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2839,
+    "groupID": 167,
     "ivs": 0,
     "name": "lnd_no_14"
   },
-  "2856": {
+  "168": {
     "coords": [
       440.93,
       69.65,
       749.4
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2856,
+    "groupID": 168,
     "ivs": 0,
     "name": "lnd_no_15"
   },
-  "2873": {
+  "169": {
     "coords": [
       561.95,
       69.92,
       725.2
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2873,
+    "groupID": 169,
     "ivs": 0,
     "name": "lnd_no_15"
   },
-  "2890": {
+  "170": {
     "coords": [
       303.39,
       68.41,
       793.93
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2890,
+    "groupID": 170,
     "ivs": 0,
     "name": "swm_no_01"
   },
-  "2907": {
+  "171": {
     "coords": [
       202.7,
       68.4,
       949.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2907,
+    "groupID": 171,
     "ivs": 0,
     "name": "swm_no_00"
   },
-  "2924": {
+  "172": {
     "coords": [
       221.89,
       70.32,
       907.6
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2924,
+    "groupID": 172,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "2941": {
+  "173": {
     "coords": [
       182.3,
       69.9,
       951.5
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2941,
+    "groupID": 173,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "2958": {
+  "174": {
     "coords": [
       170.08,
       69.31,
       881.68
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2958,
+    "groupID": 174,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "2975": {
+  "175": {
     "coords": [
       155.99,
       69.45,
       881.8
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2975,
+    "groupID": 175,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "2992": {
+  "176": {
     "coords": [
       266.21,
       69.36,
       954.27
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 2992,
+    "groupID": 176,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3009": {
+  "177": {
     "coords": [
       191.87,
       69.55,
       925.53
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3009,
+    "groupID": 177,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3026": {
+  "178": {
     "coords": [
       277.09,
       69.55,
       907.67
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3026,
+    "groupID": 178,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3043": {
+  "179": {
     "coords": [
       233.3,
       68.4,
       957.2
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3043,
+    "groupID": 179,
     "ivs": 0,
     "name": "swm_no_00"
   },
-  "3060": {
+  "180": {
     "coords": [
       242.3,
       68.4,
       921.9
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3060,
+    "groupID": 180,
     "ivs": 0,
     "name": "swm_no_00"
   },
-  "3077": {
+  "181": {
     "coords": [
       290.7,
       68.41,
       802.92
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3077,
+    "groupID": 181,
     "ivs": 0,
     "name": "swm_no_01"
   },
-  "3094": {
+  "182": {
     "coords": [
       266.21,
       68.41,
       837.49
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3094,
+    "groupID": 182,
     "ivs": 0,
     "name": "swm_no_01"
   },
-  "3111": {
+  "183": {
     "coords": [
       267.73,
       69.7,
       937.21
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3111,
+    "groupID": 183,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3128": {
+  "184": {
     "coords": [
       280.43,
       69.7,
       957.17
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3128,
+    "groupID": 184,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3145": {
+  "185": {
     "coords": [
       256.32,
       69.7,
       946.23
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3145,
+    "groupID": 185,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3162": {
+  "186": {
     "coords": [
       265.31,
       69.95,
       915.43
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3162,
+    "groupID": 186,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3179": {
+  "187": {
     "coords": [
       282.08,
       68.41,
       792.5
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3179,
+    "groupID": 187,
     "ivs": 0,
     "name": "swm_no_01"
   },
-  "3196": {
+  "188": {
     "coords": [
       278.51,
       68.41,
       813.02
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3196,
+    "groupID": 188,
     "ivs": 0,
     "name": "swm_no_01"
   },
-  "3213": {
+  "189": {
     "coords": [
       185.31,
       69.98,
       938.8
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3213,
+    "groupID": 189,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3230": {
+  "190": {
     "coords": [
       177.55,
       69.66,
       957.94
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3230,
+    "groupID": 190,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3247": {
+  "191": {
     "coords": [
       210.55,
       70.37,
       906.93
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3247,
+    "groupID": 191,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3264": {
+  "192": {
     "coords": [
       212.22,
       70.12,
       914.45
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3264,
+    "groupID": 192,
     "ivs": 0,
     "name": "lnd_no_03"
   },
-  "3281": {
+  "193": {
     "coords": [
       304.19,
       69.52,
       952.54
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3281,
+    "groupID": 193,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3298": {
+  "194": {
     "coords": [
       260.97,
       68.41,
       855.14
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3298,
+    "groupID": 194,
     "ivs": 0,
     "name": "swm_no_01"
   },
-  "3315": {
+  "195": {
     "coords": [
       255.96,
       69.7,
       931.07
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3315,
+    "groupID": 195,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3332": {
+  "196": {
     "coords": [
       325.81,
       70.14,
       948.24
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3332,
+    "groupID": 196,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3349": {
+  "197": {
     "coords": [
       192.99,
       69.74,
       913.31
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3349,
+    "groupID": 197,
     "ivs": 0,
     "name": "lnd_no_16"
   },
-  "3366": {
+  "198": {
     "coords": [
       154.28,
       72.89,
       805.19
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3366,
+    "groupID": 198,
     "ivs": 0,
     "name": "lnd_ra_50"
   },
-  "3383": {
+  "199": {
     "coords": [
       189.57,
       72.67,
       803.53
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3383,
+    "groupID": 199,
     "ivs": 0,
     "name": "lnd_ra_50"
   },
-  "3400": {
+  "200": {
     "coords": [
       109.65,
       112.41,
       641.78
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3400,
+    "groupID": 200,
     "ivs": 0,
     "name": "lnd_no_48"
   },
-  "3417": {
+  "201": {
     "coords": [
       239.33,
       70.19,
       844.62
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3417,
+    "groupID": 201,
     "ivs": 0,
     "name": "lnd_no_57"
   },
-  "3434": {
+  "202": {
     "coords": [
       110.04,
       96.0,
       722.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3434,
+    "groupID": 202,
     "ivs": 0,
     "name": "lnd_ra_50"
   },
-  "3451": {
+  "203": {
     "coords": [
       140.64,
       109.47,
       657.93
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3451,
+    "groupID": 203,
     "ivs": 0,
     "name": "lnd_ra_50"
   },
-  "3468": {
+  "204": {
     "coords": [
       217.08,
       118.8,
       630.06
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3468,
+    "groupID": 204,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3485": {
+  "205": {
     "coords": [
       243.18,
       70.37,
       790.6
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3485,
+    "groupID": 205,
     "ivs": 0,
     "name": "lnd_no_57"
   },
-  "3502": {
+  "206": {
     "coords": [
       224.12,
       72.2,
       774.8
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3502,
+    "groupID": 206,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3519": {
+  "207": {
     "coords": [
       147.61,
       72.61,
       795.9
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3519,
+    "groupID": 207,
     "ivs": 0,
     "name": "lnd_ra_50"
   },
-  "3536": {
+  "208": {
     "coords": [
       247.82,
       70.53,
       815.12
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3536,
+    "groupID": 208,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3553": {
+  "209": {
     "coords": [
       212.16,
       88.24,
       714.9
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3553,
+    "groupID": 209,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3570": {
+  "210": {
     "coords": [
       171.96,
       113.51,
       646.51
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3570,
+    "groupID": 210,
     "ivs": 0,
     "name": "lnd_no_48"
   },
-  "3587": {
+  "211": {
     "coords": [
       126.49,
       96.21,
       716.69
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3587,
+    "groupID": 211,
     "ivs": 0,
     "name": "lnd_ra_50"
   },
-  "3604": {
+  "212": {
     "coords": [
       138.71,
       99.96,
       689.7
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3604,
+    "groupID": 212,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3621": {
+  "213": {
     "coords": [
       184.43,
       121.97,
       677.86
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3621,
+    "groupID": 213,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3638": {
+  "214": {
     "coords": [
       207.1,
       117.04,
       640.48
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3638,
+    "groupID": 214,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3655": {
+  "215": {
     "coords": [
       223.42,
       123.0,
       668.48
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3655,
+    "groupID": 215,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3672": {
+  "216": {
     "coords": [
       227.76,
       70.07,
       846.64
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3672,
+    "groupID": 216,
     "ivs": 0,
     "name": "lnd_no_47"
   },
-  "3689": {
+  "217": {
     "coords": [
       221.9,
       71.11,
       806.25
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3689,
+    "groupID": 217,
     "ivs": 0,
     "name": "lnd_no_57"
   },
-  "3706": {
+  "218": {
     "coords": [
       189.09,
       128.01,
       599.66
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3706,
+    "groupID": 218,
     "ivs": 0,
     "name": "lnd_no_00"
   },
-  "3723": {
+  "219": {
     "coords": [
       215.1,
       131.0,
       591.6
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3723,
+    "groupID": 219,
     "ivs": 0,
     "name": "lnd_no_00"
   },
-  "3740": {
+  "220": {
     "coords": [
       197.7,
       134.05,
       576.46
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3740,
+    "groupID": 220,
     "ivs": 0,
     "name": "lnd_no_00"
   },
-  "3757": {
+  "221": {
     "coords": [
       200.15,
       143.49,
       546.79
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3757,
+    "groupID": 221,
     "ivs": 0,
     "name": "lnd_no_00"
   },
-  "3774": {
+  "222": {
     "coords": [
       183.01,
       132.02,
       582.39
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3774,
+    "groupID": 222,
     "ivs": 0,
     "name": "lnd_no_00"
   },
-  "3791": {
+  "223": {
     "coords": [
       341.06,
       126.55,
       611.06
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3791,
+    "groupID": 223,
     "ivs": 0,
     "name": "lnd_ra_01"
   },
-  "3808": {
+  "224": {
     "coords": [
       329.53,
       127.26,
       577.89
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3808,
+    "groupID": 224,
     "ivs": 0,
     "name": "lnd_ra_01"
   },
-  "3825": {
+  "225": {
     "coords": [
       275.7,
       128.66,
       643.17
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3825,
+    "groupID": 225,
     "ivs": 0,
     "name": "lnd_ra_01"
   },
-  "3842": {
+  "226": {
     "coords": [
       283.35,
       130.22,
       592.54
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3842,
+    "groupID": 226,
     "ivs": 0,
     "name": "lnd_no_58"
   },
-  "3859": {
+  "227": {
     "coords": [
       354.92,
       126.55,
       606.06
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3859,
+    "groupID": 227,
     "ivs": 0,
     "name": "lnd_no_56"
   },
-  "3876": {
+  "228": {
     "coords": [
       301.96,
       128.66,
       611.89
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3876,
+    "groupID": 228,
     "ivs": 0,
     "name": "lnd_no_48"
   },
-  "3893": {
+  "229": {
     "coords": [
       314.78,
       127.26,
       624.4
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3893,
+    "groupID": 229,
     "ivs": 0,
     "name": "lnd_ra_01"
   },
-  "3910": {
+  "230": {
     "coords": [
       274.48,
       130.22,
       600.48
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3910,
+    "groupID": 230,
     "ivs": 0,
     "name": "lnd_no_52"
   },
-  "3927": {
+  "231": {
     "coords": [
       285.43,
       127.26,
       649.84
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3927,
+    "groupID": 231,
     "ivs": 0,
     "name": "lnd_no_56"
   },
-  "3944": {
+  "232": {
     "coords": [
       301.62,
       105.35,
       700.04
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3944,
+    "groupID": 232,
     "ivs": 0,
     "name": "swm_no_02"
   },
-  "3961": {
+  "233": {
     "coords": [
       331.55,
       105.35,
       698.78
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3961,
+    "groupID": 233,
     "ivs": 0,
     "name": "swm_no_02"
   },
-  "3978": {
+  "234": {
     "coords": [
       273.49,
       107.1,
       699.37
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3978,
+    "groupID": 234,
     "ivs": 0,
     "name": "lnd_no_55"
   },
-  "3995": {
+  "235": {
     "coords": [
       316.58,
       106.3,
       673.99
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 3995,
+    "groupID": 235,
     "ivs": 0,
     "name": "lnd_no_28"
   },
-  "4012": {
+  "236": {
     "coords": [
       356.69,
       107.36,
       707.58
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4012,
+    "groupID": 236,
     "ivs": 0,
     "name": "lnd_no_55"
   },
-  "4029": {
+  "237": {
     "coords": [
       352.18,
       106.7,
       670.54
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4029,
+    "groupID": 237,
     "ivs": 0,
     "name": "lnd_no_55"
   },
-  "4046": {
+  "238": {
     "coords": [
       286.7,
       107.31,
       725.35
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4046,
+    "groupID": 238,
     "ivs": 0,
     "name": "lnd_no_28"
   },
-  "4063": {
+  "239": {
     "coords": [
       393.31,
       112.15,
       722.6
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4063,
+    "groupID": 239,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4080": {
+  "240": {
     "coords": [
       389.83,
       107.68,
       647.32
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4080,
+    "groupID": 240,
     "ivs": 0,
     "name": "lnd_no_42"
   },
-  "4097": {
+  "241": {
     "coords": [
       384.38,
       124.65,
       677.89
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4097,
+    "groupID": 241,
     "ivs": 0,
     "name": "lnd_no_51"
   },
-  "4114": {
+  "242": {
     "coords": [
       465.38,
       106.38,
       630.44
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4114,
+    "groupID": 242,
     "ivs": 0,
     "name": "lnd_no_51"
   },
-  "4131": {
+  "243": {
     "coords": [
       515.98,
       99.9,
       614.44
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4131,
+    "groupID": 243,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4148": {
+  "244": {
     "coords": [
       542.4,
       99.61,
       599.32
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4148,
+    "groupID": 244,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4165": {
+  "245": {
     "coords": [
       418.88,
       107.47,
       630.43
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4165,
+    "groupID": 245,
     "ivs": 0,
     "name": "lnd_no_51"
   },
-  "4182": {
+  "246": {
     "coords": [
       568.63,
       98.72,
       573.59
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4182,
+    "groupID": 246,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4199": {
+  "247": {
     "coords": [
       576.28,
       99.29,
       579.52
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4199,
+    "groupID": 247,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4216": {
+  "248": {
     "coords": [
       559.46,
       113.97,
       631.81
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4216,
+    "groupID": 248,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4233": {
+  "249": {
     "coords": [
       587.57,
       114.64,
       614.12
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4233,
+    "groupID": 249,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4250": {
+  "250": {
     "coords": [
       482.96,
       128.64,
       573.38
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4250,
+    "groupID": 250,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4267": {
+  "251": {
     "coords": [
       508.13,
       114.89,
       662.95
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4267,
+    "groupID": 251,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4284": {
+  "252": {
     "coords": [
       546.9,
       108.3,
       657.28
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4284,
+    "groupID": 252,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4301": {
+  "253": {
     "coords": [
       432.17,
       113.54,
       681.56
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4301,
+    "groupID": 253,
     "ivs": 0,
     "name": "lnd_no_30"
   },
-  "4318": {
+  "254": {
     "coords": [
       442.07,
       108.35,
       591.31
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4318,
+    "groupID": 254,
     "ivs": 0,
     "name": "lnd_no_51"
   },
-  "4335": {
+  "255": {
     "coords": [
       440.59,
       108.35,
       559.52
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4335,
+    "groupID": 255,
     "ivs": 0,
     "name": "lnd_no_51"
   },
-  "4352": {
+  "256": {
     "coords": [
       433.46,
       107.28,
       631.69
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4352,
+    "groupID": 256,
     "ivs": 0,
     "name": "lnd_no_42"
   },
-  "4369": {
+  "257": {
     "coords": [
       482.13,
       104.31,
       624.53
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4369,
+    "groupID": 257,
     "ivs": 0,
     "name": "lnd_no_42"
   },
-  "4386": {
+  "258": {
     "coords": [
       409.39,
       107.35,
       605.6
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4386,
+    "groupID": 258,
     "ivs": 0,
     "name": "lnd_no_42"
   },
-  "4403": {
+  "259": {
     "coords": [
       219.0,
       87.41,
       874.3
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4403,
+    "groupID": 259,
     "ivs": 0,
     "name": "sky_area4_03"
   },
-  "4420": {
+  "260": {
     "coords": [
       706.3,
       117.5,
       578.7
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4420,
+    "groupID": 260,
     "ivs": 0,
     "name": "sky_area4_01"
   },
-  "4437": {
+  "261": {
     "coords": [
       452.1,
       112.7,
       719.1
     ],
     "icon": "/pokearth/hisui/icons/pokeball.png",
-    "spawnerID": 4437,
+    "groupID": 261,
     "ivs": 0,
     "name": "sky_area4_02"
   }

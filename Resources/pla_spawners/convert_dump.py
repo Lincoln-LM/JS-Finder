@@ -2,6 +2,7 @@ import json
 
 locations = ["obsidianfieldlands","crimsonmirelands","cobaltcoastlands","coronethighlands","alabastericelands"]
 prefixes = ["eve","fly","gmk","lnd","mas","oyb","swm","whl","sky"]
+# TODO: update blacklist and alphas to use group ids instead of spawner ids
 blacklists = [
     [],
     [],
@@ -41,10 +42,10 @@ for map_id in range(1,6):
                 alpha = index*17 in alphas[map_id-1]
                 swarm = split[i-1].split('"')[-2][:3] == "mas"
                 if not swarm:
-                    markers[index*17] = {
+                    markers[index] = {
                         "coords": pos,
                         "icon": "/pokearth/hisui/icons/alpha.png" if alpha else "/pokearth/hisui/icons/event.png" if swarm else "/pokearth/hisui/icons/pokeball.png",
-                        "spawnerID": index*17,
+                        "groupID": index,
                         "ivs": 3 if alpha else 0,
                         "name": split[i-1].split('"')[-2]
                     }
