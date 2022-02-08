@@ -203,9 +203,9 @@
       95.50001,
       354.8
     ],
-    "icon": "/pokearth/hisui/icons/pokeball.png",
+    "icon": "/pokearth/hisui/icons/alpha.png",
     "groupID": 18,
-    "ivs": 0,
+    "ivs": 3,
     "name": "oyb_ex_08"
   },
   "19": {

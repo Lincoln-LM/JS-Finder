@@ -12,7 +12,7 @@ blacklists = [
 ]
 alphas = [
     [i*17 for i in range(18)],
-    [i*17 for i in range(18)],
+    [i*17 for i in range(19)],
     [i*17 for i in range(19)],
     [i*17 for i in range(15)],
     [i*17 for i in range(13)]
