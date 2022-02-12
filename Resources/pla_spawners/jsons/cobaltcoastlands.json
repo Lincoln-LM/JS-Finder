@@ -203,9 +203,9 @@
       39.09,
       632.41
     ],
-    "icon": "/pokearth/hisui/icons/alpha.png",
+    "icon": "/pokearth/hisui/icons/pokeball.png",
     "groupID": 18,
-    "ivs": 3,
+    "ivs": 0,
     "name": "lnd_no_38"
   },
   "19": {
