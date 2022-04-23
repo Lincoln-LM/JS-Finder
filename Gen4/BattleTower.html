@@ -75,7 +75,7 @@
                         trainer = TOWER_MASTER_SECOND;
                     } else {
                         if (stage < 7 && current_round == 6) {
-                            trainer = rng.randrange(FINAL_TRAINER_RANGES[Math.min(stage,7)][0], FINAL_TRAINER_RANGES[Math.min(stage,7)][1]);
+                            trainer = rng.randrange(FINAL_TRAINER_RANGES[stage][0], FINAL_TRAINER_RANGES[stage][1]);
                         } else {
                             trainer = rng.randrange(TRAINER_RANGES[Math.min(stage,7)][0], TRAINER_RANGES[Math.min(stage,7)][1]);
                         }
