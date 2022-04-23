@@ -16,7 +16,7 @@
 <body>
 	<div class="info">
 		<a>Seed:</a><input style="width: 100px;" type="text" id="seed" value="12345678"><br>
-        <a>Stage: </a><input style="width:80px;" type="number" max="8" min="1" id="stage" value="1"><br>
+        <a>Stage: </a><input style="width:80px;" type="number" min="1" id="stage" value="1"><br>
 	</div><br>
 	<button class="button-1" onclick=battleTowerGenerator()>Generate</button>
 	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
@@ -75,9 +75,9 @@
                         trainer = TOWER_MASTER_SECOND;
                     } else {
                         if (stage < 7 && current_round == 6) {
-                            trainer = rng.randrange(FINAL_TRAINER_RANGES[stage][0], FINAL_TRAINER_RANGES[stage][1]);
+                            trainer = rng.randrange(FINAL_TRAINER_RANGES[Math.min(stage,7)][0], FINAL_TRAINER_RANGES[Math.min(stage,7)][1]);
                         } else {
-                            trainer = rng.randrange(TRAINER_RANGES[stage][0], TRAINER_RANGES[stage][1]);
+                            trainer = rng.randrange(TRAINER_RANGES[Math.min(stage,7)][0], TRAINER_RANGES[Math.min(stage,7)][1]);
                         }
                     }
                     trainer_data = TRAINER_INFO[trainer];
