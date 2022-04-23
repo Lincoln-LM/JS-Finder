@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>DP Battle Tower Predictor</title>
+	<script src="../JS/LCRNG.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<link rel="stylesheet" href="../CSS/states.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+	
+
+<body>
+	<div class="info">
+		<a>Seed:</a><input style="width: 100px;" type="text" id="seed" value="12345678"><br>
+        <a>Stage: </a><input style="width:80px;" type="number" max="8" min="1" id="stage" value="1"><br>
+	</div><br>
+	<button class="button-1" onclick=battleTowerGenerator()>Generate</button>
+	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+	<br>
+	<br>
+    <div id="trainers"></div>
+	<script>
+        const NATURES = ["Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky"]
+        const TRAINER_RANGES = [[  1-1,100-1],
+                                [ 81-1,120-1],
+                                [101-1,140-1],
+                                [121-1,160-1],
+                                [141-1,180-1],
+                                [161-1,200-1],
+                                [181-1,220-1],
+                                [201-1,300-1]];
+        const FINAL_TRAINER_RANGES = [[101-1,120-1],
+                                      [121-1,140-1],
+                                      [141-1,160-1],
+                                      [161-1,180-1],
+                                      [181-1,200-1],
+                                      [201-1,220-1],
+                                      [221-1,240-1],
+                                      [201-1,300-1]];
+        const TRAINER_NAMES = [['Youngster', 'Lloyd'], ['Youngster', 'Ben'], ['Youngster', 'Ezekiel'],['Lass', 'Ebony'], ['Lass', 'Jenny'], ['Lass', 'Arianna'], ['School Kid M', 'Chaz'],['School Kid M', 'Everett'], ['School Kid M', 'Lamont'], ['School Kid F', 'Gloria'],['School Kid F', 'Toni'], ['School Kid F', 'Cecilia'], ['Rich Boy', 'Milton'],['Rich Boy', 'Cortez'], ['Rich Boy', 'Jaden'], ['Lady', 'Camille'], ['Lady', 'Tiana'],['Lady', 'Marina'], ['Camper', 'Nestor'], ['Camper', 'Houston'], ['Camper', 'Clark'],['Picnicker', 'Esther'], ['Picnicker', 'Nichole'], ['Picnicker', 'Martha'],['Tuber M', 'Vernon'], ['Tuber M', 'Clifton'], ['Tuber M', 'Rick'], ['Tuber F', 'Ellen'],['Tuber F', 'Aimee'], ['Tuber F', 'Tia'], ['Guitarist', 'Arnold'], ['Guitarist', 'Marcel'],['Guitarist', 'Irvin'], ['Idol', 'Elena'], ['Idol', 'Viv'], ['Idol', 'Selena'],['Pokefan M', 'Tate'], ['Pokefan M', 'Brooks'], ['Pokefan M', 'Dusty'],['Pokefan F', 'Brandy'], ['Pokefan F', 'Marie'], ['Pokefan F', 'Imani'], ['Waiter', 'Darin'],['Waiter', 'Duane'], ['Waiter', 'Gerard'], ['Waitress', 'Carissa'], ['Waitress', 'Cassie'],['Waitress', 'Alexia'], ['Bug Catcher', 'Fred'], ['Bug Catcher', 'Kenyon'], ['Bug Catcher', 'Jaleel'],['Ninja Boy', 'Colt'], ['Ninja Boy', 'Trever'], ['Ninja Boy', 'Will'], ['Poke Kid', 'Lillian'],['Poke Kid', 'Ruth'], ['Poke Kid', 'Janelle'], ['Fisherman', 'Bennett'], ['Fisherman', 'Braxton'],['Ruin Maniac', 'Winston'], ['Ruin Maniac', 'Gino'], ['Collector', 'Jamison'], ['Collector', 'Davis'],['Parasol Lady', 'Mikaela'], ['Parasol Lady', 'Sharon'], ['Parasol Lady', 'Mia'],['Beauty', 'Barbara'], ['Beauty', 'Stacy'], ['Beauty', 'Alena'], ['Aroma Lady', 'Sadie'],['Aroma Lady', 'Kierra'], ['Aroma Lady', 'Nikki'], ['Guitarist', 'Herbert'],['Guitarist', 'Jimmie'], ['Bird Keeper', 'Shayla'], ['Bird Keeper', 'Tierra'],['Bird Keeper', 'Elise'], ['Sailor', 'Kerry'], ['Sailor', 'Reuben'], ['Hiker', 'Madison'],['Hiker', 'Don'], ['Idol', 'Alana'], ['Idol', 'Carla'], ['Idol', 'Liliana'], ['Jogger', 'Keon'], ['Jogger', 'Jovan'], ['Worker', 'Kade'], ['Worker', 'Antwan'], ['Rancher', 'Sheldon'],['Rancher', 'Ezra'], ['Rancher', 'Pierce'], ['Cowgirl', 'Shawna'], ['Cowgirl', 'Annie'],['Cowgirl', 'Rose'], ['Cameraman', 'Rory'], ['Cameraman', 'Codey'], ['Cameraman', 'Sammy'],['Reporter', 'Valeria'], ['Reporter', 'Shanice'], ['Reporter', 'Callie'], ['Cyclist M', 'Cordell'],['Cyclist M', 'Kaden'], ['Cyclist F', 'Devin'], ['Cyclist F', 'Karissa'], ['Black Belt', 'Kolby'],['Black Belt', 'Jonas'], ['Battle Girl', 'Eva'], ['Battle Girl', 'Melinda'], ['Black Belt', 'Vaughn'],['Black Belt', 'Irving'], ['Black Belt', 'Gene'], ['Battle Girl', 'Lorena'], ['Battle Girl', 'Pamela'],['Battle Girl', 'Daniela'], ['Veteran', 'Santos'], ['Veteran', 'Cruz'], ['Veteran', 'Leslie'],['Socialite', 'Kate'], ['Socialite', 'Chelsie'], ['Socialite', 'Brianne'], ['Psychic M', 'Jasper'],['Psychic M', 'Kolton'], ['Psychic M', 'Stewart'], ['Psychic F', 'Melody'], ['Psychic F', 'Aliyah'],['Psychic F', 'Tina'], ['Pokemon Breeder M', 'Nico'], ['Pokemon Breeder M', 'Pierre'],['Pokemon Breeder M', 'Lester'], ['Pokemon Breeder F', 'Sonia'], ['Pokemon Breeder F', 'Larissa'],['Pokemon Breeder F', 'Kylee'], ['Gentleman', 'Grady'], ['Gentleman', 'Jackie'], ['Roughneck', 'Donnell'],['Roughneck', 'Royce'], ['Scientist', 'August'], ['Scientist', 'Jerrod'], ['Clown', 'Jesse'],['Clown', 'Benito'], ['Ace Trainer M', 'Myron'], ['Ace Trainer M', 'Herman'], ['Ace Trainer M', 'Donnie'],['Ace Trainer F', 'Jane'], ['Ace Trainer F', 'Natalia'], ['Ace Trainer F', 'Sasha'],['Pokemon Ranger M', 'Bradly'], ['Pokemon Ranger M', 'Cyrus'], ['Pokemon Ranger M', 'Darrian'],['Pokemon Ranger F', 'Breana'], ['Pokemon Ranger F', 'Kira'], ['Pokemon Ranger F', 'Macy'],['Dragon Tamer', 'Erich'], ['Dragon Tamer', 'Garett'], ['Dragon Tamer', 'Rhett'],['Dragon Tamer', 'Codie'], ['Ace Trainer M', 'Harold'], ['Ace Trainer M', 'Lincoln'],['Ace Trainer F', 'Regina'], ['Ace Trainer F', 'Alaina'], ['Youngster', 'Reese'], ['Youngster', 'Tobias'],['Lass', 'Donna'], ['Lass', 'Mckenna'], ['School Kid M', 'Vance'], ['School Kid M', 'Floyd'],['School Kid F', 'Allyson'], ['School Kid F', 'Ciara'], ['Rich Boy', 'Quinten'], ['Rich Boy', 'Elmer'],['Lady', 'Kali'], ['Lady', 'Christy'], ['Bug Catcher', 'Aric'], ['Bug Catcher', 'Daulton'],['Ninja Boy', 'Elisha'], ['Ninja Boy', 'Josef'], ['Poke Kid', 'Juliana'], ['Poke Kid', 'Tracy'],['Idol', 'Kari'], ['Idol', 'Kyla'], ['Jogger', 'Dan'], ['Jogger', 'Rico'], ['Fisherman', 'Bronson'],['Fisherman', 'Camden'], ['Ruin Maniac', 'Rocky'], ['Ruin Maniac', 'Trace'], ['Collector', 'Jim'],['Collector', 'Josh'], ['Guitarist', 'Tayler'], ['Guitarist', 'Tory'], ['Bird Keeper', 'Skylar'],['Bird Keeper', 'Paula'], ['Sailor', 'Bernard'], ['Sailor', 'Hugh'], ['Hiker', 'Jessy'], ['Hiker', 'Stetson'],['Policeman', 'Tyron'], ['Policeman', 'Rex'], ['PI', 'Quincy'], ['PI', 'Emmett'], ['Camper', 'Justyn'],['Camper', 'Leland'], ['Picnicker', 'Serena'], ['Picnicker', 'Kyra'], ['Guitarist', 'Markell'],['Guitarist', 'Marquez'], ['Idol', 'Maranda'], ['Idol', 'Claudia'], ['Pokefan M', 'Ted'],['Pokefan M', 'Cecil'], ['Pokefan F', 'Selina'], ['Pokefan F', 'Carley'], ['Rancher', 'Kellen'],['Rancher', 'Alton'], ['Cowgirl', 'Margot'], ['Cowgirl', 'Sophie'], ['Pokemon Breeder M', 'Blair'],['Pokemon Breeder M', 'Harvey'], ['Pokemon Breeder F', 'Emilee'], ['Pokemon Breeder F', 'Tiffani'],['Ace Trainer M', 'Ellis'], ['Ace Trainer M', 'Lionel'], ['Ace Trainer F', 'Irene'],['Ace Trainer F', 'Abbey'], ['Ace Trainer M', 'Dallin'], ['Ace Trainer M', 'Jayden'],['Ace Trainer F', 'Cortney'], ['Ace Trainer F', 'Celina'], ['Pokemon Ranger M', 'Denver'],['Pokemon Ranger M', 'Rusty'], ['Pokemon Ranger F', 'Darcy'], ['Pokemon Ranger F', 'Joy'],['Dragon Tamer', 'Alonso'], ['Dragon Tamer', 'Hernan'], ['Black Belt', 'Benny'], ['Black Belt', 'Daron'],['Battle Girl', 'Sylvia'], ['Battle Girl', 'Kristy'], ['Veteran', 'Mikel'], ['Veteran', 'Antony'],['Socialite', 'Mayra'], ['Socialite', 'Kailey'], ['Psychic M', 'Clyde'], ['Psychic M', 'Gunner'],['Psychic F', 'Clara'], ['Psychic F', 'Alma'], ['Waiter', 'Kelby'], ['Waiter', 'Kevon'], ['Waitress', 'Kaila'],['Waitress', 'Jaime'], ['Cameraman', 'Barrett'], ['Cameraman', 'Jess'], ['Reporter', 'Johanna'],['Reporter', 'Josie'], ['Cyclist M', 'Demetri'], ['Cyclist M', 'Lyle'], ['Cyclist F', 'Kristi'],['Cyclist F', 'Mariana'], ['PI', 'Auston'], ['PI', 'Coby'], ['Idol', 'Sidney'], ['Idol', 'Elaine'],['Jogger', 'Sherman'], ['Jogger', 'Ryne'], ['Fisherman', 'Turner'], ['Fisherman', 'Bryon'], ['Sailor', 'Cain'],['Sailor', 'Kegan'], ['Hiker', 'Aldo'], ['Hiker', 'Andreas'], ['Ruin Maniac', 'Jaylin'], ['Ruin Maniac', 'Titus'],['Guitarist', 'Tyrell'], ['Guitarist', 'Dalvin'], ['Collector', 'Edmund'], ['Collector', 'Kelton'],['Roughneck', 'Brant'], ['Roughneck', 'Aidan'], ['Scientist', 'Carlo'], ['Scientist', 'Jarred'],['Gentleman', 'Jerrell'], ['Gentleman', 'Kennedy'], ['Worker', 'Hans'], ['Worker', 'Layne'], ['Clown', 'River'],['Clown', 'Kendel'], ['Policeman', 'Kenton'], ['Policeman', 'Tavon'], ['PI', 'Chester'], ['PI', 'Codi'],['Bird Keeper', 'Allie'], ['Bird Keeper', 'Anissa'], ['Parasol Lady', 'Christa'], ['Parasol Lady', 'Madelyn'],['Beauty', 'Jaclyn'], ['Beauty', 'Noelle'], ['Aroma Lady', 'Haylee'], ['Aroma Lady', 'Nadia'], ['Idol', 'Yvette'],['Idol', 'Tasha'], ['', ''], ['', ''], ['', ''], ['', ''], ['', ''], ['Tower Tycoon', 'Palmer'], ['Tower Tycoon', 'Palmer']];
+        const TOWER_MASTER_FIRST = 305;
+        const TOWER_MASTER_SECOND = 306;
+
+        let TRAINER_INFO = [];
+        fetch("../Resources/dp_bt_trainer_data.json")
+        .then(res => res.json())
+        .then(data => TRAINER_INFO = data);
+        
+        const trainerDiv = document.getElementById("trainers");
+
+        function isShiny(tid,sid,pid) {
+            return ((pid >>> 16) ^ (pid & 0xFFFF) ^ tid ^ sid) < 8;
+        }
+		function battleTowerGenerator() {
+            while (trainerDiv.firstChild) {
+                trainerDiv.removeChild(trainerDiv.firstChild);
+            }
+            let seed = parseInt(document.getElementById("seed").value,16);
+            let stage = parseInt(document.getElementById("stage").value) - 1;
+            let rng = new BattleTowerRNG(seed);
+            rng.next(24 * stage + 1);
+            let stage_trainers = [];
+            let seen = [];
+            for (let current_round = 0; current_round < 7; current_round++) {
+                let trainer_data;
+                let trainer_name;
+                do {
+                    if (stage == 2 && current_round == 6) {
+                        trainer = TOWER_MASTER_FIRST;
+                    } else if (stage == 6 && current_round == 6) {
+                        trainer = TOWER_MASTER_SECOND;
+                    } else {
+                        if (stage < 7 && current_round == 6) {
+                            trainer = rng.randrange(FINAL_TRAINER_RANGES[stage][0], FINAL_TRAINER_RANGES[stage][1]);
+                        } else {
+                            trainer = rng.randrange(TRAINER_RANGES[stage][0], TRAINER_RANGES[stage][1]);
+                        }
+                    }
+                    trainer_data = TRAINER_INFO[trainer];
+                    trainer_name = TRAINER_NAMES[trainer];
+                } while (seen.includes(trainer_data + trainer_name))
+                stage_trainers.push([trainer_data,trainer_name]);
+                seen.push(trainer_data + trainer_name);
+            }
+            for (let current_round = 0; current_round < 7; current_round++) {
+                let trainer_info_div = document.createElement("div");
+                let pokemon_names_div = document.createElement("div");
+                let pokemon_images_div = document.createElement("div");
+                pokemon_names_div.innerHTML += "";
+                pokemon_images_div.innerHTML += "<br>";
+                let [trainer_data,trainer_name] = stage_trainers[current_round];
+                trainer_info_div.innerHTML = `<b>${trainer_name[0] + " " + trainer_name[1]}</b><br><img src="../Resources/trainers/Spr_DP_${trainer_name[0].replaceAll(" ","_")}.png">`;
+                let pokemon_list = [];
+                while (pokemon_list.length < 3) {
+                    let pokemon = rng.rand(trainer_data.length);
+                    let cont = false;
+                    for (let i = 0; i < pokemon_list.length; i++) {
+                        if (trainer_data[pokemon_list[i]]["item"] == trainer_data[pokemon]["item"] || trainer_data[pokemon_list[i]]["species"] == trainer_data[pokemon]["species"]) {
+                            cont = true;
+                            break;
+                        }
+                    }
+                    if (cont) {
+                        continue;
+                    }
+                    pokemon_list.push(pokemon);
+                }
+                let tid = rng.nextUShort();
+                let sid = rng.nextUShort();
+                for (let pokemon_index = 0; pokemon_index < 3; pokemon_index++) {
+                    let pokemon_data = trainer_data[pokemon_list[pokemon_index]];
+                    let pokemon_name = pokemon_data["species"];
+                    let nature = pokemon_data["nature"];
+                    let shiny;
+                    let pid;
+                    do {
+                        pid = Number(BigInt(rng.nextUShort()) | BigInt(rng.nextUShort()) << 16n);
+                        shiny = isShiny(tid,sid,pid);
+                    } while (pid % 25 != nature && shiny)
+                    pokemon_names_div.innerHTML += `${NATURES[pid % 25]} ${shiny ? "Shiny " : ""}${pokemon_name} / `;
+                    pokemon_images_div.innerHTML += `<img src="https://img.pokemondb.net/sprites/diamond-pearl/${shiny ? "shiny " : "normal"}/${pokemon_name.toLowerCase().replaceAll("'","").replaceAll(" ","-").replace(".","")}.png">`;
+                }
+                rng.next();
+                pokemon_names_div.innerHTML = pokemon_names_div.innerHTML.substring(0,pokemon_names_div.innerHTML.length - 3)
+                trainer_info_div.appendChild(pokemon_names_div);
+                trainer_info_div.appendChild(pokemon_images_div);
+                trainerDiv.appendChild(trainer_info_div);
+            }
+		}
+	</script>
+</body>
+</html>
