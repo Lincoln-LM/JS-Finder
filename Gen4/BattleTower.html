@@ -2,28 +2,28 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>DP Battle Tower Predictor</title>
-	<script src="../JS/LCRNG.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../CSS/main.css">
-	<link rel="stylesheet" href="../CSS/states.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>DP Battle Tower Predictor</title>
+    <script src="../JS/LCRNG.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/states.css">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-	
+    
 
 <body>
-	<div class="info">
-		<a>Seed:</a><input style="width: 100px;" type="text" id="seed" value="12345678"><br>
+    <div class="info">
+        <a>Seed:</a><input style="width: 100px;" type="text" id="seed" value="12345678"><br>
         <a>Stage: </a><input style="width:80px;" type="number" min="1" id="stage" value="1"><br>
-	</div><br>
-	<button class="button-1" onclick=battleTowerGenerator()>Generate</button>
-	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
-	<br>
-	<br>
+    </div><br>
+    <button class="button-1" onclick=battleTowerGenerator()>Generate</button>
+    <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+    <br>
+    <br>
     <div id="trainers"></div>
-	<script>
+    <script>
         const NATURES = ["Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky"]
         const TRAINER_RANGES = [[  1-1,100-1],
                                 [ 81-1,120-1],
@@ -55,7 +55,7 @@
         function isShiny(tid,sid,pid) {
             return ((pid >>> 16) ^ (pid & 0xFFFF) ^ tid ^ sid) < 8;
         }
-		function battleTowerGenerator() {
+        function battleTowerGenerator() {
             while (trainerDiv.firstChild) {
                 trainerDiv.removeChild(trainerDiv.firstChild);
             }
@@ -130,7 +130,7 @@
                 trainer_info_div.appendChild(pokemon_images_div);
                 trainerDiv.appendChild(trainer_info_div);
             }
-		}
-	</script>
+        }
+    </script>
 </body>
 </html>
