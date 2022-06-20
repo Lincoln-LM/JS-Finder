@@ -25,8 +25,8 @@
 	<script>
         function update() {
             let tidsid = BigInt(document.getElementById("G8SID").value) * 1000000n + BigInt(document.getElementById("G8TID").value);
-            document.getElementById("TID").innerText = (tidsid >> 16n).toString();
-            document.getElementById("SID").innerText = (tidsid & 0xFFFFn).toString();
+            document.getElementById("TID").innerText = (tidsid & 0xFFFFn).toString();
+            document.getElementById("SID").innerText = (tidsid >> 16n).toString();
         }
         update();
 	</script>
