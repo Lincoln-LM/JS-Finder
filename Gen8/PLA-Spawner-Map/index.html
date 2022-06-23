@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../../CSS/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
-    <title>PLA Spawner ID map</title>
-    <style>
-        html, body, #map {
-            height: 70vh;
-            width: 50vw;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../../CSS/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+  <title>PLA Spawner ID map</title>
+  <style>
+    html, body, #map {
+      height: 70vh;
+      width: 50vw;
+    }
+  </style>
 </head>
 <body>
-    <select style="width: 100%;" id="locationSelect" onchange=update()>
-        <option value="obsidianfieldlands">Obsidian Fieldlands</option>
-        <option value="crimsonmirelands">Crimson Mirelands</option>
-        <option value="cobaltcoastlands">Cobalt Coastlands</option>
-        <option value="coronethighlands">Coronet Highlands</option>
-        <option value="alabastericelands">Alabaster Icelands</option>
-    </select>
-    <div id="map"></div>
-	<button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
-    <script src=map.js></script>
-    <script>
-        let layer;
-        function convertCoordinates(coords) {
-            return [coords[2] * -0.5, coords[0] * 0.5]
+  <select style="width: 100%;" id="locationSelect" onchange=update()>
+    <option value="obsidianfieldlands">Obsidian Fieldlands</option>
+    <option value="crimsonmirelands">Crimson Mirelands</option>
+    <option value="cobaltcoastlands">Cobalt Coastlands</option>
+    <option value="coronethighlands">Coronet Highlands</option>
+    <option value="alabastericelands">Alabaster Icelands</option>
+  </select>
+  <div id="map"></div>
+  <button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
+  <script src=map.js></script>
+  <script>
+    let layer;
+    function convertCoordinates(coords) {
+      return [coords[2] * -0.5, coords[0] * 0.5]
+    }
+    function update() {
+      let location = document.getElementById("locationSelect").value
+      map.eachLayer(function(layer){
+        map.removeLayer(layer);
+      });
+      L.tileLayer(`https://www.serebii.net/pokearth/hisui/${location}/tile_{z}-{x}-{y}.png`, {
+        minZoom: 0,
+        maxZoom: 2,
+        noWrap: true,
+        attribution: "PLA Spawner Map",//map label in bottom right
+      }).addTo(map);
+      let request = new XMLHttpRequest();
+      request.open("GET", `../../Resources/pla_spawners/jsons/${location}.json`, false);
+      request.send(null)
+      let json = JSON.parse(request.responseText);
+      let keys = Object.keys(json);
+      for (let i = 0; i < keys.length; i++) {
+        let marker = json[keys[i]];
+        let iconURL;
+        if (marker['groupID'] == -1) {
+          iconURL = `../../Resources/${marker['icon'].split("/")[4].slice(0,-4)}-greyed.png`
         }
-        function update() {
-            let location = document.getElementById("locationSelect").value
-            map.eachLayer(function(layer){
-                map.removeLayer(layer);
-            });
-            L.tileLayer(`https://www.serebii.net/pokearth/hisui/${location}/tile_{z}-{x}-{y}.png`, {
-                minZoom: 0,
-                maxZoom: 2,
-                noWrap: true,
-                attribution: "PLA Spawner Map",//map label in bottom right
-            }).addTo(map);
-            let request = new XMLHttpRequest();
-            request.open("GET", `../../Resources/pla_spawners/jsons/${location}.json`, false);
-            request.send(null)
-            let json = JSON.parse(request.responseText);
-            let keys = Object.keys(json);
-            for (let i = 0; i < keys.length; i++) {
-                let marker = json[keys[i]];
-                let iconURL;
-                if (marker['groupID'] == -1) {
-                    iconURL = `../../Resources/${marker['icon'].split("/")[4].slice(0,-4)}-greyed.png`
-                }
-                else {
-                    iconURL = `https://www.serebii.net${marker['icon']}`
-                }
-                L.marker(convertCoordinates(marker['coords']), { icon: L.icon({ iconUrl: iconURL, iconSize: [ 32, 32 ], iconAnchor: [ 16, 16 ]}), groupID: marker['groupID'], markerID: marker['markerID'], ivs: marker['ivs']}).addTo(map)
-                .bindPopup(`Group ID: ${marker['groupID']}<br>Name: ${marker['name']}`);
-            }
+        else {
+          iconURL = `https://www.serebii.net${marker['icon']}`
         }
-        update()
-    </script>
+        L.marker(convertCoordinates(marker['coords']), { icon: L.icon({ iconUrl: iconURL, iconSize: [ 32, 32 ], iconAnchor: [ 16, 16 ]}), groupID: marker['groupID'], markerID: marker['markerID'], ivs: marker['ivs']}).addTo(map)
+        .bindPopup(`Group ID: ${marker['groupID']}<br>Name: ${marker['name']}`);
+      }
+    }
+    update()
+  </script>
 </body>
 <footer>
-    See <a href="https://www.serebii.net/pokearth/hisui/">Pokearth</a> for the original map
+  See <a href="https://www.serebii.net/pokearth/hisui/">Pokearth</a> for the original map
 </footer>
 </html>

@@ -1,31 +1,30 @@
 function generate(pid) {
     let states = [];
-    let methods = [1,2,4]
-    for (let i=0;i<methods.length;i++) {
-      let seeds = recoverLower16BitsPID(pid);
-      for (let j=0;j<seeds.length;j++) {
-        let temp = new PokeRNGR(seeds[j])
+    let methods = [1, 2, 4]
+    let seeds = recoverLower16BitsPID(pid);
+    for (method in methods) {
+      for (tempSeed in seeds) {
+        let temp = new PokeRNGR(seeds[tempSeed])
         let seed = temp.nextUInt();
         let go = new PokeRNG(seed);
         let state = [];
-        
+
         go.nextUShort();
         go.nextUShort();
-        if (methods[i] == 2) {
+        if (methods[method] == 2) {
             go.nextUShort();
         }
         let iv1 = go.nextUShort();
-        if (methods[i] == 4) {
+        if (methods[method] == 4) {
             go.nextUShort();
         }
         let iv2 = go.nextUShort();
         let ivs = getIVs(iv1,iv2);
         state.push(seed.toString(16).toUpperCase())
-        state.push(methods[i])
+        state.push(methods[method])
         state.push(ivs.toString())
         states.push(state)
       }
     }
     return states;
   }
-  

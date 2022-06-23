@@ -2,123 +2,123 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Shiny Color Match</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../CSS/main.css">
-	<link rel="stylesheet" href="../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Shiny Color Match</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-	
+  
 <body>
-	<label for="size">Size:</label>
-    <input type="number" id="size" value="128" onchange="selected()"><br>
-    <label for="dmult">Color Difference Weight:</label>
-	<input type="range" id="dmult" min="0" max="10" step="0.01" value="1" class="slider" onchange="selected()">
-    <a id="dmultDisplay">1</a><br>
-    <label for="dmult">Amount of Color Weight:</label>
-	<input type="range" id="cmult" min="0" max="10" step="0.01" value="1" class="slider" onchange="selected()">
-    <a id="cmultDisplay">1</a><br>
-	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button><br>
-    <img id="image">
-    <div id="canvi"></div>
-	<div class="info"></div><br>
-    <script>
-        let request = new XMLHttpRequest();
-        request.open("GET", "../Resources/pla_dif_cnt.json", false);
-        request.send(null)
-        let json = JSON.parse(request.responseText);
-        let keys = Object.keys(json);
-        let colors = [
-            [255,0,0],
-            [255,127,0],
-            [255,255,0],
-            [127,255,0],
-            [0,255,0],
-            [0,255,127],
-            [0,255,255],
-            [0,127,255],
-            [0,0,255],
-            [127,0,255],
-            [255,0,255],
-            [255,0,127],
-        ]
-        let colorStrings = [];
-        for (let i = 0; i < colors.length; i++) {
-            let color = colors[i].toString();
-            colorStrings.push(color);
-            let div = document.createElement('div');
-            div.id = i.toString();
-            canvi.appendChild(div);
+  <label for="size">Size:</label>
+  <input type="number" id="size" value="128" onchange="selected()"><br>
+  <label for="dmult">Color Difference Weight:</label>
+  <input type="range" id="dmult" min="0" max="10" step="0.01" value="1" class="slider" onchange="selected()">
+  <a id="dmultDisplay">1</a><br>
+  <label for="dmult">Amount of Color Weight:</label>
+  <input type="range" id="cmult" min="0" max="10" step="0.01" value="1" class="slider" onchange="selected()">
+  <a id="cmultDisplay">1</a><br>
+  <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button><br>
+  <img id="image">
+  <div id="canvi"></div>
+  <div class="info"></div><br>
+  <script>
+    let request = new XMLHttpRequest();
+    request.open("GET", "../Resources/pla_dif_cnt.json", false);
+    request.send(null)
+    let json = JSON.parse(request.responseText);
+    let keys = Object.keys(json);
+    let colors = [
+      [255,0,0],
+      [255,127,0],
+      [255,255,0],
+      [127,255,0],
+      [0,255,0],
+      [0,255,127],
+      [0,255,255],
+      [0,127,255],
+      [0,0,255],
+      [127,0,255],
+      [255,0,255],
+      [255,0,127],
+    ]
+    let colorStrings = [];
+    for (let i = 0; i < colors.length; i++) {
+      let color = colors[i].toString();
+      colorStrings.push(color);
+      let div = document.createElement('div');
+      div.id = i.toString();
+      canvi.appendChild(div);
+    }
+    function selected() {
+      let imgs = {};
+      let canvi = document.getElementById("canvi");
+      let dmul = document.getElementById("dmult").value;
+      let cmul = document.getElementById("cmult").value;
+      document.getElementById("dmultDisplay").innerText = dmul.toString();
+      document.getElementById("cmultDisplay").innerText = cmul.toString();
+      let size = parseInt(document.getElementById("size").value);
+      for (let i = 0; i < colors.length; i++) {
+        let col = document.getElementById(i.toString());
+        while (col.firstChild) {
+          col.removeChild(col.firstChild);
         }
-        function selected() {
-            let imgs = {};
-            let canvi = document.getElementById("canvi");
-            let dmul = document.getElementById("dmult").value;
-            let cmul = document.getElementById("cmult").value;
-            document.getElementById("dmultDisplay").innerText = dmul.toString();
-            document.getElementById("cmultDisplay").innerText = cmul.toString();
-            let size = parseInt(document.getElementById("size").value);
-            for (let i = 0; i < colors.length; i++) {
-                let col = document.getElementById(i.toString());
-                while (col.firstChild) {
-                    col.removeChild(col.firstChild);
-                }
-                imgs[i.toString()] = {};
-                let canv = document.createElement('canvas');
-                let ctx = canv.getContext('2d');
-                canv.height = size;
-                canv.width = size;
-                ctx.fillStyle = `rgb(${colors[i][0]},${colors[i][1]},${colors[i][2]})`;
-                ctx.fillRect(0, 0, canv.width, canv.height);
-                col.appendChild(canv);
-            }
-            for (let i = 0; i < keys.length; i++) {
-                let key = keys[i];
-                let item = json[key];
-                let itemKeys = Object.keys(item);
-                let bestVal = 0;
-                let best = null;
-                for (let j = 0; j < itemKeys.length; j++) {
-                    let itemKey = itemKeys[j];
-                    let info = item[itemKey];
-                    let dif = info[0];
-                    let cnt = info[1];
-                    let d = info[2];
-                    let val = dif * dmul + cnt * cmul;
-                    if (val > bestVal) {
-                        bestVal = val;
-                        best = d;
-                    }
-                }
-                let col = colorStrings.indexOf(best.toString());
-                let im = document.createElement('img');
-                im.height = size;
-                im.width = size;
-                im.src = "../Resources/pla_sprites/" + key;
-                imgs[col.toString()][bestVal] = im;
-                // document.getElementById(col.toString()).appendChild(im);
-            }
-            for (let i = 0; i < colors.length; i++) {
-                let keys = Object.keys(imgs[i]);
-                let sortedKeys = [];
-                for (let j = 0; j < keys.length; j++) {
-                    // console.log(parseFloat(keys[j]))
-                    sortedKeys.push(parseFloat(keys[j]));
-                }
-                sortedKeys.sort(function(a, b) {
-                    return a - b;
-                });
-                console.log(sortedKeys);
-                for (let j = 0; j < sortedKeys.length; j++) {
-                    console.log(sortedKeys[j]);
-                    document.getElementById(i.toString()).appendChild(imgs[i][parseFloat(sortedKeys[j])]);
-                }
-                console.log("");
-            }
+        imgs[i.toString()] = {};
+        let canv = document.createElement('canvas');
+        let ctx = canv.getContext('2d');
+        canv.height = size;
+        canv.width = size;
+        ctx.fillStyle = `rgb(${colors[i][0]},${colors[i][1]},${colors[i][2]})`;
+        ctx.fillRect(0, 0, canv.width, canv.height);
+        col.appendChild(canv);
+      }
+      for (let i = 0; i < keys.length; i++) {
+        let key = keys[i];
+        let item = json[key];
+        let itemKeys = Object.keys(item);
+        let bestVal = 0;
+        let best = null;
+        for (let j = 0; j < itemKeys.length; j++) {
+          let itemKey = itemKeys[j];
+          let info = item[itemKey];
+          let dif = info[0];
+          let cnt = info[1];
+          let d = info[2];
+          let val = dif * dmul + cnt * cmul;
+          if (val > bestVal) {
+            bestVal = val;
+            best = d;
+          }
         }
-        selected();
-    </script>
+        let col = colorStrings.indexOf(best.toString());
+        let im = document.createElement('img');
+        im.height = size;
+        im.width = size;
+        im.src = "../Resources/pla_sprites/" + key;
+        imgs[col.toString()][bestVal] = im;
+        // document.getElementById(col.toString()).appendChild(im);
+      }
+      for (let i = 0; i < colors.length; i++) {
+        let keys = Object.keys(imgs[i]);
+        let sortedKeys = [];
+        for (let j = 0; j < keys.length; j++) {
+          // console.log(parseFloat(keys[j]))
+          sortedKeys.push(parseFloat(keys[j]));
+        }
+        sortedKeys.sort(function(a, b) {
+          return a - b;
+        });
+        console.log(sortedKeys);
+        for (let j = 0; j < sortedKeys.length; j++) {
+          console.log(sortedKeys[j]);
+          document.getElementById(i.toString()).appendChild(imgs[i][parseFloat(sortedKeys[j])]);
+        }
+        console.log("");
+      }
+    }
+    selected();
+  </script>
 </body>
 </html>

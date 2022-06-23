@@ -40,6 +40,6 @@ class Xorshift {
     let size = 0x7FFFFFn;
     let rand = this.next() & 0x7FFFFFn;
     let t = rand * size / 0x7FFFFFn;
-    return Number(t * min + (size - t) * max)/Number(size);
+    return Number(t * min + (size - t) * max) / Number(size);
   }
 }

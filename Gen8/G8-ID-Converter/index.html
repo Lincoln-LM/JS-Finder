@@ -2,34 +2,32 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Gen 8 ID Converter</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../../CSS/main.css">
-	<link rel="stylesheet" href="../../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Gen 8 ID Converter</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../../CSS/main.css">
+  <link rel="stylesheet" href="../../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
 </head>
-	
-
 <body>
-	<div class="info">
-        <a>Enter your G8 IDs to convert them to your 5 digit ID counterparts</a><br>
-		<a>G8 TID:</a><input onchange="update()" type="number" id="G8TID" max=999999 min=0 value=0><br>
-        <a>G8 SID:</a><input onchange="update()" type="number" id="G8SID" max=4294 min=0 value=0><br>
-        <a>TID: </a><a id="TID"></a><br>
-        <a>SID: </a><a id="SID"></a>
-    </div><br>
-	<button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
-	<br>
-	<script>
-        function update() {
-            let tidsid = BigInt(document.getElementById("G8SID").value) * 1000000n + BigInt(document.getElementById("G8TID").value);
-            document.getElementById("TID").innerText = (tidsid & 0xFFFFn).toString();
-            document.getElementById("SID").innerText = (tidsid >> 16n).toString();
-        }
-        update();
-	</script>
+  <div class="info">
+    <a>Enter your G8 IDs to convert them to your 5 digit ID counterparts</a><br>
+    <a>G8 TID:</a><input onchange="update()" type="number" id="G8TID" max=999999 min=0 value=0><br>
+    <a>G8 SID:</a><input onchange="update()" type="number" id="G8SID" max=4294 min=0 value=0><br>
+    <a>TID: </a><a id="TID"></a><br>
+    <a>SID: </a><a id="SID"></a>
+  </div><br>
+  <button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
+  <br>
+  <script>
+    function update() {
+      let tidsid = BigInt(document.getElementById("G8SID").value) * 1000000n + BigInt(document.getElementById("G8TID").value);
+      document.getElementById("TID").innerText = (tidsid & 0xFFFFn).toString();
+      document.getElementById("SID").innerText = (tidsid >> 16n).toString();
+    }
+    update();
+  </script>
 </body>
 <br>
 </html>

@@ -23,8 +23,6 @@ function setInheritance(inh, par, ivs, parents) {
     for (let i = 0; i < 3; i++) {
         let stat = available[inh[i] % (6 - i)];
         let parent = par[i] & 1;
-        //console.log(ivs)
-        //console.log(parents)
         switch (stat)
         {
         case 0:
@@ -103,22 +101,74 @@ function generateUpper(seed, initialAdvances, maxAdvances, lower, parents) {
   return states;
 }
 
-function generateBack(seed1,seed2,heldInitialAdvances,pickupInitialAdvances,heldMaxAdvances,pickupMaxAdvances,parents,compatability) {
-  low = generateLower(seed1, heldInitialAdvances, heldMaxAdvances, compatability);
+function generateBack(
+  seed1,
+  seed2,
+  heldInitialAdvances,
+  pickupInitialAdvances,
+  heldMaxAdvances,
+  pickupMaxAdvances,
+  parents,
+  compatability
+) {
+  low = generateLower(
+    seed1,
+    heldInitialAdvances,
+    heldMaxAdvances,
+    compatability
+  );
   if (low.length > 0) {
-    return generateUpper(seed2, pickupInitialAdvances, pickupMaxAdvances, low, parents)
+    return generateUpper(
+      seed2,
+      pickupInitialAdvances,
+      pickupMaxAdvances,
+      low,
+      parents
+    )
   }
 }
 
-function generate(heldinitial,pickupinitial,heldInitialAdvances,pickupInitialAdvances,heldMaxAdvances,pickupMaxAdvances,delay,tid,sid,ivn,ivx,iva,ivb,compatability,targetNature,isShiny) {
-  let natures = [ "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" ]
-  
+function generate(
+  heldinitial,
+  pickupinitial,
+  heldInitialAdvances,
+  pickupInitialAdvances,
+  heldMaxAdvances,
+  pickupMaxAdvances,
+  delay,
+  tid,
+  sid,
+  ivn,
+  ivx,
+  iva,
+  ivb,
+  compatability,
+  targetNature,
+  isShiny
+) {
+  let natures = [
+  "Hardy", "Lonely", "Brave", "Adamant", "Naughty",
+  "Bold", "Docile", "Relaxed", "Impish", "Lax",
+  "Timid", "Hasty", "Serious", "Jolly", "Naive",
+  "Modest", "Mild", "Quiet", "Bashful", "Rash",
+  "Calm", "Gentle", "Sassy", "Careful", "Quirky"
+]
+
   let tsv = Math.floor((tid^sid)/8);
   let rng = new PokeRNG(heldinitial);
   let rng2 = new PokeRNG(pickupinitial);
   let states = [];
-  
-  let sstates = generateBack(rng.seed,rng2.seed,heldInitialAdvances,pickupInitialAdvances,heldMaxAdvances,pickupMaxAdvances,[iva,ivb],compatability)
+
+  let sstates = generateBack(
+    rng.seed,
+    rng2.seed,
+    heldInitialAdvances,
+    pickupInitialAdvances,
+    heldMaxAdvances,
+    pickupMaxAdvances,
+    [iva,ivb],
+    compatability
+  )
 
   for (let i in sstates) {
     sstate = sstates[i];
@@ -126,10 +176,10 @@ function generate(heldinitial,pickupinitial,heldInitialAdvances,pickupInitialAdv
 
     let pid = sstate[2];
     let psv = Math.floor((pid&0xFFFF ^ (pid>>16)) / 8);
-    
+
     let ivs = sstate[3]
     let flag = true;
-    
+
     for (let j = 0; j < 6; j++) {
       if (ivs[j] < ivn[j] | ivs[j] > ivx[j]) {
         flag = false;
@@ -138,10 +188,10 @@ function generate(heldinitial,pickupinitial,heldInitialAdvances,pickupInitialAdv
     if (targetNature != "Any" & natures[pid%25] != targetNature) {
       flag = false;
     }
-    if (isShiny & !(tsv == psv)) {
+    if (isShiny & (tsv != psv)) {
       flag = false;
     }
-    
+
     if (flag) {
       state.push(sstate[1]);
       state.push(sstate[0]);

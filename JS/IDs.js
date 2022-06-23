@@ -1,39 +1,45 @@
-function generate(initial,initialAdvances,maxAdvances,delay,targetTid,targetSid,targetPid,tidcheck,sidcheck,pidcheck) {
+function generate(
+  initial,
+  initialAdvances,
+  maxAdvances,
+  delay,
+  targetTID,
+  targetSID,
+  targetPID,
+  tidcheck,
+  sidcheck,
+  pidcheck
+) {
     let rng = new PokeRNG(initial);
     let states = [];
-    let psv = Math.floor(((targetPid>>>16)^(targetPid&0xFFFF))/8)
-    
-    rng.next(initialAdvances+delay);
-    for (let i=0;i<maxAdvances;i++) {
+    let psv = ((targetPID >>> 16) ^ (targetPID & 0xFFFF)) >>> 3;
+
+    rng.next(initialAdvances + delay);
+    for (let cnt = 0; cnt<maxAdvances; cnt++, rng.next()) {
       let seed = rng.seed;
       let go = new PokeRNG(seed);
       let state = [];
-      
+
       let sid = go.nextUShort();
       let tid = go.nextUShort();
       let tsv = Math.floor((tid^sid)/8);
-      
+
       let flag = true;
-      
-      if (tidcheck && tid != targetTid) {
-        flag = false;
-      }
-      if (sidcheck && sid != targetSid) {
-        flag = false;
-      }
-      if (pidcheck && tsv != psv) {
+
+      if (
+        (tidcheck && tid != targetTID) ||
+        (sidcheck && sid != targetSID) ||
+        (pidcheck && tsv != psv)
+      ) {
         flag = false;
       }
 
       if (flag) {
-        state.push(i+initialAdvances);
+        state.push(cnt+initialAdvances);
         state.push(tid);
         state.push(sid);
         states.push(state)
       }
-      
-      rng.nextUInt();
     }
     return states;
   }
-  

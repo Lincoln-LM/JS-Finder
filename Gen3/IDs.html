@@ -2,84 +2,81 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Gen 3 TID/SID Generator</title>
-	<script src="../JS/LCRNG.js"></script>
-	<script src="../JS/tools.js"></script>
-	<script src="../JS/IDs.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../CSS/main.css">
-	<link rel="stylesheet" href="../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Gen 3 TID/SID Generator</title>
+  <script src="../JS/LCRNG.js"></script>
+  <script src="../JS/tools.js"></script>
+  <script src="../JS/IDs.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-	
+  
 
 <body>
-	<div class="info">
-		<a>Initial Seed:</a><input style="width: 100px;" type="text" id="initial" value="1234"><br>
-		<a>Initial Advances: </a><input style="width:80px;" type="number" id="initialadvances" value="0"><br>
-		<a>Max Advances: </a><input style="width:80px;" type="number" id="maxadvances" value="100"><br>
-		<a>Delay: </a><input style="width:80px;" type="number" id="delay" value="0"><br>
-	</div><br>
-	<div class="filters">
-        <input class="checkbox-round" type="checkbox" value="pidcheck" id="pidcheck" style="position: relative; left:-3px;">
-        <a>PID: </a><input style="width: 100px;" type="text" id="pid" value="00000000"><br>
-        <input class="checkbox-round" type="checkbox" value="tidcheck" id="tidcheck" style="position: relative; left:-3px;">
-        <a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="0"><br>
-        <input class="checkbox-round" type="checkbox" value="sidcheck" id="sidcheck" style="position: relative; left:-3px;">
-        <a>SID: </a><input style="width:80px;" type="number" max="65535" id="sid" value="0"><br>
-	</div>
-	<br>
-	<button class="button-1" onclick=gen3IDsGenerator()>Generate</button>
-	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
-	<br>
-	<br>
-	<table id="states" style="width: 100%">
-		<colgroup>
-			<col style="width: 33%;">
-			<col style="width: 33%;">
-			<col style="width: 33%;">
-		</colgroup>
-		<thead>
-			<tr>
-				<th>Advance</th>
-				<th>TID</th>
-				<th>SID</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
-	<script>
-		function gen3IDsGenerator() {
-			let initial = parseInt(document.getElementById("initial").value,16);
-			let initialAdvances = parseInt(document.getElementById("initialadvances").value);
-			let maxAdvances = parseInt(document.getElementById("maxadvances").value);
-			let delay = parseInt(document.getElementById("delay").value);
-			let tid = parseInt(document.getElementById("tid").value);
-			let sid = parseInt(document.getElementById("sid").value);
-			let pid = parseInt(document.getElementById("pid").value,16);
-            let tidcheck = document.getElementById("tidcheck").checked;
-            let sidcheck = document.getElementById("sidcheck").checked;
-            let pidcheck = document.getElementById("pidcheck").checked;
-			
-			let t = document.getElementById("states");
-			let b = t.tBodies[0];
-			b.innerHTML = "";
-  
-			let states = generate(initial,initialAdvances,maxAdvances,delay,tid,sid,pid,tidcheck,sidcheck,pidcheck);
-  
-			for (let state of states) {
-				let row = b.insertRow();
-				
-				for (let val of state) {
-					let cell = row.insertCell();
-					let text = document.createTextNode(val);
-					cell.appendChild(text);
-				}
-			}
-		}
-	</script>
+  <div class="info">
+    <a>Initial Seed:</a><input style="width: 100px;" type="text" id="initial" value="1234"><br>
+    <a>Initial Advances: </a><input style="width:80px;" type="number" id="initialadvances" value="0"><br>
+    <a>Max Advances: </a><input style="width:80px;" type="number" id="maxadvances" value="100"><br>
+    <a>Delay: </a><input style="width:80px;" type="number" id="delay" value="0"><br>
+  </div><br>
+  <div class="filters">
+    <input class="checkbox-round" type="checkbox" value="pidcheck" id="pidcheck" style="position: relative; left:-3px;">
+    <a>PID: </a><input style="width: 100px;" type="text" id="pid" value="00000000"><br>
+    <input class="checkbox-round" type="checkbox" value="tidcheck" id="tidcheck" style="position: relative; left:-3px;">
+    <a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="0"><br>
+    <input class="checkbox-round" type="checkbox" value="sidcheck" id="sidcheck" style="position: relative; left:-3px;">
+    <a>SID: </a><input style="width:80px;" type="number" max="65535" id="sid" value="0"><br>
+  </div>
+  <br>
+  <button class="button-1" onclick=gen3IDsGenerator()>Generate</button>
+  <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+  <br>
+  <br>
+  <table id="states" style="width: 100%">
+    <colgroup>
+      <col style="width: 33%;">
+      <col style="width: 33%;">
+      <col style="width: 33%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Advance</th>
+        <th>TID</th>
+        <th>SID</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script>
+    function gen3IDsGenerator() {
+      let initial = parseInt(document.getElementById("initial").value,16);
+      let initialAdvances = parseInt(document.getElementById("initialadvances").value);
+      let maxAdvances = parseInt(document.getElementById("maxadvances").value);
+      let delay = parseInt(document.getElementById("delay").value);
+      let tid = parseInt(document.getElementById("tid").value);
+      let sid = parseInt(document.getElementById("sid").value);
+      let pid = parseInt(document.getElementById("pid").value,16);
+      let tidcheck = document.getElementById("tidcheck").checked;
+      let sidcheck = document.getElementById("sidcheck").checked;
+      let pidcheck = document.getElementById("pidcheck").checked;
+      
+      let t = document.getElementById("states");
+      let b = t.tBodies[0];
+      b.innerHTML = "";
+      let states = generate(initial,initialAdvances,maxAdvances,delay,tid,sid,pid,tidcheck,sidcheck,pidcheck);
+      for (let state of states) {
+        let row = b.insertRow();
+        for (let val of state) {
+          let cell = row.insertCell();
+          let text = document.createTextNode(val);
+          cell.appendChild(text);
+        }
+      }
+    }
+  </script>
 </body>
 </html>

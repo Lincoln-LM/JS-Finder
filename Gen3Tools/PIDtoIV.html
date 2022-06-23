@@ -2,61 +2,58 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Gen 3 PID to IV</title>
-	<script src="../JS/LCRNG.js"></script>
-	<script src="../JS/tools.js"></script>
-	<script src="../JS/PIDtoIV.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../CSS/main.css">
-	<link rel="stylesheet" href="../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Gen 3 PID to IV</title>
+  <script src="../JS/LCRNG.js"></script>
+  <script src="../JS/tools.js"></script>
+  <script src="../JS/PIDtoIV.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-	
 <body>
-	<div class="info">
-		<a>PID</a><br>
-        <input style="width: 100px;" type="text" id="pid" value="00000000">
-        <button class="button-2" style="float: right; position: relative; bottom: 10px;" onclick=gen3PIDtoIV()>Generate</button>
-        <button class="button-2" style="float: right; position: relative; bottom: 10px;" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
-	</div><br>
-	<table id="states" style="width: 100%">
-		<colgroup>
-			<col style="width: 33%;">
-			<col style="width: 33%;">
-			<col style="width: 33%;">
-		</colgroup>
-		<thead>
-			<tr>
-				<th>Seed</th>
-				<th>Method</th>
-				<th>IVs</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
-	<script>
-		function gen3PIDtoIV() {
-			let pid = parseInt(document.getElementById("pid").value,16);
-			
-			let t = document.getElementById("states");
-			let b = t.tBodies[0];
-			b.innerHTML = "";
+  <div class="info">
+    <a>PID</a><br>
+    <input style="width: 100px;" type="text" id="pid" value="00000000">
+    <button class="button-2" style="float: right; position: relative; bottom: 10px;" onclick=gen3PIDtoIV()>Generate</button>
+    <button class="button-2" style="float: right; position: relative; bottom: 10px;" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+  </div><br>
+  <table id="states" style="width: 100%">
+    <colgroup>
+      <col style="width: 33%;">
+      <col style="width: 33%;">
+      <col style="width: 33%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Seed</th>
+        <th>Method</th>
+        <th>IVs</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script>
+    function gen3PIDtoIV() {
+      let pid = parseInt(document.getElementById("pid").value,16);
+      
+      let t = document.getElementById("states");
+      let b = t.tBodies[0];
+      b.innerHTML = "";
   
-			let states = generate(pid);
-  
-			for (let state of states) {
-				let row = b.insertRow();
-				
-				for (let val of state) {
-					let cell = row.insertCell();
-					let text = document.createTextNode(val);
-					cell.appendChild(text);
-				}
-			}
-		}
-	</script>
+      let states = generate(pid);
+      for (let state of states) {
+        let row = b.insertRow();
+        for (let val of state) {
+          let cell = row.insertCell();
+          let text = document.createTextNode(val);
+          cell.appendChild(text);
+        }
+      }
+    }
+  </script>
 </body>
 </html>

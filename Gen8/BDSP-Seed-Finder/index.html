@@ -2,247 +2,247 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>BDSP Seed Finder</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY1HPCV2W0"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>BDSP Seed Finder</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY1HPCV2W0"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-HY1HPCV2W0');
-    </script>
-	<script src="../../JS/Xorshift.js"></script>
-	<script src="../../JS/XorshiftInverse.js"></script>
-    <script async src="https://docs.opencv.org/4.5.5/opencv.js" onload="onCvLoaded();" type="text/javascript"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../../CSS/main.css">
-	<link rel="stylesheet" href="../../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+  gtag('config', 'G-HY1HPCV2W0');
+  </script>
+  <script src="../../JS/Xorshift.js"></script>
+  <script src="../../JS/XorshiftInverse.js"></script>
+  <script async src="https://docs.opencv.org/4.5.5/opencv.js" onload="onCvLoaded();" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../../CSS/main.css">
+  <link rel="stylesheet" href="../../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
 </head>
 
 
 <body>
-	<div class="info">
-        <a>X: </a><input style="width:80px;" type="number" id="x" value="105"><br>
-        <a>Y: </a><input style="width:80px;" type="number" id="y" value="30"><br>
-        <a>W: </a><input style="width:80px;" type="number" id="w" value="40"><br>
-        <a>H: </a><input style="width:80px;" type="number" id="h" value="40"><br>
-        <a id="progress">0/0</a><br>
-    </div><br>
-	<button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
-    <button class="button-1" id="previewButton" style="position:relative;left:2px">Preview</button>
-    <button class="button-1" id="monitorButton" style="position:relative;left:2px">Monitor</button>
-	<br>
-    <img src="eye.png" id="eye">
-	<br>
-    <video id="video" width="300" height="225"></video>
-    <canvas id="canvasOutput"></canvas>
-    <br>
-    <div id="blinkPhotos"></div>
-	<script>
-        const video = document.getElementById('video');
-        const blinkPhotos = document.getElementById('blinkPhotos');
-        const previewButton = document.getElementById('previewButton');
-        const monitorButton = document.getElementById('monitorButton');
-        const xInput = document.getElementById('x');
-        const yInput = document.getElementById('y');
-        const wInput = document.getElementById('w');
-        const hInput = document.getElementById('h');
-        const progress = document.getElementById('progress');
-        const width = video.width;
-        const height = video.height;
-        const FPS = 60;
-        let stream;
-        let streaming = false;
-        let monitoring = false;
-        let previewing = false;
-        let progressVal = 0;
-        let progressMax = 0;
-        let intervals = [];
-        let blinks = [];
-        let src;
-        let dst;
-        let x,y,w,h;
-        let templ;
-        function onCvLoaded () {
-            console.log('cv', cv);
-            cv.onRuntimeInitialized = onReady;
+  <div class="info">
+    <a>X: </a><input style="width:80px;" type="number" id="x" value="105"><br>
+    <a>Y: </a><input style="width:80px;" type="number" id="y" value="30"><br>
+    <a>W: </a><input style="width:80px;" type="number" id="w" value="40"><br>
+    <a>H: </a><input style="width:80px;" type="number" id="h" value="40"><br>
+    <a id="progress">0/0</a><br>
+  </div><br>
+  <button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
+  <button class="button-1" id="previewButton" style="position:relative;left:2px">Preview</button>
+  <button class="button-1" id="monitorButton" style="position:relative;left:2px">Monitor</button>
+  <br>
+  <img src="eye.png" id="eye">
+  <br>
+  <video id="video" width="300" height="225"></video>
+  <canvas id="canvasOutput"></canvas>
+  <br>
+  <div id="blinkPhotos"></div>
+  <script>
+    const video = document.getElementById('video');
+    const blinkPhotos = document.getElementById('blinkPhotos');
+    const previewButton = document.getElementById('previewButton');
+    const monitorButton = document.getElementById('monitorButton');
+    const xInput = document.getElementById('x');
+    const yInput = document.getElementById('y');
+    const wInput = document.getElementById('w');
+    const hInput = document.getElementById('h');
+    const progress = document.getElementById('progress');
+    const width = video.width;
+    const height = video.height;
+    const FPS = 60;
+    let stream;
+    let streaming = false;
+    let monitoring = false;
+    let previewing = false;
+    let progressVal = 0;
+    let progressMax = 0;
+    let intervals = [];
+    let blinks = [];
+    let src;
+    let dst;
+    let x,y,w,h;
+    let templ;
+    function onCvLoaded () {
+      console.log('cv', cv);
+      cv.onRuntimeInitialized = onReady;
+    }
+    function onReady () {
+      let last = Date.now();
+      const cap = new cv.VideoCapture(video);
+
+      previewButton.addEventListener('click', () => {
+        if (streaming) {
+          progressVal = 0;
+          progressMax = 0;
+          stop();
+        } else {
+          previewing = true;
+          progressVal = 0;
+          progressMax = 0;
+          start();
         }
-        function onReady () {
-            let last = Date.now();
-            const cap = new cv.VideoCapture(video);
+      });
 
-            previewButton.addEventListener('click', () => {
-                if (streaming) {
-                    progressVal = 0;
-                    progressMax = 0;
-                    stop();
-                } else {
-                    previewing = true;
-                    progressVal = 0;
-                    progressMax = 0;
-                    start();
-                }
-            });
-
-            monitorButton.addEventListener('click', () => {
-                if (streaming) {
-                    progressVal = 0;
-                    progressMax = 0;
-                    stop();
-                } else {
-                    monitoring = true;
-                    progressVal = 0;
-                    progressMax = 40;
-                    start();
-                }
-            });
-
-            function start () {
-                intervals = [];
-                blinks = [];
-                if (previewing) {
-                    previewButton.textContent = "Stop Previewing";
-                }
-                else if (monitoring) {
-                    monitorButton.textContent = "Stop Monitoring";
-                    while (blinkPhotos.firstChild) {
-                        blinkPhotos.removeChild(blinkPhotos.firstChild);
-                    }
-                }
-                navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false })
-                .then(_stream => {
-                    stream = _stream;
-                    console.log('stream', stream);
-                    video.srcObject = stream;
-                    video.play();
-                    streaming = true;
-                    src = new cv.Mat(height, width, cv.CV_8UC4);
-                    dst = new cv.Mat(height, width, cv.CV_8UC1);
-                    x = parseInt(xInput.value);
-                    y = parseInt(yInput.value);
-                    w = parseInt(wInput.value);
-                    h = parseInt(hInput.value);
-                    setTimeout(processVideo, 0)
-                })
-                .catch(err => console.log(`An error occurred: ${err}`));
-            }
-
-            function stop () {
-                if (previewing) {
-                    previewButton.textContent = "Preview";
-                    previewing = false;
-                }
-                else if (monitoring) {
-                    monitorButton.textContent = "Monitor";
-                    monitoring = false;
-                }
-                if (video) {
-                    video.pause();
-                    video.srcObject = null;
-                }
-                if (stream) {
-                    stream.getVideoTracks()[0].stop();
-                }
-                streaming = false;
-            }
-
-            function processVideo () {
-                if (!streaming) {
-                    src.delete();
-                    dst.delete();
-                    templ.delete();
-                    return;
-                }
-                if (previewing) {
-                    x = parseInt(xInput.value);
-                    y = parseInt(yInput.value);
-                    w = parseInt(wInput.value);
-                    h = parseInt(hInput.value);
-                }
-                templ = cv.imread('eye');
-                const begin = Date.now();
-                cap.read(src)
-                dst = src
-                let rect = new cv.Rect(x,y,w,h)
-                let sr = new cv.Mat();
-                cv.cvtColor(dst, sr, cv.COLOR_RGBA2GRAY);
-                cv.cvtColor(templ, templ, cv.COLOR_RGBA2GRAY);
-                sr = sr.roi(rect);
-                let ds = new cv.Mat();
-                let mask = new cv.Mat();
-                cv.matchTemplate(sr, templ, ds, cv.TM_CCOEFF_NORMED, mask);
-                let result = cv.minMaxLoc(ds, mask);
-                let confidence = result.maxVal;
-                let maxPoint, color, color2, point;
-                if (previewing) {
-                    maxPoint = result.maxLoc;
-                    color = new cv.Scalar(0, 0, 255, 255);
-                    color2 = new cv.Scalar(255, 0, 0, 255);
-                    point = new cv.Point(maxPoint.x+templ.cols, maxPoint.y+templ.rows);
-                    cv.rectangle(dst, new cv.Point(x,y), new cv.Point(x+w,y+h), color2, 2, cv.LINE_8, 0);
-                }
-                if (confidence >= 0.9) {
-                    if (previewing) {
-                        cv.rectangle(dst, new cv.Point(maxPoint.x+x,maxPoint.y+y), new cv.Point(point.x+x,point.y+y), color, 2, cv.LINE_8, 0);
-                    }
-                }
-                else {
-                    let curr = Date.now();
-                    if (monitoring) {
-                        if (curr-last >= 700) {
-                            let ts_last = (curr-last)/1000;
-                            let interval = Math.round(ts_last);
-                            console.log("blink",interval,ts_last);
-                            intervals.push(interval);
-                            blinks.push(0);
-                            progress.textContent = `${blinks.length}/${progressMax}`;
-                            last = curr;
-                            // let canv = document.createElement("canvas");
-                            // canv.id = `b-${blinks.length}`;
-                            // blinkPhotos.appendChild(canv);
-                            // cv.imshow(`b-${blinks.length}`, sr);
-                            // if (blinks.length % 1 == 0) {
-                            //     src.delete();
-                            //     src = new cv.Mat(height, width, cv.CV_8UC4);
-                            //     dst = new cv.Mat(height, width, cv.CV_8UC1);
-                            // }
-                        }
-                        else if (blinks.slice(-1) != 1 && 300 <= curr-last) {
-                            console.log("double blink");
-                            blinks.splice(-1,1,1);
-                            // let canv = document.createElement("canvas");
-                            // canv.id = `d-${blinks.length}`;
-                            // blinkPhotos.appendChild(canv);
-                            // cv.imshow(`d-${blinks.length}`, sr);
-                        }
-                    }
-                    if (previewing) {
-                        cv.rectangle(dst, new cv.Point(x,y), new cv.Point(x+w,y+h), color, 2, cv.LINE_8, 0);
-                    }
-                }
-                if (previewing) {
-                    cv.imshow('canvasOutput', dst);
-                }
-                ds.delete();
-                mask.delete();
-                const delay = 1000/FPS - (Date.now() - begin);
-                if (previewing || blinks.length < progressMax || Date.now()-last < 700) {
-                    setTimeout(processVideo, delay);
-                }
-                else {
-                    streaming = false;
-                    stream.getVideoTracks()[0].stop();
-                    console.log("blinks done");
-                    console.log(intervals);
-                    console.log(blinks);
-                    console.log(calculateState(intervals,blinks))
-                }
-            }
+      monitorButton.addEventListener('click', () => {
+        if (streaming) {
+          progressVal = 0;
+          progressMax = 0;
+          stop();
+        } else {
+          monitoring = true;
+          progressVal = 0;
+          progressMax = 40;
+          start();
         }
-	</script>
+      });
+
+      function start () {
+        intervals = [];
+        blinks = [];
+        if (previewing) {
+          previewButton.textContent = "Stop Previewing";
+        }
+        else if (monitoring) {
+          monitorButton.textContent = "Stop Monitoring";
+          while (blinkPhotos.firstChild) {
+            blinkPhotos.removeChild(blinkPhotos.firstChild);
+          }
+        }
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false })
+        .then(_stream => {
+          stream = _stream;
+          console.log('stream', stream);
+          video.srcObject = stream;
+          video.play();
+          streaming = true;
+          src = new cv.Mat(height, width, cv.CV_8UC4);
+          dst = new cv.Mat(height, width, cv.CV_8UC1);
+          x = parseInt(xInput.value);
+          y = parseInt(yInput.value);
+          w = parseInt(wInput.value);
+          h = parseInt(hInput.value);
+          setTimeout(processVideo, 0)
+        })
+        .catch(err => console.log(`An error occurred: ${err}`));
+      }
+
+      function stop () {
+        if (previewing) {
+          previewButton.textContent = "Preview";
+          previewing = false;
+        }
+        else if (monitoring) {
+          monitorButton.textContent = "Monitor";
+          monitoring = false;
+        }
+        if (video) {
+          video.pause();
+          video.srcObject = null;
+        }
+        if (stream) {
+          stream.getVideoTracks()[0].stop();
+        }
+        streaming = false;
+      }
+
+      function processVideo () {
+        if (!streaming) {
+          src.delete();
+          dst.delete();
+          templ.delete();
+          return;
+        }
+        if (previewing) {
+          x = parseInt(xInput.value);
+          y = parseInt(yInput.value);
+          w = parseInt(wInput.value);
+          h = parseInt(hInput.value);
+        }
+        templ = cv.imread('eye');
+        const begin = Date.now();
+        cap.read(src)
+        dst = src
+        let rect = new cv.Rect(x,y,w,h)
+        let sr = new cv.Mat();
+        cv.cvtColor(dst, sr, cv.COLOR_RGBA2GRAY);
+        cv.cvtColor(templ, templ, cv.COLOR_RGBA2GRAY);
+        sr = sr.roi(rect);
+        let ds = new cv.Mat();
+        let mask = new cv.Mat();
+        cv.matchTemplate(sr, templ, ds, cv.TM_CCOEFF_NORMED, mask);
+        let result = cv.minMaxLoc(ds, mask);
+        let confidence = result.maxVal;
+        let maxPoint, color, color2, point;
+        if (previewing) {
+          maxPoint = result.maxLoc;
+          color = new cv.Scalar(0, 0, 255, 255);
+          color2 = new cv.Scalar(255, 0, 0, 255);
+          point = new cv.Point(maxPoint.x+templ.cols, maxPoint.y+templ.rows);
+          cv.rectangle(dst, new cv.Point(x,y), new cv.Point(x+w,y+h), color2, 2, cv.LINE_8, 0);
+        }
+        if (confidence >= 0.9) {
+          if (previewing) {
+            cv.rectangle(dst, new cv.Point(maxPoint.x+x,maxPoint.y+y), new cv.Point(point.x+x,point.y+y), color, 2, cv.LINE_8, 0);
+          }
+        }
+        else {
+          let curr = Date.now();
+          if (monitoring) {
+            if (curr-last >= 700) {
+              let ts_last = (curr-last)/1000;
+              let interval = Math.round(ts_last);
+              console.log("blink",interval,ts_last);
+              intervals.push(interval);
+              blinks.push(0);
+              progress.textContent = `${blinks.length}/${progressMax}`;
+              last = curr;
+              // let canv = document.createElement("canvas");
+              // canv.id = `b-${blinks.length}`;
+              // blinkPhotos.appendChild(canv);
+              // cv.imshow(`b-${blinks.length}`, sr);
+              // if (blinks.length % 1 == 0) {
+              //   src.delete();
+              //   src = new cv.Mat(height, width, cv.CV_8UC4);
+              //   dst = new cv.Mat(height, width, cv.CV_8UC1);
+              // }
+            }
+            else if (blinks.slice(-1) != 1 && 300 <= curr-last) {
+              console.log("double blink");
+              blinks.splice(-1,1,1);
+              // let canv = document.createElement("canvas");
+              // canv.id = `d-${blinks.length}`;
+              // blinkPhotos.appendChild(canv);
+              // cv.imshow(`d-${blinks.length}`, sr);
+            }
+          }
+          if (previewing) {
+            cv.rectangle(dst, new cv.Point(x,y), new cv.Point(x+w,y+h), color, 2, cv.LINE_8, 0);
+          }
+        }
+        if (previewing) {
+          cv.imshow('canvasOutput', dst);
+        }
+        ds.delete();
+        mask.delete();
+        const delay = 1000/FPS - (Date.now() - begin);
+        if (previewing || blinks.length < progressMax || Date.now()-last < 700) {
+          setTimeout(processVideo, delay);
+        }
+        else {
+          streaming = false;
+          stream.getVideoTracks()[0].stop();
+          console.log("blinks done");
+          console.log(intervals);
+          console.log(blinks);
+          console.log(calculateState(intervals,blinks))
+        }
+      }
+    }
+  </script>
 </body>
 </html>

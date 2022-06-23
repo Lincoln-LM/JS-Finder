@@ -2,103 +2,103 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>SWSH Encounter Finder</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../CSS/main.css">
-	<link rel="stylesheet" href="../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>SWSH Encounter Finder</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-	
+  
 <body>
-    <button class="button-2" style="float: left; position: relative; bottom: 5px;" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button><br>
-    <div class="info">
-        <a>Game: </a><select id="game" onchange="get()" style="text-align-last:center;">
-			<option value="Sword">Sword</option>
-			<option value="Shield">Shield</option>
-		</select><br>
-		<a>Species (include form tag ex. Moltres-1): </a><input type="text" id="species" onchange="get()" value="Pikachu"><br>
-	</div><br>
-	<table id="states" style="width: 100%">
-		<colgroup>
-			<col style="width: 20%;">
-			<col style="width: 20%;">
-			<col style="width: 20%;">
-			<col style="width: 20%;">
-			<col style="width: 20%;">
-		</colgroup>
-		<thead>
-			<tr>
-				<th>Type</th>
-				<th>Location</th>
-				<th>Weather/Encounter Type</th>
-				<th>Species</th>
-				<th>Info</th>
-			</tr>
-		</thead>
-		<tbody>
-	</table>
-    <script>
-        let object;
-        let types;
-        let locations;
-        let weathers;
-        let pokemon;
-        let specific;
-        let httpRequest = new XMLHttpRequest();
-        httpRequest.open("GET", "https://raw.githubusercontent.com/Lincoln-LM/PyNXReader/master/tests/SWSH_Encounters.json", true);
-        httpRequest.send();
-        httpRequest.addEventListener("readystatechange", function() {
-            if (this.readyState === this.DONE) {
-                object = JSON.parse(this.response);
-                get();
+  <button class="button-2" style="float: left; position: relative; bottom: 5px;" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button><br>
+  <div class="info">
+    <a>Game: </a><select id="game" onchange="get()" style="text-align-last:center;">
+      <option value="Sword">Sword</option>
+      <option value="Shield">Shield</option>
+    </select><br>
+    <a>Species (include form tag ex. Moltres-1): </a><input type="text" id="species" onchange="get()" value="Pikachu"><br>
+  </div><br>
+  <table id="states" style="width: 100%">
+    <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 20%;">
+      <col style="width: 20%;">
+      <col style="width: 20%;">
+      <col style="width: 20%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Location</th>
+        <th>Weather/Encounter Type</th>
+        <th>Species</th>
+        <th>Info</th>
+      </tr>
+    </thead>
+    <tbody>
+  </table>
+  <script>
+    let object;
+    let types;
+    let locations;
+    let weathers;
+    let pokemon;
+    let specific;
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open("GET", "https://raw.githubusercontent.com/Lincoln-LM/PyNXReader/master/tests/SWSH_Encounters.json", true);
+    httpRequest.send();
+    httpRequest.addEventListener("readystatechange", function() {
+      if (this.readyState === this.DONE) {
+        object = JSON.parse(this.response);
+        get();
+      }
+    });
+    
+    // should wait for request before allowing to be called
+    function get() {
+      let game = document.getElementById("game").value;
+      let species = document.getElementById("species").value;
+      let t = document.getElementById("states");
+      let b = t.tBodies[0];
+      b.innerHTML = "";
+      types = object[game]
+      let types_keys = Object.keys(types);
+      for (let i = 0; i < types_keys.length; i++) {
+        locations = types[types_keys[i]]
+        let locations_keys = Object.keys(locations)
+        for (let j = 0; j < locations_keys.length; j++) {
+          weathers = locations[locations_keys[j]]
+          let weathers_keys = Object.keys(weathers)
+          for (let k = 0; k < weathers_keys.length; k++) {
+            pokemon = weathers[Object.keys(weathers)[k]]
+            specific = weathers[Object.keys(weathers)[k]]
+            if (types_keys[i] != "Static") {
+              pokemon = pokemon["Slots"]
             }
-        });
-        
-        // should wait for request before allowing to be called
-        function get() {
-            let game = document.getElementById("game").value;
-            let species = document.getElementById("species").value;
-            let t = document.getElementById("states");
-            let b = t.tBodies[0];
-            b.innerHTML = "";
-            types = object[game]
-            let types_keys = Object.keys(types);
-            for (let i = 0; i < types_keys.length; i++) {
-                locations = types[types_keys[i]]
-                let locations_keys = Object.keys(locations)
-                for (let j = 0; j < locations_keys.length; j++) {
-                    weathers = locations[locations_keys[j]]
-                    let weathers_keys = Object.keys(weathers)
-                    for (let k = 0; k < weathers_keys.length; k++) {
-                        pokemon = weathers[Object.keys(weathers)[k]]
-                        specific = weathers[Object.keys(weathers)[k]]
-                        if (types_keys[i] != "Static") {
-                            pokemon = pokemon["Slots"]
-                        }
-                        let pokemon_keys = Object.keys(pokemon);
-                        for (let l = 0; l < pokemon_keys.length; l++) {
-                            if (pokemon_keys[l] == species) {
-                                let row = b.insertRow();
-                                let info = "";
-                                if (types_keys[i] != "Static") {
-                                    info = `Level: ${specific["Level"][0]}-${specific["Level"][1]} Slot: ${pokemon[species][0]}-${pokemon[species][1]}`;
-                                }
-                                else {
-                                    info = `Level: ${pokemon[species]["Level"]} ${pokemon[species]["Ability"] != -1 ?  `Forced Ability: ${pokemon[species]["Ability"]} ` : ""}${pokemon[species]["GuaranteedIVs"] != 0 ?  `${pokemon[species]["GuaranteedIVs"]}IVs` : ""}`;
-                                }
-                                row.insertCell().appendChild(document.createTextNode(types_keys[i]));
-                                row.insertCell().appendChild(document.createTextNode(locations_keys[j]));
-                                row.insertCell().appendChild(document.createTextNode(weathers_keys[k]));
-                                row.insertCell().appendChild(document.createTextNode(pokemon_keys[l]));
-                                row.insertCell().appendChild(document.createTextNode(info));
-                            }
-                        }
-                    }
+            let pokemon_keys = Object.keys(pokemon);
+            for (let l = 0; l < pokemon_keys.length; l++) {
+              if (pokemon_keys[l] == species) {
+                let row = b.insertRow();
+                let info = "";
+                if (types_keys[i] != "Static") {
+                  info = `Level: ${specific["Level"][0]}-${specific["Level"][1]} Slot: ${pokemon[species][0]}-${pokemon[species][1]}`;
                 }
+                else {
+                  info = `Level: ${pokemon[species]["Level"]} ${pokemon[species]["Ability"] != -1 ?  `Forced Ability: ${pokemon[species]["Ability"]} ` : ""}${pokemon[species]["GuaranteedIVs"] != 0 ?  `${pokemon[species]["GuaranteedIVs"]}IVs` : ""}`;
+                }
+                row.insertCell().appendChild(document.createTextNode(types_keys[i]));
+                row.insertCell().appendChild(document.createTextNode(locations_keys[j]));
+                row.insertCell().appendChild(document.createTextNode(weathers_keys[k]));
+                row.insertCell().appendChild(document.createTextNode(pokemon_keys[l]));
+                row.insertCell().appendChild(document.createTextNode(info));
+              }
             }
+          }
         }
-    </script>
+      }
+    }
+  </script>
 </body>
 </html>

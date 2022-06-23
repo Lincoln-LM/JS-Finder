@@ -2,85 +2,85 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>BDSP Lottery Predictor</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-	<link rel="stylesheet" href="../CSS/main.css">
-	<link rel="stylesheet" href="../CSS/states.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>BDSP Lottery Predictor</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
-	
+  
 
 <body>
-	<div class="info">
-        <strong>OUTDATED AS OF 1.3</strong><br>
-		<a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="65535" id="lottery" value="0"><br>
-		<a>Max Days To Display: </a><input style="width:80px;" type="number" id="maxadvances" value="10"><br>
-		<a>IDs of Pokemon (comma seperated): </a><input style="width: 80%;" type="text" id="ids" value="123456,69420,555555"><br>
-		<a>Min Matching: </a><input style="width:80px;" type="number" id="matching" value="0" max="5"><br>
-	</div><br>
-	<button class="button-1" onclick=lotteryGenerator()>Generate</button>
-	<button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
-	<br>
-	<br>
-	<table id="states" style="width: 100%">
-		<colgroup>
-			<col style="width: 33%;">
-			<col style="width: 33%;">
-			<col style="width: 33%;">
-		</colgroup>
-		<thead>
-			<tr>
-				<th>In X Days</th>
-				<th>Lottery Number</th>
-				<th>Matching Digits</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
-	<script>
-		function lotteryGenerator() {
-			let lottery = parseInt(document.getElementById("lottery").value);
-			let maxAdvances = parseInt(document.getElementById("maxadvances").value);
-			let matching = parseInt(document.getElementById("matching").value);
-			let tids = document.getElementById("ids").value.split(',');
-			console.log(ids);
-			
-			let t = document.getElementById("states");
-			let b = t.tBodies[0];
-			b.innerHTML = "";
+  <div class="info">
+    <strong>OUTDATED AS OF 1.3</strong><br>
+  <a>Todays Lottery Number: </a><input style="width:80px;" type="number" max="65535" id="lottery" value="0"><br>
+  <a>Max Days To Display: </a><input style="width:80px;" type="number" id="maxadvances" value="10"><br>
+  <a>IDs of Pokemon (comma seperated): </a><input style="width: 80%;" type="text" id="ids" value="123456,69420,555555"><br>
+  <a>Min Matching: </a><input style="width:80px;" type="number" id="matching" value="0" max="5"><br>
+  </div><br>
+  <button class="button-1" onclick=lotteryGenerator()>Generate</button>
+  <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+  <br>
+  <br>
+  <table id="states" style="width: 100%">
+  <colgroup>
+    <col style="width: 33%;">
+    <col style="width: 33%;">
+    <col style="width: 33%;">
+  </colgroup>
+  <thead>
+    <tr>
+    <th>In X Days</th>
+    <th>Lottery Number</th>
+    <th>Matching Digits</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+  <script>
+  function lotteryGenerator() {
+    let lottery = parseInt(document.getElementById("lottery").value);
+    let maxAdvances = parseInt(document.getElementById("maxadvances").value);
+    let matching = parseInt(document.getElementById("matching").value);
+    let tids = document.getElementById("ids").value.split(',');
+    console.log(ids);
+    
+    let t = document.getElementById("states");
+    let b = t.tBodies[0];
+    b.innerHTML = "";
   
-			for (let i=0;i<maxAdvances;i++) {
-				let compare = ('000000'+lottery.toString(10)).slice(-6);
-				let win = 0;
-				for (let k=0;k<tids.length;k++) {
-					id = tids[k];
-					let compare2 = ('000000'+id).slice(-6);
-					for (let j=5;j>=1;j--) {
-						if (compare[j] == compare2[j]) {
-							if (6-j > win) {
-								win = 6-j;
-							}
-						}
-						else {
-							break;
-						}
-					}
-					if (win == 5) {
-						break;
-					}
-				}
-				if (win >= matching) {
-					let row = b.insertRow();
-					row.insertCell().appendChild(document.createTextNode(i));
-					row.insertCell().appendChild(document.createTextNode(lottery));
-					row.insertCell().appendChild(document.createTextNode(win));
-				}
-				lottery = (lottery * 0x8965 + 0xF729) & 0xFFFF
-			}
-		}
-	</script>
+    for (let i=0;i<maxAdvances;i++) {
+    let compare = ('000000'+lottery.toString(10)).slice(-6);
+    let win = 0;
+    for (let k=0;k<tids.length;k++) {
+      id = tids[k];
+      let compare2 = ('000000'+id).slice(-6);
+      for (let j=5;j>=1;j--) {
+      if (compare[j] == compare2[j]) {
+        if (6-j > win) {
+        win = 6-j;
+        }
+      }
+      else {
+        break;
+      }
+      }
+      if (win == 5) {
+        break;
+      }
+    }
+    if (win >= matching) {
+      let row = b.insertRow();
+      row.insertCell().appendChild(document.createTextNode(i));
+      row.insertCell().appendChild(document.createTextNode(lottery));
+      row.insertCell().appendChild(document.createTextNode(win));
+    }
+    lottery = (lottery * 0x8965 + 0xF729) & 0xFFFF
+    }
+  }
+  </script>
 </body>
 </html>
