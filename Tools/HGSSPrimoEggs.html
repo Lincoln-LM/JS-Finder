@@ -75,17 +75,10 @@
             out[3] |= out_3_low;
         }
         let words = [out[0], -1, -1, -1];
-        let invalid = false;
         for (let i = 1; i < 4; i++) {
-            words[i] = words[i - 1] + out[i];
-            if (words[i] > 350) {
-                invalid = true;
-                break
-            }
+            words[i] = (words[i - 1] + out[i]) % 351;
         }
-        if (!invalid) {
-            return words;
-        }
+        return words;
     }
   </script>
   <footer><a href="https://github.com/Lincoln-LM/RNG-Python-Scripts/blob/f80aa6e0f42b3fbd175fec979f473b456f64123b/hgss_aikotoba_reverse.py#L37">Algorithm</a></footer>
