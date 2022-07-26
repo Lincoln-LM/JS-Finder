@@ -18,8 +18,7 @@
   </div>
   <h>Egg 0 Words: <strong id="egg0"></strong></h><br>
   <h>Egg 1 Words: <strong id="egg1"></strong></h><br>
-  <h>Egg 2 Words: <strong id="egg2"></strong></h><br>
-  <h>Egg 3 Words: <strong id="egg3"></strong></h><br><br>
+  <h>Egg 2 Words: <strong id="egg2"></strong></h><br><br>
   <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
   <script>
     let POSSIBLE_WORDS = {};
@@ -28,7 +27,7 @@
     .then(data => {POSSIBLE_WORDS = data; generate();});
     function generate() {
       let tid = parseInt(document.getElementById("tid").value);
-      for (let species = 0; species < 4; species++) {
+      for (let species = 0; species < 3; species++) {
         let words = reverseAikotoba(species, tid);
         let element = document.getElementById(`egg${species}`);
         element.innerText = "";
@@ -43,56 +42,52 @@
         let species_val = species + 8;
         let tid_high = tid >>> 8;
         let tid_low = tid & 0xFF;
-        for (let out_0_high = 0; out_0_high < 0x10; out_0_high++) {
-            let out_0 = species_val | (out_0_high << 4);
-            console.log(out_0);
-            let out_1 = tid_high ^ out_0;
-            let out_2 = tid_low ^ out_0;
-            for (let out_3 = 0; out_3 < 0x100; out_3++) {
-                let out = [out_0, out_1, out_2, out_3];
-                let cycles = out[3] & 0xF;
-                let xor_val = (out[3] >>> 4) | (out[3] & 0xF0);
-                for (let i = 0; i < cycles; i++) {
-                    let out_2_low = out[0] >>> 7;
-                    out[0] <<= 1;
-                    out[0] &= 0xFF;
-                    for (let j = 1; j < 3; j++) {
-                        out[j - 1] |= out[j] >> 7;
-                        out[j] <<= 1;
-                        out[j] &= 0xFF;
-                    }
-                    out[2] |= out_2_low;
-                }
-                for (let i = 0; i < 3; i++) {
-                    out[i] ^= xor_val;
-                }
-                for (let i = 0; i < 5; i++) {
-                    let out_3_low = out[0] >> 7;
-                    out[0] <<= 1;
-                    out[0] &= 0xFF;
-                    for (let j = 1; j < 4; j++) {
-                        out[j - 1] |= out[j] >> 7;
-                        out[j] <<= 1;
-                        out[j] &= 0xFF;
-                    }
-                    out[3] |= out_3_low;
-                }
-                let words = [out[0], -1, -1, -1];
-                let invalid = false;
-                for (let i = 1; i < 4; i++) {
-                    words[i] = words[i - 1] + out[i];
-                    if (words[i] > 350) {
-                        invalid = true;
-                        break
-                    }
-                }
-                if (!invalid) {
-                    return words;
-                }
+        let out_0 = species_val | (6 << 4);
+        let out_1 = tid_high ^ out_0;
+        let out_2 = tid_low ^ out_0;
+        let out_3 = ((out_2 ^ out_0) * (out_0 + (out_1 ^ out_0)) & 0xFF);
+        let out = [out_0, out_1, out_2, out_3];
+        let cycles = out[3] & 0xF;
+        let xor_val = (out[3] >>> 4) | (out[3] & 0xF0);
+        for (let i = 0; i < cycles; i++) {
+            let out_2_low = out[0] >>> 7;
+            out[0] <<= 1;
+            out[0] &= 0xFF;
+            for (let j = 1; j < 3; j++) {
+                out[j - 1] |= out[j] >> 7;
+                out[j] <<= 1;
+                out[j] &= 0xFF;
             }
+            out[2] |= out_2_low;
+        }
+        for (let i = 0; i < 3; i++) {
+            out[i] ^= xor_val;
+        }
+        for (let i = 0; i < 5; i++) {
+            let out_3_low = out[0] >> 7;
+            out[0] <<= 1;
+            out[0] &= 0xFF;
+            for (let j = 1; j < 4; j++) {
+                out[j - 1] |= out[j] >> 7;
+                out[j] <<= 1;
+                out[j] &= 0xFF;
+            }
+            out[3] |= out_3_low;
+        }
+        let words = [out[0], -1, -1, -1];
+        let invalid = false;
+        for (let i = 1; i < 4; i++) {
+            words[i] = words[i - 1] + out[i];
+            if (words[i] > 350) {
+                invalid = true;
+                break
+            }
+        }
+        if (!invalid) {
+            return words;
         }
     }
   </script>
-  <footer><a href="https://github.com/Lincoln-LM/RNG-Python-Scripts/blob/7f5891e31ff8b5fb89cd246dcf239354a4272389/hgss_aikotoba_reverse.py#L37">Algorithm</a></footer>
+  <footer><a href="https://github.com/Lincoln-LM/RNG-Python-Scripts/blob/f80aa6e0f42b3fbd175fec979f473b456f64123b/hgss_aikotoba_reverse.py#L37">Algorithm</a></footer>
 </body>
 </html>
