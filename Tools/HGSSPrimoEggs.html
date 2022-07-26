@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>HGSS Primo Egg Calculator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+  
+
+<body>
+  <div class="info">
+    <a>TID: </a><input style="width:80px;" type="number" max="65535" id="tid" value="0" onchange="generate()"><br>
+  </div>
+  <h>Egg 0 Words: <strong id="egg0"></strong></h><br>
+  <h>Egg 1 Words: <strong id="egg1"></strong></h><br>
+  <h>Egg 2 Words: <strong id="egg2"></strong></h><br>
+  <h>Egg 3 Words: <strong id="egg3"></strong></h><br><br>
+  <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+  <script>
+    let POSSIBLE_WORDS = {};
+    fetch("https://raw.githubusercontent.com/Lincoln-LM/RNG-Python-Scripts/main/aikotoba_words.json")
+    .then(res => res.json())
+    .then(data => {POSSIBLE_WORDS = data; generate();});
+    function generate() {
+      let tid = parseInt(document.getElementById("tid").value);
+      for (let species = 0; species < 4; species++) {
+        let words = reverseAikotoba(species, tid);
+        let element = document.getElementById(`egg${species}`);
+        element.innerText = "";
+        for (let i = 0; i < 4; i++) {
+            element.innerText += POSSIBLE_WORDS[words[i].toString()] + ","
+        }
+        element.innerText = element.innerText.substring(0, element.innerText.length - 1);
+      }
+
+    }
+    function reverseAikotoba(species, tid) {
+        let species_val = species + 8;
+        let tid_high = tid >>> 8;
+        let tid_low = tid & 0xFF;
+        for (let out_0_high = 0; out_0_high < 0x10; out_0_high++) {
+            let out_0 = species_val | (out_0_high << 4);
+            console.log(out_0);
+            let out_1 = tid_high ^ out_0;
+            let out_2 = tid_low ^ out_0;
+            for (let out_3 = 0; out_3 < 0x100; out_3++) {
+                let out = [out_0, out_1, out_2, out_3];
+                let cycles = out[3] & 0xF;
+                let xor_val = (out[3] >>> 4) | (out[3] & 0xF0);
+                for (let i = 0; i < cycles; i++) {
+                    let out_2_low = out[0] >>> 7;
+                    out[0] <<= 1;
+                    out[0] &= 0xFF;
+                    for (let j = 1; j < 3; j++) {
+                        out[j - 1] |= out[j] >> 7;
+                        out[j] <<= 1;
+                        out[j] &= 0xFF;
+                    }
+                    out[2] |= out_2_low;
+                }
+                for (let i = 0; i < 3; i++) {
+                    out[i] ^= xor_val;
+                }
+                for (let i = 0; i < 5; i++) {
+                    let out_3_low = out[0] >> 7;
+                    out[0] <<= 1;
+                    out[0] &= 0xFF;
+                    for (let j = 1; j < 4; j++) {
+                        out[j - 1] |= out[j] >> 7;
+                        out[j] <<= 1;
+                        out[j] &= 0xFF;
+                    }
+                    out[3] |= out_3_low;
+                }
+                let words = [out[0], -1, -1, -1];
+                let invalid = false;
+                for (let i = 1; i < 4; i++) {
+                    words[i] = words[i - 1] + out[i];
+                    if (words[i] > 350) {
+                        invalid = true;
+                        break
+                    }
+                }
+                if (!invalid) {
+                    return words;
+                }
+            }
+        }
+    }
+  </script>
+  <footer><a href="https://github.com/Lincoln-LM/RNG-Python-Scripts/blob/7f5891e31ff8b5fb89cd246dcf239354a4272389/hgss_aikotoba_reverse.py#L37">Algorithm</a></footer>
+</body>
+</html>
