@@ -22,7 +22,7 @@
   <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
   <script>
     let POSSIBLE_WORDS = {};
-    fetch("https://raw.githubusercontent.com/Lincoln-LM/RNG-Python-Scripts/main/aikotoba_words.json")
+    fetch("https://raw.githubusercontent.com/Lincoln-LM/RNG-Python-Scripts/main/gen4/aikotoba_words.json")
     .then(res => res.json())
     .then(data => {POSSIBLE_WORDS = data; generate();});
     function generate() {
