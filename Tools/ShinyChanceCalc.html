@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Cumulative Shiny Chance Calc</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/states.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+  
+
+<body>
+  <h4>Note: The chances calculated by this page are <b>not</b> precisely accurate (yet) for the "break-early" shiny roll mechanic but do provide a close approximation</h4>
+  <a>Decimal Point Precision: </a><input style="width: 80px;" type="number" id="precision" value="2"><br>
+  <b>Encounters to Cumulative Chance</b>
+  <div class="info">
+    <a>Base Chance: 1/</a><input style="width: 80px;" type="number" id="chance" value="4096"><br>
+    <a>Encounters: </a><input style="width: 80px;" type="number" id="encounters" value="1"><br>
+    <a>Chance as percent: </a><a id="percent"></a><br>
+    <a>Chance as fraction: 1/</a><a id="one"></a><br>
+  </div><br>
+  <b>Cumulative Chance to Encounters</b>
+  <div class="info">
+    <a>Base Chance: 1/</a><input style="width: 80px;" type="number" id="chance_inverse" value="4096"><br>
+    <a>Percent wanted: </a><input style="width: 80px;" type="number" id="percent_inverse" value="0"><br>
+    <a>Encounters needed: </a><a id="encounters_inverse"></a><br>
+  </div><br>
+  <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
+  <br>
+  <br>
+  </table>
+  <script>
+    const precision = document.getElementById('precision');
+    const chance = document.getElementById('chance');
+    const encounters = document.getElementById('encounters');
+    const percent = document.getElementById('percent');
+    const one = document.getElementById('one');
+    const chance_inverse = document.getElementById('chance_inverse');
+    const encounters_inverse = document.getElementById('encounters_inverse');
+    const percent_inverse = document.getElementById('percent_inverse');
+
+    calculate();
+    inverse();
+
+    precision.addEventListener('change', (event) => {
+      calculate();
+      inverse();
+    });
+    chance.addEventListener('change', (event) => {
+      calculate();
+    });
+    encounters.addEventListener('change', (event) => {
+      calculate();
+    });
+
+    chance_inverse.addEventListener('change', (event) => {
+      inverse();
+    });
+    percent_inverse.addEventListener('change', (event) => {
+      inverse();
+    });
+
+    function calculate() {  
+      var mult = Math.pow(10,precision.value)
+      var bnp = 1-Math.pow((1-1/chance.value),encounters.value);
+      percent.textContent = (Math.round((1-Math.pow((1-1/chance.value),encounters.value)) * 100 * mult)/mult).toString() + "%";
+      one.textContent = (Math.round((1/bnp) * mult)/mult).toString();
+    }
+    function inverse() {  
+      var mult = Math.pow(10,precision.value)
+      var encounters = Math.round((Math.log(1-(percent_inverse.value/100)) / Math.log(1-(1/chance_inverse.value))) * mult)/mult;
+      encounters_inverse.textContent = encounters.toString();
+    }
+  </script>
+</body>
+</html>

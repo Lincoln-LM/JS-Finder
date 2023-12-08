@@ -1,78 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>Cumulative Shiny Odds Calc</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
-  <link rel="stylesheet" href="../CSS/main.css">
-  <link rel="stylesheet" href="../CSS/states.css">
-  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-</head>
-  
-
-<body>
-  <a>Decimal Point Precision: </a><input style="width: 80px;" type="number" id="precision" value="2"><br>
-  <b>Encounters to Cumulative Odds</b>
-  <div class="info">
-    <a>Odds: 1/</a><input style="width: 80px;" type="number" id="odds" value="4096"><br>
-    <a>Encounters: </a><input style="width: 80px;" type="number" id="encounters" value="1"><br>
-    <a>Odds in percent: </a><a id="percent"></a><br>
-    <a>Odds in 1/</a><a id="one"></a><br>
-  </div><br>
-  <b>Cumulative Odds to Encounters</b>
-  <div class="info">
-    <a>Odds: 1/</a><input style="width: 80px;" type="number" id="odds_inverse" value="4096"><br>
-    <a>Percent wanted: </a><input style="width: 80px;" type="number" id="percent_inverse" value="0"><br>
-    <a>Encounters needed: </a><a id="encounters_inverse"></a><br>
-  </div><br>
-  <button class="button-1" onclick="window.location.href='./'" style="position:relative;left:2px">Back</button>
-  <br>
-  <br>
-  </table>
-  <script>
-    const precision = document.getElementById('precision');
-    const odds = document.getElementById('odds');
-    const encounters = document.getElementById('encounters');
-    const percent = document.getElementById('percent');
-    const one = document.getElementById('one');
-    const odds_inverse = document.getElementById('odds_inverse');
-    const encounters_inverse = document.getElementById('encounters_inverse');
-    const percent_inverse = document.getElementById('percent_inverse');
-
-    calculate();
-    inverse();
-
-    precision.addEventListener('change', (event) => {
-      calculate();
-      inverse();
-    });
-    odds.addEventListener('change', (event) => {
-      calculate();
-    });
-    encounters.addEventListener('change', (event) => {
-      calculate();
-    });
-
-    odds_inverse.addEventListener('change', (event) => {
-      inverse();
-    });
-    percent_inverse.addEventListener('change', (event) => {
-      inverse();
-    });
-
-    function calculate() {  
-      var mult = Math.pow(10,precision.value)
-      var bnp = 1-Math.pow((1-1/odds.value),encounters.value);
-      percent.textContent = (Math.round((1-Math.pow((1-1/odds.value),encounters.value)) * 100 * mult)/mult).toString() + "%";
-      one.textContent = (Math.round((1/bnp) * mult)/mult).toString();
-    }
-    function inverse() {  
-      var mult = Math.pow(10,precision.value)
-      var encounters = Math.round((Math.log(1-(percent_inverse.value/100)) / Math.log(1-(1/odds_inverse.value))) * mult)/mult;
-      encounters_inverse.textContent = encounters.toString();
-    }
-  </script>
-</body>
+<<html>
+  <head>
+    <meta http-equiv="refresh" content="0;url=./ShinyChanceCalc" />
+    <title></title>
+  </head>
+ <body></body>
 </html>
