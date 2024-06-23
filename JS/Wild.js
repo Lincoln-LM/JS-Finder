@@ -24,7 +24,7 @@ function generate(
   let states = [];
 
   rng.next(initialAdvances+delay);
-  for (let cnt = 0; cnt < maxAdvances; i++) {
+  for (let cnt = 0; cnt < maxAdvances; cnt++) {
     let seed = rng.seed;
     let go = new PokeRNG(seed);
 
