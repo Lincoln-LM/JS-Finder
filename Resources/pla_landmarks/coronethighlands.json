@@ -1,0 +1,6168 @@
+{
+    "0102": {
+        "identifier": "0102",
+        "position": [
+            824.669983,
+            36.499271,
+            934.47998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 5699926776690567812
+    },
+    "0103": {
+        "identifier": "0103",
+        "position": [
+            787.070007,
+            36.608002,
+            929.890015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 5699926776690567812
+    },
+    "0104": {
+        "identifier": "0104",
+        "position": [
+            771.63678,
+            26.590731,
+            903.493225
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 5699926776690567812
+    },
+    "0101": {
+        "identifier": "0101",
+        "position": [
+            888.320007,
+            34.946468,
+            810.640015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 5699926776690567812
+    },
+    "0105": {
+        "identifier": "0105",
+        "position": [
+            884.309998,
+            36.202969,
+            865.599976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 5699926776690567812
+    },
+    "0106": {
+        "identifier": "0106",
+        "position": [
+            787.421997,
+            36.723541,
+            966.552002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0107": {
+        "identifier": "0107",
+        "position": [
+            880.669983,
+            25.693729,
+            801.659973
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0108": {
+        "identifier": "0108",
+        "position": [
+            754.650024,
+            25.65,
+            858.650024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0109": {
+        "identifier": "0109",
+        "position": [
+            688.650024,
+            43.325958,
+            880.890015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0110": {
+        "identifier": "0110",
+        "position": [
+            883.099976,
+            36.837009,
+            889.890015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0111": {
+        "identifier": "0111",
+        "position": [
+            690.820007,
+            26.438841,
+            968.099976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0112": {
+        "identifier": "0112",
+        "position": [
+            927.950012,
+            49.631409,
+            750.969971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0113": {
+        "identifier": "0113",
+        "position": [
+            939.26001,
+            41.40778,
+            789.030029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0114": {
+        "identifier": "0114",
+        "position": [
+            864.340027,
+            26.15527,
+            758.780029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14729172523017917980
+    },
+    "0120": {
+        "identifier": "0120",
+        "position": [
+            672.429993,
+            49.628941,
+            863.719971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0121": {
+        "identifier": "0121",
+        "position": [
+            703.580017,
+            49.175018,
+            832.599976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0122": {
+        "identifier": "0122",
+        "position": [
+            798.150024,
+            48.853611,
+            753.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0115": {
+        "identifier": "0115",
+        "position": [
+            763.280029,
+            49.388401,
+            812.97998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0116": {
+        "identifier": "0116",
+        "position": [
+            599.799988,
+            57.150509,
+            963.619995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0117": {
+        "identifier": "0117",
+        "position": [
+            671.219971,
+            49.70261,
+            799.539978
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0118": {
+        "identifier": "0118",
+        "position": [
+            639.429993,
+            55.64484,
+            920.409973
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0119": {
+        "identifier": "0119",
+        "position": [
+            705.869995,
+            27.041691,
+            882.710022
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 2726763842906820066
+    },
+    "0123": {
+        "identifier": "0123",
+        "position": [
+            668.840027,
+            43.25275,
+            943.030029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0124": {
+        "identifier": "0124",
+        "position": [
+            778.830017,
+            49.251129,
+            785.780029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0125": {
+        "identifier": "0125",
+        "position": [
+            560.049988,
+            57.368931,
+            946.099976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0126": {
+        "identifier": "0126",
+        "position": [
+            649.700012,
+            57.004639,
+            944.0
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0127": {
+        "identifier": "0127",
+        "position": [
+            628.440002,
+            53.109921,
+            890.26001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0128": {
+        "identifier": "0128",
+        "position": [
+            699.02002,
+            49.174068,
+            787.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0129": {
+        "identifier": "0129",
+        "position": [
+            580.390015,
+            56.997501,
+            965.900024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 11878486388499629146
+    },
+    "0130": {
+        "identifier": "0130",
+        "position": [
+            759.320007,
+            49.91153,
+            766.630005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0131": {
+        "identifier": "0131",
+        "position": [
+            645.77002,
+            52.209999,
+            865.130005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0133": {
+        "identifier": "0133",
+        "position": [
+            690.119995,
+            42.3074,
+            697.070007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12216609179917316160
+    },
+    "0134": {
+        "identifier": "0134",
+        "position": [
+            626.76001,
+            54.775539,
+            760.01001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 12216609179917316160
+    },
+    "0132": {
+        "identifier": "0132",
+        "position": [
+            679.419983,
+            45.78223,
+            744.01001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12216609179917316160
+    },
+    "0135": {
+        "identifier": "0135",
+        "position": [
+            708.559998,
+            42.041809,
+            731.900024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 2799146036907217464
+    },
+    "0136": {
+        "identifier": "0136",
+        "position": [
+            742.530029,
+            57.522491,
+            658.859985
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 2799146036907217464
+    },
+    "0137": {
+        "identifier": "0137",
+        "position": [
+            729.940002,
+            40.667358,
+            673.919983
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 2799146036907217464
+    },
+    "0138": {
+        "identifier": "0138",
+        "position": [
+            821.059998,
+            49.004059,
+            707.590027
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9154735426851320047
+    },
+    "0139": {
+        "identifier": "0139",
+        "position": [
+            800.559998,
+            46.4473,
+            670.719971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9154735426851320047
+    },
+    "0140": {
+        "identifier": "0140",
+        "position": [
+            854.330017,
+            45.65958,
+            721.690002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 9154735426851320047
+    },
+    "0141": {
+        "identifier": "0141",
+        "position": [
+            843.039978,
+            51.12439,
+            520.650024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0142": {
+        "identifier": "0142",
+        "position": [
+            768.890015,
+            51.860958,
+            613.130005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0143": {
+        "identifier": "0143",
+        "position": [
+            730.690002,
+            77.750557,
+            575.48999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0144": {
+        "identifier": "0144",
+        "position": [
+            797.73999,
+            50.9165,
+            571.280029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0145": {
+        "identifier": "0145",
+        "position": [
+            826.409973,
+            50.966518,
+            545.48999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0146": {
+        "identifier": "0146",
+        "position": [
+            765.059998,
+            85.29808,
+            551.309998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0147": {
+        "identifier": "0147",
+        "position": [
+            855.890015,
+            51.142879,
+            551.630005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18306457972444129127
+    },
+    "0148": {
+        "identifier": "0148",
+        "position": [
+            838.460022,
+            46.958309,
+            643.280029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Chesto Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0149": {
+        "identifier": "0149",
+        "position": [
+            865.22998,
+            46.540001,
+            603.059998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0151": {
+        "identifier": "0151",
+        "position": [
+            830.580017,
+            60.400002,
+            588.340027
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0154": {
+        "identifier": "0154",
+        "position": [
+            938.640015,
+            58.86076,
+            629.849976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0155": {
+        "identifier": "0155",
+        "position": [
+            929.349976,
+            58.709141,
+            652.969971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0150": {
+        "identifier": "0150",
+        "position": [
+            868.76001,
+            48.467098,
+            674.369995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Chesto Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0152": {
+        "identifier": "0152",
+        "position": [
+            896.049988,
+            46.706699,
+            655.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Chesto Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0153": {
+        "identifier": "0153",
+        "position": [
+            877.280029,
+            51.043491,
+            709.820007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0156": {
+        "identifier": "0156",
+        "position": [
+            894.960022,
+            25.75494,
+            479.839996
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 12449692526770903838
+    },
+    "0157": {
+        "identifier": "0157",
+        "position": [
+            828.52002,
+            25.742741,
+            455.709991
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0158": {
+        "identifier": "0158",
+        "position": [
+            832.419983,
+            47.475922,
+            611.150024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18395168791726377494
+    },
+    "0159": {
+        "identifier": "0159",
+        "position": [
+            857.98999,
+            27.518339,
+            466.899994
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18395168791726377494
+    },
+    "0160": {
+        "identifier": "0160",
+        "position": [
+            834.320007,
+            30.202971,
+            468.540009
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 18395168791726377494
+    },
+    "0161": {
+        "identifier": "0161",
+        "position": [
+            898.72998,
+            50.605999,
+            678.02002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0162": {
+        "identifier": "0162",
+        "position": [
+            875.280029,
+            50.029999,
+            688.929993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0163": {
+        "identifier": "0163",
+        "position": [
+            824.549988,
+            59.941151,
+            654.869995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0164": {
+        "identifier": "0164",
+        "position": [
+            862.549988,
+            60.202991,
+            578.900024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0165": {
+        "identifier": "0165",
+        "position": [
+            891.369995,
+            59.378601,
+            584.130005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0168": {
+        "identifier": "0168",
+        "position": [
+            726.929993,
+            112.749001,
+            517.099976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0170": {
+        "identifier": "0170",
+        "position": [
+            696.630005,
+            116.239403,
+            547.619995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 10869453170968771221
+    },
+    "0171": {
+        "identifier": "0171",
+        "position": [
+            730.179993,
+            92.94519,
+            548.859985
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0173": {
+        "identifier": "0173",
+        "position": [
+            621.799988,
+            119.993301,
+            497.420013
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0172": {
+        "identifier": "0172",
+        "position": [
+            774.75,
+            95.677673,
+            514.640015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0166": {
+        "identifier": "0166",
+        "position": [
+            660.737793,
+            109.436699,
+            519.128479
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0174": {
+        "identifier": "0174",
+        "position": [
+            641.549988,
+            109.620201,
+            551.440002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0169": {
+        "identifier": "0169",
+        "position": [
+            646.25,
+            97.082108,
+            576.679993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 1,
+        "itemRewardMax": 2,
+        "rewardTable": [
+            {
+                "item": "Leppa Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0167": {
+        "identifier": "0167",
+        "position": [
+            672.809998,
+            98.412666,
+            573.309998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 6304049292333031213
+    },
+    "0176": {
+        "identifier": "0176",
+        "position": [
+            613.140015,
+            110.267303,
+            533.619995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 10869453170968771221
+    },
+    "0175": {
+        "identifier": "0175",
+        "position": [
+            696.97998,
+            113.091003,
+            522.840027
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 10869453170968771221
+    },
+    "0177": {
+        "identifier": "0177",
+        "position": [
+            598.609985,
+            136.634995,
+            485.369995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 10869453170968771221
+    },
+    "0178": {
+        "identifier": "0178",
+        "position": [
+            694.539978,
+            125.692802,
+            455.929993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 10869453170968771221
+    },
+    "0179": {
+        "identifier": "0179",
+        "position": [
+            510.940002,
+            136.198196,
+            434.429993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0180": {
+        "identifier": "0180",
+        "position": [
+            530.549988,
+            128.768906,
+            509.200012
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0182": {
+        "identifier": "0182",
+        "position": [
+            580.710022,
+            146.049606,
+            477.859985
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0183": {
+        "identifier": "0183",
+        "position": [
+            606.159973,
+            136.3806,
+            425.410004
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0189": {
+        "identifier": "0189",
+        "position": [
+            449.220001,
+            130.810394,
+            521.570007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Aspear Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0190": {
+        "identifier": "0190",
+        "position": [
+            418.019989,
+            133.6595,
+            491.980011
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0187": {
+        "identifier": "0187",
+        "position": [
+            480.079987,
+            129.396301,
+            465.829987
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Aspear Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0188": {
+        "identifier": "0188",
+        "position": [
+            533.210022,
+            138.376801,
+            492.179993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0184": {
+        "identifier": "0184",
+        "position": [
+            640.219971,
+            133.313507,
+            459.399994
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0185": {
+        "identifier": "0185",
+        "position": [
+            656.900024,
+            132.599701,
+            446.839996
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0186": {
+        "identifier": "0186",
+        "position": [
+            582.22998,
+            137.477997,
+            415.51001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 1,
+        "itemRewardMax": 2,
+        "rewardTable": [
+            {
+                "item": "Leppa Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 9476529592987156092
+    },
+    "0191": {
+        "identifier": "0191",
+        "position": [
+            539.780029,
+            132.829803,
+            444.899994
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4723809936530898596
+    },
+    "0192": {
+        "identifier": "0192",
+        "position": [
+            409.76001,
+            133.280594,
+            537.179993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4723809936530898596
+    },
+    "0193": {
+        "identifier": "0193",
+        "position": [
+            402.700012,
+            138.413406,
+            513.309998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4723809936530898596
+    },
+    "0194": {
+        "identifier": "0194",
+        "position": [
+            641.359985,
+            133.992905,
+            414.440002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4723809936530898596
+    },
+    "0195": {
+        "identifier": "0195",
+        "position": [
+            498.329987,
+            128.510803,
+            462.089996
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 10
+            },
+            {
+                "item": "Stealth Spray",
+                "probability": 9
+            },
+            {
+                "item": "Bean Cake",
+                "probability": 10
+            },
+            {
+                "item": "Salt Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 10
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 10
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 10
+            },
+            {
+                "item": "Nugget",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0196": {
+        "identifier": "0196",
+        "position": [
+            451.177002,
+            130.8703,
+            534.23999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 10
+            },
+            {
+                "item": "Stealth Spray",
+                "probability": 9
+            },
+            {
+                "item": "Bean Cake",
+                "probability": 10
+            },
+            {
+                "item": "Salt Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 10
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 10
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 10
+            },
+            {
+                "item": "Nugget",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0197": {
+        "identifier": "0197",
+        "position": [
+            449.269989,
+            131.119995,
+            471.850006
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0198": {
+        "identifier": "0198",
+        "position": [
+            411.070007,
+            133.5401,
+            483.579987
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 10
+            },
+            {
+                "item": "Stealth Spray",
+                "probability": 9
+            },
+            {
+                "item": "Bean Cake",
+                "probability": 10
+            },
+            {
+                "item": "Salt Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 10
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 10
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 10
+            },
+            {
+                "item": "Nugget",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0199": {
+        "identifier": "0199",
+        "position": [
+            465.420013,
+            130.231293,
+            468.790009
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 10
+            },
+            {
+                "item": "Stealth Spray",
+                "probability": 9
+            },
+            {
+                "item": "Bean Cake",
+                "probability": 10
+            },
+            {
+                "item": "Salt Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 10
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 10
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 10
+            },
+            {
+                "item": "Nugget",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0200": {
+        "identifier": "0200",
+        "position": [
+            409.299988,
+            133.630005,
+            460.790009
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0201": {
+        "identifier": "0201",
+        "position": [
+            431.559998,
+            133.4104,
+            531.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 10
+            },
+            {
+                "item": "Stealth Spray",
+                "probability": 9
+            },
+            {
+                "item": "Bean Cake",
+                "probability": 10
+            },
+            {
+                "item": "Salt Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 10
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 10
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 10
+            },
+            {
+                "item": "Nugget",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0202": {
+        "identifier": "0202",
+        "position": [
+            428.820007,
+            133.216705,
+            477.420013
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0203": {
+        "identifier": "0203",
+        "position": [
+            505.690002,
+            128.065002,
+            488.220001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0204": {
+        "identifier": "0204",
+        "position": [
+            413.290009,
+            133.490005,
+            459.910004
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 1738038732854786811
+    },
+    "0206": {
+        "identifier": "0206",
+        "position": [
+            390.589996,
+            150.213593,
+            470.649994
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0207": {
+        "identifier": "0207",
+        "position": [
+            191.160004,
+            155.259995,
+            492.730011
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0209": {
+        "identifier": "0209",
+        "position": [
+            300.359985,
+            145.402496,
+            534.580017
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0210": {
+        "identifier": "0210",
+        "position": [
+            328.190002,
+            153.106003,
+            504.23999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0211": {
+        "identifier": "0211",
+        "position": [
+            247.399994,
+            154.726807,
+            514.359985
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0205": {
+        "identifier": "0205",
+        "position": [
+            272.220001,
+            176.411301,
+            384.899994
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0208": {
+        "identifier": "0208",
+        "position": [
+            254.0,
+            141.929901,
+            569.630005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 7460223097130010002
+    },
+    "0212": {
+        "identifier": "0212",
+        "position": [
+            248.0,
+            155.427505,
+            461.350006
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0213": {
+        "identifier": "0213",
+        "position": [
+            348.899994,
+            152.400497,
+            459.140015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0214": {
+        "identifier": "0214",
+        "position": [
+            169.419998,
+            180.181,
+            393.410004
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0215": {
+        "identifier": "0215",
+        "position": [
+            316.209991,
+            174.809494,
+            453.98999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0216": {
+        "identifier": "0216",
+        "position": [
+            320.609985,
+            185.152298,
+            388.670013
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0217": {
+        "identifier": "0217",
+        "position": [
+            363.799988,
+            190.513,
+            347.179993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0218": {
+        "identifier": "0218",
+        "position": [
+            416.75,
+            197.444504,
+            318.600006
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16489363290341051914
+    },
+    "0219": {
+        "identifier": "0219",
+        "position": [
+            373.938995,
+            150.516006,
+            507.428986
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 10
+            },
+            {
+                "item": "Stealth Spray",
+                "probability": 9
+            },
+            {
+                "item": "Bean Cake",
+                "probability": 10
+            },
+            {
+                "item": "Salt Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 10
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 10
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 10
+            },
+            {
+                "item": "Nugget",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 5274379901424041525
+    },
+    "0220": {
+        "identifier": "0220",
+        "position": [
+            347.790009,
+            152.009506,
+            498.970001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 5274379901424041525
+    },
+    "0221": {
+        "identifier": "0221",
+        "position": [
+            296.540009,
+            154.373306,
+            503.130005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Pok\u00c3\u00a9 Ball",
+                "probability": 20
+            },
+            {
+                "item": "Great Ball",
+                "probability": 10
+            },
+            {
+                "item": "Mushroom Cake",
+                "probability": 10
+            },
+            {
+                "item": "Honey Cake",
+                "probability": 10
+            },
+            {
+                "item": "Grain Cake",
+                "probability": 10
+            },
+            {
+                "item": "Sticky Glob",
+                "probability": 7
+            },
+            {
+                "item": "Smoke Bomb",
+                "probability": 15
+            },
+            {
+                "item": "Scatter Bang",
+                "probability": 15
+            },
+            {
+                "item": "Ultra Ball",
+                "probability": 3
+            }
+        ],
+        "encounterTable": 5274379901424041525
+    },
+    "0223": {
+        "identifier": "0223",
+        "position": [
+            252.210007,
+            185.718002,
+            411.790009
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16409402330848364940
+    },
+    "0224": {
+        "identifier": "0224",
+        "position": [
+            344.029999,
+            193.913803,
+            415.170013
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16409402330848364940
+    },
+    "0225": {
+        "identifier": "0225",
+        "position": [
+            428.459991,
+            157.488693,
+            427.019989
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16409402330848364940
+    },
+    "0226": {
+        "identifier": "0226",
+        "position": [
+            481.119995,
+            155.866501,
+            396.089996
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 16409402330848364940
+    },
+    "0227": {
+        "identifier": "0227",
+        "position": [
+            598.070007,
+            79.313873,
+            859.719971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 14007621457196405646
+    },
+    "0228": {
+        "identifier": "0228",
+        "position": [
+            514.75,
+            89.493408,
+            876.400024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 14007621457196405646
+    },
+    "0229": {
+        "identifier": "0229",
+        "position": [
+            514.710022,
+            87.230927,
+            832.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 14007621457196405646
+    },
+    "0230": {
+        "identifier": "0230",
+        "position": [
+            578.369995,
+            87.536713,
+            855.02002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4681883972240015814
+    },
+    "0231": {
+        "identifier": "0231",
+        "position": [
+            516.75,
+            69.341187,
+            914.330017
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 13888194681074509983
+    },
+    "0233": {
+        "identifier": "0233",
+        "position": [
+            435.329987,
+            68.639236,
+            879.0
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13888194681074509983
+    },
+    "0234": {
+        "identifier": "0234",
+        "position": [
+            511.25,
+            78.474319,
+            791.75
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 13888194681074509983
+    },
+    "0232": {
+        "identifier": "0232",
+        "position": [
+            502.579987,
+            66.296951,
+            933.320007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 13888194681074509983
+    },
+    "0235": {
+        "identifier": "0235",
+        "position": [
+            570.429993,
+            69.991852,
+            904.640015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13888194681074509983
+    },
+    "0236": {
+        "identifier": "0236",
+        "position": [
+            573.190002,
+            73.689484,
+            770.650024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 13888194681074509983
+    },
+    "0237": {
+        "identifier": "0237",
+        "position": [
+            587.23999,
+            77.664047,
+            744.440002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0238": {
+        "identifier": "0238",
+        "position": [
+            446.679993,
+            70.781281,
+            913.619995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0239": {
+        "identifier": "0239",
+        "position": [
+            455.040009,
+            77.127823,
+            772.210022
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0240": {
+        "identifier": "0240",
+        "position": [
+            410.320007,
+            85.208687,
+            807.75
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0241": {
+        "identifier": "0241",
+        "position": [
+            396.470001,
+            83.436447,
+            896.200012
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0242": {
+        "identifier": "0242",
+        "position": [
+            330.679993,
+            82.830627,
+            907.140015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0243": {
+        "identifier": "0243",
+        "position": [
+            391.850006,
+            89.557602,
+            859.159973
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0244": {
+        "identifier": "0244",
+        "position": [
+            354.23999,
+            84.390961,
+            876.419983
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0245": {
+        "identifier": "0245",
+        "position": [
+            608.669983,
+            80.076134,
+            824.530029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0246": {
+        "identifier": "0246",
+        "position": [
+            486.910004,
+            70.499184,
+            904.0
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0247": {
+        "identifier": "0247",
+        "position": [
+            544.73999,
+            76.819183,
+            761.27002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0248": {
+        "identifier": "0248",
+        "position": [
+            482.799988,
+            75.841843,
+            801.179993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 1417502091671668311
+    },
+    "0251": {
+        "identifier": "0251",
+        "position": [
+            286.470001,
+            70.527496,
+            849.590027
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 1,
+        "itemRewardMax": 2,
+        "rewardTable": [
+            {
+                "item": "Leppa Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 16950068434140506096
+    },
+    "0249": {
+        "identifier": "0249",
+        "position": [
+            415.679993,
+            70.456383,
+            777.01001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 16950068434140506096
+    },
+    "0250": {
+        "identifier": "0250",
+        "position": [
+            320.279999,
+            69.863892,
+            802.599976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 16950068434140506096
+    },
+    "0252": {
+        "identifier": "0252",
+        "position": [
+            530.630005,
+            70.126068,
+            703.130005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0253": {
+        "identifier": "0253",
+        "position": [
+            360.899994,
+            70.149673,
+            805.01001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0254": {
+        "identifier": "0254",
+        "position": [
+            725.969971,
+            59.158939,
+            652.330017
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0255": {
+        "identifier": "0255",
+        "position": [
+            670.690002,
+            62.789951,
+            625.929993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0256": {
+        "identifier": "0256",
+        "position": [
+            597.27002,
+            70.120796,
+            720.679993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0257": {
+        "identifier": "0257",
+        "position": [
+            544.719971,
+            77.118347,
+            691.0
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0258": {
+        "identifier": "0258",
+        "position": [
+            498.380005,
+            89.494049,
+            695.380005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0259": {
+        "identifier": "0259",
+        "position": [
+            637.320007,
+            67.346336,
+            669.77002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0260": {
+        "identifier": "0260",
+        "position": [
+            711.179993,
+            57.763611,
+            606.320007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0261": {
+        "identifier": "0261",
+        "position": [
+            441.76001,
+            70.015907,
+            735.77002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0262": {
+        "identifier": "0262",
+        "position": [
+            497.73999,
+            70.626999,
+            732.320007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 7532605291130407400
+    },
+    "0263": {
+        "identifier": "0263",
+        "position": [
+            299.549988,
+            69.900757,
+            947.039978
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0264": {
+        "identifier": "0264",
+        "position": [
+            184.619995,
+            69.863892,
+            915.880005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0271": {
+        "identifier": "0271",
+        "position": [
+            244.910004,
+            69.698883,
+            969.289978
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0265": {
+        "identifier": "0265",
+        "position": [
+            172.259995,
+            70.290001,
+            868.580017
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0266": {
+        "identifier": "0266",
+        "position": [
+            271.420013,
+            69.697983,
+            934.25
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Chesto Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0267": {
+        "identifier": "0267",
+        "position": [
+            144.669998,
+            70.232559,
+            893.179993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 1,
+        "itemRewardMax": 2,
+        "rewardTable": [
+            {
+                "item": "Leppa Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0268": {
+        "identifier": "0268",
+        "position": [
+            270.209991,
+            69.723297,
+            911.890015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Chesto Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0269": {
+        "identifier": "0269",
+        "position": [
+            333.0,
+            70.590179,
+            952.73999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0270": {
+        "identifier": "0270",
+        "position": [
+            182.479996,
+            69.793617,
+            944.02002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 13685827291060569601
+    },
+    "0272": {
+        "identifier": "0272",
+        "position": [
+            183.520004,
+            70.207283,
+            971.179993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 47
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 47
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 5
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4360089806104179769
+    },
+    "0273": {
+        "identifier": "0273",
+        "position": [
+            286.540009,
+            69.722229,
+            959.469971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 47
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 47
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 5
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4360089806104179769
+    },
+    "0274": {
+        "identifier": "0274",
+        "position": [
+            293.200012,
+            69.764069,
+            895.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 47
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 47
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 5
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4360089806104179769
+    },
+    "0275": {
+        "identifier": "0275",
+        "position": [
+            207.570007,
+            70.168579,
+            895.710022
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 47
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 47
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 5
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4360089806104179769
+    },
+    "0276": {
+        "identifier": "0276",
+        "position": [
+            206.380005,
+            85.965759,
+            875.349976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 47
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 47
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 5
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 4360089806104179769
+    },
+    "0277": {
+        "identifier": "0277",
+        "position": [
+            217.320007,
+            70.453773,
+            901.890015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0278": {
+        "identifier": "0278",
+        "position": [
+            173.399994,
+            69.863922,
+            889.580017
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 38
+            },
+            {
+                "item": "Springy Mushroom",
+                "probability": 20
+            },
+            {
+                "item": "Dazzling Honey",
+                "probability": 20
+            },
+            {
+                "item": "Plump Beans",
+                "probability": 20
+            },
+            {
+                "item": "Leaf Stone",
+                "probability": 1
+            },
+            {
+                "item": "King\u00e2\u20ac\u2122s Leaf",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 14695981039346656837
+    },
+    "0281": {
+        "identifier": "0281",
+        "position": [
+            250.970001,
+            70.527496,
+            824.419983
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0285": {
+        "identifier": "0285",
+        "position": [
+            255.770004,
+            69.981087,
+            788.590027
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0280": {
+        "identifier": "0280",
+        "position": [
+            230.25,
+            69.863892,
+            855.030029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Chesto Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0283": {
+        "identifier": "0283",
+        "position": [
+            129.839996,
+            72.895828,
+            802.450012
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0284": {
+        "identifier": "0284",
+        "position": [
+            152.429993,
+            113.7724,
+            638.070007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0279": {
+        "identifier": "0279",
+        "position": [
+            171.380005,
+            122.876701,
+            670.77002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 1,
+        "itemRewardMax": 2,
+        "rewardTable": [
+            {
+                "item": "Leppa Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0282": {
+        "identifier": "0282",
+        "position": [
+            192.270004,
+            72.739548,
+            813.150024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 17465480130500721130
+    },
+    "0286": {
+        "identifier": "0286",
+        "position": [
+            107.290001,
+            96.494263,
+            715.630005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0287": {
+        "identifier": "0287",
+        "position": [
+            132.660004,
+            96.392441,
+            726.440002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0288": {
+        "identifier": "0288",
+        "position": [
+            101.050003,
+            72.451782,
+            800.780029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0289": {
+        "identifier": "0289",
+        "position": [
+            102.349998,
+            72.518341,
+            792.030029
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0290": {
+        "identifier": "0290",
+        "position": [
+            221.100006,
+            81.387512,
+            745.630005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0291": {
+        "identifier": "0291",
+        "position": [
+            117.389999,
+            72.842346,
+            793.380005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0292": {
+        "identifier": "0292",
+        "position": [
+            238.309998,
+            125.468597,
+            660.02002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0293": {
+        "identifier": "0293",
+        "position": [
+            237.119995,
+            88.154266,
+            712.380005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0294": {
+        "identifier": "0294",
+        "position": [
+            174.289993,
+            91.053467,
+            713.169983
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 500370454055033010
+    },
+    "0295": {
+        "identifier": "0295",
+        "position": [
+            194.139999,
+            124.424797,
+            614.390015
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 2080609809857165627
+    },
+    "0296": {
+        "identifier": "0296",
+        "position": [
+            206.210007,
+            150.513596,
+            527.51001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 3,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 2080609809857165627
+    },
+    "0297": {
+        "identifier": "0297",
+        "position": [
+            221.919998,
+            117.555298,
+            641.809998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 2080609809857165627
+    },
+    "0298": {
+        "identifier": "0298",
+        "position": [
+            228.889999,
+            122.267899,
+            683.469971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 2080609809857165627
+    },
+    "0299": {
+        "identifier": "0299",
+        "position": [
+            183.130005,
+            132.005798,
+            578.559998
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 15682838200312545379
+    },
+    "0300": {
+        "identifier": "0300",
+        "position": [
+            223.0,
+            128.003906,
+            601.0
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 15682838200312545379
+    },
+    "0301": {
+        "identifier": "0301",
+        "position": [
+            268.895996,
+            130.216003,
+            621.093872
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 15568565226393367951
+    },
+    "0302": {
+        "identifier": "0302",
+        "position": [
+            296.470001,
+            130.216003,
+            574.690002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 15568565226393367951
+    },
+    "0303": {
+        "identifier": "0303",
+        "position": [
+            355.450012,
+            144.400696,
+            533.650024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 15568565226393367951
+    },
+    "0304": {
+        "identifier": "0304",
+        "position": [
+            343.779999,
+            126.5177,
+            582.659973
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0305": {
+        "identifier": "0305",
+        "position": [
+            305.149994,
+            127.403503,
+            640.869995
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0306": {
+        "identifier": "0306",
+        "position": [
+            286.079987,
+            128.680695,
+            635.630005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0307": {
+        "identifier": "0307",
+        "position": [
+            397.869995,
+            128.677994,
+            560.75
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0308": {
+        "identifier": "0308",
+        "position": [
+            230.619995,
+            154.041901,
+            556.380005
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0309": {
+        "identifier": "0309",
+        "position": [
+            246.820007,
+            140.019501,
+            645.969971
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Sky Tumblestone",
+                "probability": 68
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 30
+            },
+            {
+                "item": "Dawn Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0310": {
+        "identifier": "0310",
+        "position": [
+            363.420013,
+            142.849594,
+            547.77002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 6342922696830645639
+    },
+    "0311": {
+        "identifier": "0311",
+        "position": [
+            360.459991,
+            107.461899,
+            686.690002
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 294195900221632958
+    },
+    "0312": {
+        "identifier": "0312",
+        "position": [
+            320.519989,
+            106.331596,
+            717.909973
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Razz Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 294195900221632958
+    },
+    "0313": {
+        "identifier": "0313",
+        "position": [
+            302.970001,
+            107.814301,
+            665.929993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 12660393286303325110
+    },
+    "0314": {
+        "identifier": "0314",
+        "position": [
+            370.470001,
+            113.278297,
+            724.570007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 12660393286303325110
+    },
+    "0315": {
+        "identifier": "0315",
+        "position": [
+            261.579987,
+            117.7714,
+            733.919983
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 12660393286303325110
+    },
+    "0316": {
+        "identifier": "0316",
+        "position": [
+            419.48999,
+            107.643799,
+            652.419983
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 6,
+        "itemRewardMax": 7,
+        "rewardTable": [
+            {
+                "item": "Apricorn",
+                "probability": 95
+            },
+            {
+                "item": "Spoiled Apricorn",
+                "probability": 5
+            }
+        ],
+        "encounterTable": 18419145807795348529
+    },
+    "0319": {
+        "identifier": "0319",
+        "position": [
+            415.76001,
+            107.474197,
+            615.650024
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 18419145807795348529
+    },
+    "0318": {
+        "identifier": "0318",
+        "position": [
+            457.470001,
+            106.759003,
+            615.080017
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 2,
+        "itemRewardMax": 3,
+        "rewardTable": [
+            {
+                "item": "Hopo Berry",
+                "probability": 100
+            }
+        ],
+        "encounterTable": 18419145807795348529
+    },
+    "0317": {
+        "identifier": "0317",
+        "position": [
+            371.980011,
+            107.465401,
+            643.929993
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 4,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Oran Berry",
+                "probability": 77
+            },
+            {
+                "item": "Sitrus Berry",
+                "probability": 23
+            }
+        ],
+        "encounterTable": 18419145807795348529
+    },
+    "0320": {
+        "identifier": "0320",
+        "position": [
+            432.937988,
+            107.598999,
+            575.791992
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0321": {
+        "identifier": "0321",
+        "position": [
+            531.76001,
+            99.508453,
+            616.51001
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0322": {
+        "identifier": "0322",
+        "position": [
+            414.319,
+            107.556999,
+            569.237976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0323": {
+        "identifier": "0323",
+        "position": [
+            383.76001,
+            107.312599,
+            608.700012
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Tumblestone",
+                "probability": 83
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 15
+            },
+            {
+                "item": "Shiny Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0324": {
+        "identifier": "0324",
+        "position": [
+            426.700012,
+            109.731598,
+            699.070007
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0325": {
+        "identifier": "0325",
+        "position": [
+            514.380005,
+            128.196701,
+            563.049988
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0326": {
+        "identifier": "0326",
+        "position": [
+            476.579987,
+            131.3461,
+            568.48999
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    },
+    "0327": {
+        "identifier": "0327",
+        "position": [
+            410.320007,
+            112.908401,
+            685.349976
+        ],
+        "activationRate": 10,
+        "itemRewardMin": 5,
+        "itemRewardMax": 5,
+        "rewardTable": [
+            {
+                "item": "Black Tumblestone",
+                "probability": 58
+            },
+            {
+                "item": "Iron Chunk",
+                "probability": 40
+            },
+            {
+                "item": "Dusk Stone",
+                "probability": 1
+            },
+            {
+                "item": "Stardust",
+                "probability": 1
+            }
+        ],
+        "encounterTable": 9285510411263157097
+    }
+}

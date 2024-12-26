@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular">
   <link rel="stylesheet" href="../../CSS/main.css">
   <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
-  <title>PLA Spawner ID map</title>
+  <title>PLA Landmark Map</title>
   <style>
     html, body, #map {
       height: 70vh;
@@ -22,13 +22,13 @@
   </style>
 </head>
 <body>
-  <!-- <select style="width: 100%;" id="locationSelect" onchange=update()>
+  <select style="width: 100%;" id="locationSelect" onchange=update()>
     <option value="obsidianfieldlands">Obsidian Fieldlands</option>
     <option value="crimsonmirelands">Crimson Mirelands</option>
     <option value="cobaltcoastlands">Cobalt Coastlands</option>
     <option value="coronethighlands">Coronet Highlands</option>
     <option value="alabastericelands">Alabaster Icelands</option>
-  </select> -->
+  </select>
   <div id="map"></div>
   <button class="button-1" onclick="window.location.href='../'" style="position:relative;left:2px">Back</button>
   <script src=map.js></script>
@@ -38,35 +38,29 @@
       return [coords[2] * -0.5, coords[0] * 0.5]
     }
     function update() {
-      // let location = document.getElementById("locationSelect").value
+      let location = document.getElementById("locationSelect").value
       map.eachLayer(function(layer){
         map.removeLayer(layer);
       });
-      L.tileLayer(`https://www.serebii.net/pokearth/hisui/obsidianfieldlands/tile_{z}-{x}-{y}.png`, {
+      L.tileLayer(`https://www.serebii.net/pokearth/hisui/${location}/tile_{z}-{x}-{y}.png`, {
         minZoom: 0,
         maxZoom: 2,
         noWrap: true,
         attribution: "PLA Spawner Map",//map label in bottom right
       }).addTo(map);
       let request = new XMLHttpRequest();
-      request.open("GET", "landmark_item_spawn_table.json", false);
+      request.open("GET", `../../Resources/pla_landmarks/${location}.json`, false);
       request.send(null);
-      let spawn_tables = JSON.parse(request.responseText).Table.reduce(function(map, obj) {
-          map[obj.LandmarkItemSpawnTableID] = obj;
-          return map;
-      }, {});
-      request = new XMLHttpRequest();
-      request.open("GET", "landmark_item.json", false);
-      request.send(null);
-      let landmarks = JSON.parse(request.responseText).Table;
-      for (let i = 0; i < landmarks.length; i++) {
-        let landmark = landmarks[i];
-        let spawn_table = spawn_tables[landmark.LandmarkItemSpawnTableID];
-        console.log(landmark);
-        console.log(spawn_table);
-
-        L.marker(convertCoordinates([landmark.Field_03[0].Coordinates.X, landmark.Field_03[0].Coordinates.Y, landmark.Field_03[0].Coordinates.Z]), { icon: L.icon({ iconUrl: "https://www.serebii.net/pokearth/hisui/icons/alpha.png", iconSize: [ 32, 32 ], iconAnchor: [ 16, 16 ]})}).addTo(map)
-        .bindPopup(`Reward Count: ${spawn_table.ItemRewardMin} - ${spawn_table.ItemRewardMax} | Table Length: ${spawn_table.Field_03.length}`);
+      let landmarks = JSON.parse(request.responseText);
+      let keys = Object.keys(landmarks);
+      for (let i = 0; i < keys.length; i++) {
+        let landmark = landmarks[keys[i]];
+        let item_table = "";
+        for (let j = 0; j < landmark.rewardTable.length; j++) {
+          item_table += `<br>${landmark.rewardTable[j].item}: ${landmark.rewardTable[j].probability}%`;
+        }
+        L.marker(convertCoordinates(landmark.position), { icon: L.icon({ iconUrl: "https://www.serebii.net/pokearth/hisui/icons/star.png", iconSize: [ 32, 32 ], iconAnchor: [ 16, 16 ]})}).addTo(map)
+        .bindPopup(`Identifier: ${landmark.identifier}<br>Reward Count: ${landmark.itemRewardMin} - ${landmark.itemRewardMax} | Table Length: ${landmark.rewardTable.length}` + item_table);
       }
     }
     update()
